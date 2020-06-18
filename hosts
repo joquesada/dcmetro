@@ -47,3 +47,10 @@ n9k09-leaf-sjc05
 
 [n9k-vnichange]
 n9k11-leaf-eat1
+
+[ITCM-12596]
+#n9k01-borderleaf-eat1
+#n9k02-borderleaf-eat1
+#n9k[01:16]-leaf-eat1
+n9k11-leaf-eat1
+
