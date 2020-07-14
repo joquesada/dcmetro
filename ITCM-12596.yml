@@ -5,8 +5,7 @@
   tasks:
   - name: Create checkpoint 
     nxos_command:
-      commands: checkpoint Jun26 description Checkpoint created for ITCM-12596
-        - copy run start
+      commands: checkpoint Jun20 description Checkpoint created for ITCM-12596
   - name: Change Description for TEMP VLANs
     nxos_vlan:
       vlan_id: "{{ item.id }}"
