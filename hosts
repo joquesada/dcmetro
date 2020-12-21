@@ -6,6 +6,14 @@ n9k01-borderleaf-eat1
 n9k02-borderleaf-eat1
 n9k[01:16]-leaf-eat1
 
+[Radius-test]
+#n9k[01:02]-leaf-eat1
+n9k[01:16]-leaf-eat1
+n9k[17:24]-leaf-eat1.eng.vmware.com
+n9k[01:02]-borderleaf-eat1
+n9k[01:02]-spine-eat1
+n9k[01:02]-cb-mdf-eat1.eng.vmware.com
+
 [WDC_STAGE]
 n9k01-borderleaf-eat1
 n9k02-borderleaf-eat1
@@ -33,8 +41,8 @@ n9k11-leaf-sjc05
 [vxlan-evpn-leaf-automation]
 n9k12-leaf-sjc05
 
-[CORP_DCI_Leafs]
-n9k01-corp-dci-sjc05
+[Target_Switches]
+
 
 [leaves_jinja2]
 n9k14-leaf-sjc05
@@ -55,6 +63,14 @@ n9k[01:16]-leaf-eat1
 #n9k11-leaf-eat1
 
 [n9k-license]
-n9k01-borderleaf-sjc05
-n9k02-borderleaf-sjc05
-n9k[01:18]-leaf-sjc05
+#n9k01-borderleaf-sjc05
+#n9k02-borderleaf-sjc05
+n9k[01:16]-leaf-eat1
+n9k[17:24]-leaf-eat1.eng.vmware.com
+n9k[01:02]-borderleaf-eat1
+n9k[01:02]-spine-eat1
+n9k[01:02]-cb-mdf-eat1.eng.vmware.com
+
+[STAGE]
+n9k[13:14]-leaf-sjc05
+

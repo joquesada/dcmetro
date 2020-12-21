@@ -1,0 +1,35 @@
+---
+- hosts: "Radius-test"
+  gather_facts: false
+
+  tasks:
+  - name: Create New Radius ISE Group
+    nxos_command:
+      commands:
+        - config terminal
+        - radius-server host 10.113.12.78 key 7 YIa4j3 authentication accounting
+        - radius-server host 10.128.153.226 key 7 YIa4j3 authentication accounti
+        - aaa group server radius RADIUS-ISE
+        - use-vrf management
+        - source-interface mgmt0
+        - server 10.113.12.78
+        - server 10.128.153.226
+
+  - name: Change AAA group to ISE
+    nxos_command:
+      commands:
+        - conf t
+        - aaa authentication login default group RADIUS-ISE
+        - aaa authentication login console local
+
+  - name: Delete old radius groups and hosts
+    nxos_command:
+      commands:
+        - conf t
+        - no aaa group server radius RADIUS-ENG
+        - no aaa group server radius RADIUS-CORP
+        - no radius-server host 10.128.254.33
+        - no radius-server host 10.113.51.100
+        - no radius-server key 7 "122F280046195F"
+        - copy r s
+...

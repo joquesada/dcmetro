@@ -9,7 +9,7 @@
         - "sh int desc | i [Ww][Dd][Cc]"
     register: config
     tags: intdesc
-  - name: save config to /etc/ansible/backups/intdescwdc
+  - name: save config to a file
     copy:
       content: "{{config.stdout[0]}}"
       dest: "/etc/ansible/backups/intdescwdc/{{inventory_hostname}}.txt"

@@ -1,0 +1,10 @@
+---
+ansible_connection: network_cli
+ansible_network_os: nxos
+ansible_user: "svc.dcmetroscript"
+ansible_password: "n6s.G7BDh7AaoK7!..@"
+
+VNI:
+  - {oldvni: 1001000, id: 1000, name: test-1, vni: 1000, multicast: 239.0.0.25}
+  - {oldvni: 1001001, id: 1001, name: test-2, vni: 1001, multicast: 239.0.0.25}
+...

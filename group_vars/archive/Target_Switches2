@@ -1,0 +1,194 @@
+---
+ansible_connection: network_cli
+ansible_network_os: nxos
+ansible_user: "svc.dcmetroscript"
+ansible_password: "n6s.G7BDh7AaoK7!..@"
+
+
+VLANDESC1:
+  - {id: 3101, name: temp-sjc05-mgmt}
+  - {id: 3105, name: temp-sjc05-prod-greemplum-server}
+  - {id: 3107, name: temp-sjc05-stage-greemplum-server}
+  - {id: 3412, name: temp-sjc05-tier2-staging-server}
+  - {id: 3413, name: temp-sjc05-tier2-staging-server-mgmt}
+  - {id: 3422, name: temp-sjc05-ebiz-prod-server}
+  - {id: 3427, name: temp-sjc05-staging-production-vips}
+  - {id: 3428, name: temp-sjc05-staging-vips}
+  - {id: 3432, name: temp-sjc05-tier2-staging-mgmt}
+  - {id: 3433, name: temp-sjc05-tier2-staging-server-2}
+  - {id: 3437, name: temp-sjc05-tier2-prod-server}
+  - {id: 3460, name: temp-sjc05-tier2-prod-server-2}
+  - {id: 3461, name: temp-sjc05-tier2-prod-server-mgmt-2}
+  - {id: 3471, name: temp-sjc05-virtual-mgmt}
+  - {id: 3473, name: temp-sjc05-production-environment}
+  - {id: 3474, name: temp-sjc05-staging-environment}
+  - {id: 12, name: temp-eat1-dmz-prod-protable}
+  - {id: 14, name: temp-eat1-dmz-stage-new}
+  - {id: 3411, name: temp-sjc05-dmz-stage-tier1-vplex}
+  - {id: 3421, name: temp-sjc05-dmz-tier1-prod}
+  - {id: 3434, name: temp-sjc05-dmz-tier2-staging}
+  - {id: 3438, name: temp-sjc05-dmz-tier2-prod}
+
+
+OLDVNI:
+  - {id: 1505, name: sjc05-mgmt, vni: 1001505, multicast: 239.0.0.8}
+  - {id: 1509, name: sjc05-prod-greemplum-server, vni: 1001509, multicast: 239.0.0.8}
+  - {id: 1901, name: sjc05-stage-greemplum-server, vni: 1001901, multicast: 239.0.0.26}
+  - {id: 1902, name: sjc05-tier2-staging-server, vni: 1001902, multicast: 239.0.0.26}
+  - {id: 1903, name: sjc05-tier2-staging-server-mgmt, vni: 1001903, multicast: 239.0.0.26}
+  - {id: 1522, name: sjc05-ebiz-prod-server, vni: 1001522, multicast: 239.0.0.8}
+  - {id: 1524, name: sjc05-staging-production-vips, vni: 1001524, multicast: 239.0.0.8}
+  - {id: 1904, name: sjc05-staging-vips, vni: 1001904, multicast: 239.0.0.26}
+  - {id: 1905, name: sjc05-tier2-staging-mgmt, vni: 1001905, multicast: 239.0.0.26}
+  - {id: 1906, name: sjc05-tier2-staging-server-2, vni: 1001906, multicast: 239.0.0.27}
+  - {id: 1526, name: sjc05-tier2-prod-server, vni: 1001526, multicast: 239.0.0.8}
+  - {id: 1531, name: sjc05-tier2-prod-server-2, vni: 1001531, multicast: 239.0.0.9}
+  - {id: 1532, name: sjc05-tier2-prod-server-mgmt-2, vni: 1001532, multicast: 239.0.0.9}
+  - {id: 1535, name: sjc05-virtual-mgmt, vni: 1001535, multicast: 239.0.0.9}
+  - {id: 1537, name: sjc05-production-environment, vni: 1001537, multicast: 239.0.0.9}
+  - {id: 1909, name: sjc05-staging-environment, vni: 1001909, multicast: 239.0.0.27}
+  - {id: 2201, name: eat1-dmz-prod-protable, vni: 1002201, multicast: 239.0.1.3}
+  - {id: 2202, name: eat1-dmz-stage-new, vni: 1002202, multicast: 239.0.1.3}
+  - {id: 2215, name: sjc05-dmz-tier1-prod, vni: 1002215, multicast: 239.0.1.3}
+  - {id: 2216, name: sjc05-dmz-tier2-staging, vni: 1002216, multicast: 239.0.1.3}
+  - {id: 2217, name: sjc05-dmz-tier2-prod, vni: 1002217, multicast: 239.0.1.3}
+
+NEWVNI:
+  - {vni: 1000016, multicast: 239.0.10.1}
+  - {vni: 1000028, multicast: 239.0.10.1}
+  - {vni: 1000030, multicast: 239.0.10.1}
+  - {vni: 1000172, multicast: 239.0.10.1}
+  - {vni: 1000618, multicast: 239.0.10.1}
+  - {vni: 1001000, multicast: 239.0.0.1}
+  - {vni: 1001005, multicast: 239.0.0.1}
+  - {vni: 1001007, multicast: 239.0.0.1}
+  - {vni: 1001013, multicast: 239.0.0.2}
+  - {vni: 1001021, multicast: 239.0.0.3}
+  - {vni: 1001022, multicast: 239.0.0.3}
+  - {vni: 1001023, multicast: 239.0.0.3}
+  - {vni: 1001026, multicast: 239.0.0.3}
+  - {vni: 1001034, multicast: 239.0.0.4}
+  - {vni: 1001046, multicast: 239.0.0.5}
+  - {vni: 1001063, multicast: 239.0.0.6}
+  - {vni: 1001073, multicast: 239.0.0.7}
+  - {vni: 1001600, multicast: 239.0.0.17}
+  - {vni: 1001602, multicast: 239.0.0.17}
+  - {vni: 1001605, multicast: 239.0.0.17}
+  - {vni: 1001608, multicast: 239.0.0.18}
+  - {vni: 1001609, multicast: 239.0.0.18}
+  - {vni: 1001610, multicast: 239.0.0.18}
+  - {vni: 1002900, multicast: 239.0.0.36}
+  - {vni: 1003001, multicast: 239.0.0.36}
+  - {vni: 1003087, multicast: 239.0.0.36}
+  - {vni: 1003101, multicast: 239.0.0.36}
+  - {vni: 1003105, multicast: 239.0.0.37}
+  - {vni: 1003107, multicast: 239.0.0.37}
+  - {vni: 1003155, multicast: 239.0.0.37}
+  - {vni: 1003156, multicast: 239.0.0.37}
+  - {vni: 1003161, multicast: 239.0.0.38}
+  - {vni: 1003162, multicast: 239.0.0.38}
+  - {vni: 1003163, multicast: 239.0.0.38}
+  - {vni: 1003164, multicast: 239.0.0.38}
+  - {vni: 1003166, multicast: 239.0.0.39}
+  - {vni: 1003176, multicast: 239.0.0.39}
+  - {vni: 1003182, multicast: 239.0.0.40}
+  - {vni: 1003212, multicast: 239.0.0.45}
+  - {vni: 1003250, multicast: 239.0.0.52}
+  - {vni: 1003251, multicast: 239.0.0.52}
+  - {vni: 1003338, multicast: 239.0.0.60}
+  - {vni: 1003412, multicast: 239.0.0.70}
+  - {vni: 1003413, multicast: 239.0.0.70}
+  - {vni: 1003422, multicast: 239.0.0.71}
+  - {vni: 1003427, multicast: 239.0.0.71}
+  - {vni: 1003428, multicast: 239.0.0.71}
+  - {vni: 1003432, multicast: 239.0.0.72}
+  - {vni: 1003433, multicast: 239.0.0.72}
+  - {vni: 1003437, multicast: 239.0.0.72}
+  - {vni: 1003460, multicast: 239.0.0.73}
+  - {vni: 1003461, multicast: 239.0.0.73}
+  - {vni: 1003471, multicast: 239.0.0.74}
+  - {vni: 1003473, multicast: 239.0.0.74}
+  - {vni: 1003474, multicast: 239.0.0.74}
+  - {vni: 1003490, multicast: 239.0.0.75}
+  - {vni: 1003498, multicast: 239.0.0.76}
+  - {vni: 1003499, multicast: 239.0.0.76}
+  - {vni: 1003800, multicast: 239.0.8.1}
+  - {vni: 1003801, multicast: 239.0.8.1}
+  - {vni: 1003802, multicast: 239.0.8.1}
+  - {vni: 1003803, multicast: 239.0.8.1}
+  - {vni: 1003804, multicast: 239.0.8.1}
+  - {vni: 1003805, multicast: 239.0.8.2}
+  - {vni: 1003837, multicast: 239.0.8.8}
+  - {vni: 1003838, multicast: 239.0.8.8}
+  - {vni: 1003839, multicast: 239.0.8.8}
+  - {vni: 1003840, multicast: 239.0.8.9}
+  - {vni: 1003841, multicast: 239.0.8.9}
+  - {vni: 1003842, multicast: 239.0.8.9}
+  - {vni: 1003843, multicast: 239.0.8.9}
+  - {vni: 1003844, multicast: 239.0.8.9}
+  - {vni: 1003845, multicast: 239.0.8.10}
+  - {vni: 1003846, multicast: 239.0.8.10}
+  - {vni: 1003847, multicast: 239.0.8.10}
+  - {vni: 1003848, multicast: 239.0.8.10}
+  - {vni: 1003849, multicast: 239.0.1.3}
+  - {vni: 1003850, multicast: 239.0.8.11}
+  - {vni: 1003851, multicast: 239.0.8.11}
+  - {vni: 1003860, multicast: 239.0.8.13}
+  - {vni: 1003861, multicast: 239.0.8.13}
+  - {vni: 1003862, multicast: 239.0.8.13}
+  - {vni: 1003864, multicast: 239.0.8.13}
+  - {vni: 1003870, multicast: 239.0.8.15}
+  - {vni: 1003871, multicast: 239.0.8.15}
+  - {vni: 1003875, multicast: 239.0.8.16}
+  - {vni: 1003878, multicast: 239.0.8.16}
+  - {vni: 1003882, multicast: 239.0.8.17}
+  - {vni: 1003883, multicast: 239.0.8.17}
+  - {vni: 1003889, multicast: 239.0.8.18}
+  - {vni: 1003890, multicast: 239.0.8.19}
+  - {vni: 1003891, multicast: 239.0.8.19}
+  - {vni: 1003893, multicast: 239.0.8.19}
+  - {vni: 1003895, multicast: 239.0.8.20}
+  - {vni: 1003896, multicast: 239.0.8.20}
+  - {vni: 1003897, multicast: 239.0.8.20}
+  - {vni: 1003899, multicast: 239.0.8.20}
+  - {vni: 1003901, multicast: 239.0.8.21}
+  - {vni: 1003902, multicast: 239.0.8.21}
+  - {vni: 1003904, multicast: 239.0.8.21}
+  - {vni: 1003905, multicast: 239.0.8.22}
+  - {vni: 1003906, multicast: 239.0.8.22}
+  - {vni: 1003911, multicast: 239.0.8.23}
+  - {vni: 1003916, multicast: 239.0.8.24}
+  - {vni: 1003917, multicast: 239.0.8.24}
+  - {vni: 1003919, multicast: 239.0.8.24}
+  - {vni: 1003920, multicast: 239.0.8.25}
+  - {vni: 1003924, multicast: 239.0.8.25}
+  - {vni: 1003925, multicast: 239.0.8.26}
+  - {vni: 1003926, multicast: 239.0.8.26}
+  - {vni: 1003927, multicast: 239.0.8.26}
+  - {vni: 1003928, multicast: 239.0.8.26}
+  - {vni: 1003929, multicast: 239.0.8.26}
+  - {vni: 1003930, multicast: 239.0.8.27}
+  - {vni: 1003933, multicast: 239.0.8.27}
+  - {vni: 1003934, multicast: 239.0.8.27}
+  - {vni: 1000012, multicast: 239.0.1.1}
+  - {vni: 1000014, multicast: 239.0.1.1}
+  - {vni: 1000040, multicast: 239.0.1.1}
+  - {vni: 1000042, multicast: 239.0.1.1}
+  - {vni: 1000045, multicast: 239.0.1.1}
+  - {vni: 1000141, multicast: 239.0.1.2}
+  - {vni: 1002104, multicast: 239.0.1.2}
+  - {vni: 1002107, multicast: 239.0.1.2}
+  - {vni: 1002112, multicast: 239.0.1.2}
+  - {vni: 1002201, multicast: 239.0.1.3}
+  - {vni: 1002202, multicast: 239.0.1.3}
+  - {vni: 1002215, multicast: 239.0.1.3}
+  - {vni: 1002216, multicast: 239.0.1.3}
+  - {vni: 1002217, multicast: 239.0.1.3}
+  - {vni: 1002280, multicast: 239.0.1.4}
+  - {vni: 1003421, multicast: 239.0.1.5}
+  - {vni: 1003434, multicast: 239.0.1.5}
+  - {vni: 1003438, multicast: 239.0.1.5}
+  - {vni: 1003849, multicast: 239.0.1.5}
+  - {vni: 1003866, multicast: 239.0.1.6}
+  - {vni: 1003867, multicast: 239.0.1.6}
+...

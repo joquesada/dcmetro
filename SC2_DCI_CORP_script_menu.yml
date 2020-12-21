@@ -1,6 +1,6 @@
 ---
 
-- hosts: CORP_DCI_Leafs
+- hosts: STAGE
   vars_prompt:
   - name: switch_number
     prompt: "\nPlease neter a choice for switch \n1- n9k01-corp-dci-sjc05\n2- n9k01-leaf-sjc05\n3- n9k02-leaf-sjc05"
