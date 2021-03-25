@@ -1,0 +1,24 @@
+---
+- hosts: "ITCM-20841-1"
+  gather_facts: false
+
+  tasks:
+  - name: Create checkpoint 
+    nxos_command:
+      commands: checkpoint Feb05-1 description Checkpoint created for ITCM-20841-1
+  - name: Remove un-used VLANs in n9k17 and 18. Task 1-> remove VNI on the NVE1 Int.
+    nxos_vxlan_vtep_vni:
+      interface: nve1
+      vni: "{{ item.vni }}"
+      state: absent
+    with_items: "{{ DELVNI20841 }}"
+  - name: Remove all un-used VLANs in n9k17 and 18. Task 2-> Remove L2 VLANs
+    nxos_vlan:
+      vlan_id: "{{ item.id }}"
+      state: absent
+    with_items: "{{ DELVNI20841 }}"
+  - name: Save Config
+    nxos_command:
+      commands:
+        - copy run start
+...

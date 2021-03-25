@@ -14,6 +14,34 @@ n9k[01:02]-borderleaf-eat1
 n9k[01:02]-spine-eat1
 n9k[01:02]-cb-mdf-eat1.eng.vmware.com
 
+[verify_radius_config]
+n9k[01:16]-leaf-eat1
+n9k[17:24]-leaf-eat1.eng.vmware.com
+n9k[01:02]-borderleaf-eat1
+n9k[01:02]-spine-eat1
+n9k[01:02]-cb-mdf-eat1.eng.vmware.com
+n5k[01:10]-eat1
+n5k-hadoop[01:04]-eat1
+n5k[01:02]-engdmz-eat1
+rce[01:06]-eat1
+rce[01:02]-prod-eat1
+rce[01:02]-dmz-eat1
+n9k[01:02]-aggregation-eat1
+rce[03:04]-eng-eat1
+n9k[03:04]eng-dci-eat1
+n9k[01:02]corp-dci-eat1
+core[01:02]-mgmt-eat1
+
+[ITCM-20841]
+n9k[17:18]-leaf-eat1.eng.vmware.com
+rce[01:02]-bos5.eng.vmware.com
+
+[ITCM-20841-1]
+n9k[17:18]-leaf-eat1.eng.vmware.com
+
+#10.128.160.164
+#10.128.160.165
+
 [WDC_STAGE]
 n9k01-borderleaf-eat1
 n9k02-borderleaf-eat1
@@ -21,6 +49,9 @@ n9k[01:16]-leaf-eat1
 
 [WDC_n5ks]
 n5k[01:10]-eat1
+
+[WDC_n5k-desc]
+n5k[05:08]-eat1
 
 [WDC_test]
 n9k01-borderleaf-eat1

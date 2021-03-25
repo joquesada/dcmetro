@@ -1,0 +1,17 @@
+---
+- hosts: "verify_radius_config"
+  gather_facts: false
+
+  tasks:
+  - name: radius_verify
+    nxos_command:
+      commands:
+        - "sh radius-server  | i 10."
+    register: config
+    tags: radius   
+  - name: save config to /etc/ansible/dcmetro/backups/radius 
+    copy:
+      content: "{{config.stdout[0]}}"
+      dest: "/etc/ansible/dcmetro/backups/radius/{{inventory_hostname}}.txt" 
+    tags: radius 
+...
