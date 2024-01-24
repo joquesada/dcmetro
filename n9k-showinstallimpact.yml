@@ -1,0 +1,17 @@
+---
+- hosts: "WDC_test"
+  gather_facts: false
+
+  tasks:
+  - name: n9k-installimpact for WDC
+    nxos_command:
+      commands:
+        - "show install all impact nxos bootflash:///nxos.9.3.4.bin"
+    register: config
+    tags: installimpact
+  - name: save config to /etc/ansible/backups/install
+    copy:
+      content: "{{config.stdout[0]}}"
+      dest: "/etc/ansible/backups/install/{{inventory_hostname}}.txt"
+    tags: installimpact
+...

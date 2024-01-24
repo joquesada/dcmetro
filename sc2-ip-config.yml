@@ -1,0 +1,27 @@
+---
+- hosts: "sc2-ip-config"
+  gather_facts: no
+
+  tasks:
+  - name: Config Loopback0 
+    nxos_config:
+      lines:
+        - description BGP/OSPF Router-ID
+        - ip address 10.189.6.35/32
+        - ip router ospf 65181 area 0.0.0.0
+        - ip pim sparse-mode
+      parents: interface loopback0
+  
+  - name: Config Loopback1   
+    nxos_config:
+      lines:
+        - description Anycast VTEP address
+        - ip address 10.189.6.36/32
+        - ip address 10.189.6.209/32 secondary
+        - ip router ospf 65181 area 0.0.0.0
+        - ip pim sparse-mode
+      parents: interface loopback1
+
+
+...
+

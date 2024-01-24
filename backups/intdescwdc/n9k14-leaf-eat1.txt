@@ -1,0 +1,84 @@
+Eth1/1        eth    10G     wdc-hadoop1-esxi-1:2 - TKT3500765
+Eth1/2        eth    10G     wdc-hadoop1-esxi-1:4 - TKT3500765
+Eth1/3        eth    10G     wdc-hadoop1-esxi-2:2 - TKT3500765
+Eth1/4        eth    10G     wdc-hadoop1-esxi-2:4 - TKT3500765
+Eth1/5        eth    10G     wdc-hadoop1-esxi-3:2 - TKT3500765
+Eth1/6        eth    10G     wdc-hadoop1-esxi-3:4 - TKT3500765
+Eth1/7        eth    10G     wdc-hadoop1-esxi-4:2 - TKT3500765
+Eth1/8        eth    10G     wdc-hadoop1-esxi-4:4 - TKT3500765
+Eth1/9        eth    10G     wdc-hadoop1-esxi-5:2 - TKT3500765
+Eth1/10       eth    10G     wdc-hadoop1-esxi-5:4 - TKT3500765
+Eth1/11       eth    10G     wdc-hadoop1-esxi-6:2 - TKT3500765
+Eth1/12       eth    10G     wdc-hadoop1-esxi-6:4 - TKT3500765
+Eth1/13       eth    10G     wdc-hadoop1-esxi-7:2 - TKT3500765
+Eth1/14       eth    10G     wdc-hadoop1-esxi-7:4 - TKT3500765
+Eth1/15       eth    10G     wdc-hadoop1-esxi-8:2 - TKT3500765
+Eth1/16       eth    10G     wdc-hadoop1-esxi-8:4 - TKT3500765
+Eth1/17       eth    10G     wdc-hadoop1-esxi-9:2 - TKT3500765
+Eth1/18       eth    10G     wdc-hadoop1-esxi-9:4 - TKT3500765
+Eth1/19       eth    10G     wdc-hadoop1-esxi-10:2 - TKT3500765
+Eth1/20       eth    10G     wdc-hadoop1-esxi-10:4 - TKT3500765
+Eth1/21       eth    10G     wdc-hadoop1-esxi-11:2 - TKT3500765
+Eth1/22       eth    10G     wdc-hadoop1-esxi-11:4 - TKT3500765
+Eth1/23       eth    10G     wdc-hadoop1-esxi-12:2 - TKT3500765
+Eth1/24       eth    10G     wdc-hadoop1-esxi-12:4 - TKT3500765
+Eth1/25       eth    10G     wdc-hadoop1-esxi-13:2 - TKT3500765
+Eth1/26       eth    10G     wdc-hadoop1-esxi-13:4 - TKT3500765
+Eth1/27       eth    10G     wdc-hadoop1-esxi-14:2 - TKT3500765
+Eth1/28       eth    10G     wdc-hadoop1-esxi-14:4 - TKT3500765
+Eth1/29       eth    10G     wdc-hadoop1-esxi-15:2 - TKT3500765
+Eth1/30       eth    10G     wdc-hadoop1-esxi-15:4 - TKT3500765
+Eth1/31       eth    10G     wdc-hadoop1-esxi-16:2 - TKT3500765
+Eth1/32       eth    10G     wdc-hadoop1-esxi-16:4 - TKT3500765
+Eth1/33       eth    10G     wdc-hadoop1-esxi-17:2 - TKT3500765
+Eth1/34       eth    10G     wdc-hadoop1-esxi-17:4 - TKT3500765
+Eth1/35       eth    10G     wdc-hadoop1-esxi-18:2 - TKT3500765
+Eth1/36       eth    10G     wdc-hadoop1-esxi-18:4 - TKT3500765
+Eth1/37       eth    10G     wdc-hadoop1-esxi-19 Port 3 HN TKT3127081
+Eth1/38       eth    10G     wdc-hadoop1-esxi-19 Port 4 HN TKT3127081
+Eth1/39       eth    10G     wdc-hadoop1-esxi-20 Port 3 HN TKT3127081
+Eth1/40       eth    10G     wdc-hadoop1-esxi-20 Port 4 HN TKT3127081
+Eth1/41       eth    10G     wdc-hadoop1-esxi-21 Port 3 HN TKT3127081
+Eth1/42       eth    10G     wdc-hadoop1-esxi-21 Port 4 HN TKT3127081
+Eth1/43       eth    10G     wdc-hadoop1-esxi-22 Port 3 HN TKT3127081
+Eth1/44       eth    10G     wdc-hadoop1-esxi-22 Port  4HN TKT3127081
+Eth1/45       eth    10G     wdc-hadoop1-esxi-23 Port 3 HN TKT3127081
+Eth1/46       eth    10G     wdc-hadoop1-esxi-23 Port 4 HN TKT3127081
+Eth1/47       eth    10G     wdc-hadoop1-esxi-24 Port 3 HN TKT3127081
+Eth1/48       eth    10G     wdc-hadoop1-esxi-24 Port 4 HN TKT3127081
+Eth1/49       eth    10G     wdc-hadoop1-esxi-25 Port 3 HN TKT3127081
+Eth1/50       eth    10G     wdc-hadoop1-esxi-25 Port 4 HN TKT3127081
+Eth1/51       eth    10G     wdc-hadoop1-esxi-26 Port 3 HN TKT3127081
+Eth1/52       eth    10G     wdc-hadoop1-esxi-26 Port 4 HN TKT3127081
+Eth1/53       eth    10G     wdc-hadoop1-esxi-27 Port 3 HN TKT3127081
+Eth1/54       eth    10G     wdc-hadoop1-esxi-27 Port 4 HN TKT3127081
+Eth1/55       eth    10G     wdc-hadoop1-esxi-28 Port 3 HN TKT3127081
+Eth1/56       eth    10G     wdc-hadoop1-esxi-28 Port 4 HN TKT3127081
+Po20                     wdc-hadoop1-esxi-1 - Ports 2:4 - TKT3500765
+Po21                     wdc-hadoop1-esxi-2 - Ports 2:4 - TKT3500765
+Po22                     wdc-hadoop1-esxi-3 - Ports 2:4 - TKT3500765
+Po23                     wdc-hadoop1-esxi-4 - Ports 2:4 - TKT3500765
+Po24                     wdc-hadoop1-esxi-5 - Ports 2:4 - TKT3500765
+Po25                     wdc-hadoop1-esxi-6 - Ports 2:4 - TKT3500765
+Po26                     wdc-hadoop1-esxi-7 - Ports 2:4 - TKT3500765
+Po27                     wdc-hadoop1-esxi-8 - Ports 2:4 - TKT3500765
+Po28                     wdc-hadoop1-esxi-9 - Ports 2:4 - TKT3500765
+Po29                     wdc-hadoop1-esxi-10 - Ports 2:4 - TKT3500765
+Po30                     wdc-hadoop1-esxi-11 - Ports 2:4 - TKT3500765
+Po31                     wdc-hadoop1-esxi-12 - Ports 2:4 - TKT3500765
+Po32                     wdc-hadoop1-esxi-13 - Ports 2:4 - TKT3500765
+Po33                     wdc-hadoop1-esxi-14 - Ports 2:4 - TKT3500765
+Po34                     wdc-hadoop1-esxi-15 - Ports 2:4 - TKT3500765
+Po35                     wdc-hadoop1-esxi-16 - Ports 2:4 - TKT3500765
+Po36                     wdc-hadoop1-esxi-17 - Ports 2:4 - TKT3500765
+Po37                     wdc-hadoop1-esxi-18 - Ports 2:4 - TKT3500765
+Po38                     wdc-hadoop1-esxi-19 Ports 3:4 - TKT3127081
+Po39                     wdc-hadoop1-esxi-20 Ports 3:4 - TKT3127081
+Po40                     wdc-hadoop1-esxi-21 Ports 3:4 - TKT3127081
+Po41                     wdc-hadoop1-esxi-22 Ports 3:4 - TKT3127081
+Po42                     wdc-hadoop1-esxi-23 Ports 3:4 - TKT3127081
+Po43                     wdc-hadoop1-esxi-24 Ports 3:4 - TKT3127081
+Po44                     wdc-hadoop1-esxi-25 Ports 3:4 - TKT3127081
+Po45                     wdc-hadoop1-esxi-26 Ports 3:4 - TKT3127081
+Po46                     wdc-hadoop1-esxi-27 Ports 3:4 - TKT3127081
+Po47                     wdc-hadoop1-esxi-28 Ports 3:4 - TKT3127081

@@ -1,0 +1,11 @@
+---
+- hosts: "Nexus_AAA_auth"
+  gather_facts: false
+  tasks:
+
+  - name: Configure Local authentication
+    nxos_command:
+      commands:
+        - aaa authentication login default group RADIUS-ISE
+    tag: Local_auth
+...

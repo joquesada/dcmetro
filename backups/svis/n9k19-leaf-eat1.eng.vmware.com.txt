@@ -1,0 +1,21 @@
+IP Interface Status for VRF "CORP"(3)
+Interface            IP Address      Interface Status
+Vlan99               forward-enabled protocol-up/link-up/admin-up       
+Vlan1600             10.188.13.253   protocol-up/link-up/admin-up       
+Vlan1602             10.188.45.253   protocol-up/link-up/admin-up       
+Vlan1900             10.113.123.253  protocol-up/link-up/admin-up       
+Vlan1901             10.113.124.253  protocol-up/link-up/admin-up       
+Vlan1902             10.113.68.253   protocol-up/link-up/admin-up       
+Vlan1903             10.113.66.253   protocol-up/link-up/admin-up       
+Vlan1904             10.113.14.1     protocol-up/link-up/admin-up       
+Vlan1909             10.119.39.253   protocol-up/link-up/admin-up       
+Vlan3803             10.129.152.253  protocol-up/link-up/admin-up       
+Vlan3804             10.129.153.126  protocol-up/link-up/admin-up       
+Vlan3805             10.129.153.253  protocol-up/link-up/admin-up       
+Vlan3806             10.129.154.62   protocol-up/link-up/admin-up       
+Vlan3807             10.129.154.77   protocol-up/link-up/admin-up       
+Vlan3808             10.129.154.93   protocol-up/link-up/admin-up       
+Vlan3809             10.129.154.109  protocol-up/link-up/admin-up       
+Vlan3810             10.129.154.126  protocol-up/link-up/admin-up       
+Vlan3811             10.129.154.141  protocol-up/link-up/admin-up       
+Vlan3812             10.129.154.157  protocol-up/link-up/admin-up

@@ -1,0 +1,492 @@
+---
+ansible_connection: local
+ansible_network_os: nxos
+ansible_user: "admin"
+ansible_password: "S3cur!ty!sn01Pr!or!ty"
+
+features:
+  - bgp
+  - pim
+  - nv overlay
+  - vn-segment-vlan-based
+  - ospf
+  - interface-vlan
+  - lacp
+  - vpc
+  - sla sender
+  - ngoam
+  - udld
+  - dhcp
+  - lldp
+  - nxapi
+  - bash-shell
+ 
+VRFs:
+  - {vrf: CORP, rd: 65270:99, vni: 9999}
+  - {vrf: ENG, rd: 65270:96, vni: 9696}
+  - {vrf: ENG-V6, rd: 65270:97, vni: 9797}
+  - {vrf: INTERNET, rd: 65270:98, vni: 9898}
+  
+L3VNI:
+  - {id: 99, name: "L3VNI", descr: L3VNI-CORP, vni: 9999, vrf: CORP}
+  - {id: 98, name: "L3VNI-98", descr: L3VNI-INTERNET, vni: 9898, vrf: INTERNET}
+  - {id: 97, name: "L3VNI-97", descr: L3VNI-ENG-V6, vni: 9797, vrf: ENG-V6}
+  - {id: 96, name: "L3VNI-96", descr: L3VNI-ENG, vni: 9696, vrf: ENG}
+
+Underlay_Interfaces:
+  - loopback0
+  - loopback1
+  - Ethernet1/49
+  - Ethernet1/50
+  - Ethernet1/55
+  - Ethernet1/56
+
+OSPF_Type:
+  - Ethernet1/49
+  - Ethernet1/50
+  - Ethernet1/55
+  - Ethernet1/56
+
+asn: 65270
+
+bgp_neighbors:
+  - {remote_as: 65270, neighbor: 10.250.206.1, description: n9k01-spine-eat1, update_source: Loopback0}
+  - {remote_as: 65270, neighbor: 10.250.206.2, description: n9k02-spine-eat1, update_source: Loopback0}
+  
+ACL:
+  - { name: 70, seq: 5, action: permit, proto: ip, src: 10.253.0.0/16, dest: any }
+  - { name: 70, seq: 10, action: permit, proto: ip, src: 10.17.0.0/23, dest: any }
+  - { name: 70, seq: 15, action: permit, proto: ip, src: 10.188.245.143/32, dest: any }
+  - { name: 70, seq: 20, action: permit, proto: ip, src: 10.17.9.0/24, dest: any }
+  - { name: 70, seq: 30, action: permit, proto: ip, src: 10.113.60.5/32, dest: any }
+  - { name: 70, seq: 40, action: permit, proto: ip, src: 10.113.60.9/32, dest: any }
+  - { name: 70, seq: 50, action: permit, proto: ip, src: 10.113.60.157/32, dest: any }
+  - { name: 70, seq: 60, action: permit, proto: ip, src: 10.113.161.221/32, dest: any }
+  - { name: 70, seq: 70, action: permit, proto: ip, src: 10.128.153.23/32, dest: any }
+  - { name: 70, seq: 80, action: permit, proto: ip, src: 10.112.236.7/32, dest: any }
+  - { name: 70, seq: 90, action: permit, proto: ip, src: 10.16.142.14/32, dest: any }
+  - { name: 70, seq: 100, action: permit, proto: ip, src: 10.33.38.43/32, dest: any }
+  - { name: 70, seq: 110, action: permit, proto: ip, src: 10.132.7.81/32, dest: any }
+  - { name: 70, seq: 120, action: permit, proto: ip, src: 10.111.0.33/32, dest: any }
+  - { name: 70, seq: 130, action: permit, proto: ip, src: 10.112.0.23/32, dest: any }
+  - { name: 70, seq: 140, action: permit, proto: ip, src: 10.23.108.38/32, dest: any }
+  - { name: 70, seq: 150, action: permit, proto: ip, src: 10.132.7.0/32, dest: any }
+  - { name: 70, seq: 160, action: permit, proto: ip, src: 10.132.71.0/24, dest: any }
+  - { name: 70, seq: 170, action: permit, proto: ip, src: 10.188.54.128/27, dest: any }
+  - { name: 70, seq: 180, action: permit, proto: ip, src: 10.188.54.128/27, dest: any }
+  - { name: 70, seq: 190, action: permit, proto: ip, src: 10.188.54.128/27, dest: any }
+  - { name: 99, seq: 5, action: permit, proto: ip, src: 10.253.0.0/16, dest: any }
+  - { name: 99, seq: 10, action: permit, proto: ip, src: 10.113.60.5/32, dest: any }
+  - { name: 99, seq: 20, action: permit, proto: ip, src: 10.113.60.9/32, dest: any }
+  - { name: 99, seq: 30, action: permit, proto: ip, src: 10.113.60.157/32, dest: any }
+  - { name: 99, seq: 40, action: permit, proto: ip, src: 10.26.178.0/24, dest: any }
+  - { name: 99, seq: 50, action: permit, proto: ip, src: 10.26.179.0/24, dest: any }
+  - { name: 99, seq: 60, action: permit, proto: ip, src: 10.26.166.32/27, dest: any }
+  - { name: 99, seq: 70, action: permit, proto: ip, src: 10.23.88.0/24, dest: any }
+  - { name: 99, seq: 80, action: permit, proto: ip, src: 10.23.225.224/28, dest: any }
+  - { name: 99, seq: 90, action: permit, proto: ip, src: 10.112.106.192/26, dest: any }
+  - { name: 99, seq: 100, action: permit, proto: ip, src: 10.112.240.0/24, dest: any }
+  - { name: 99, seq: 110, action: permit, proto: ip, src: 10.17.0.0/23, dest: any }
+  - { name: 99, seq: 120, action: permit, proto: ip, src: 10.17.9.0/24, dest: any }
+  - { name: 99, seq: 130, action: permit, proto: ip, src: 10.17.6.178/32, dest: any }
+  - { name: 99, seq: 140, action: permit, proto: ip, src: 10.132.7.239/32, dest: any }
+  - { name: 99, seq: 150, action: permit, proto: ip, src: 10.112.64.47/32, dest: any }
+  - { name: 99, seq: 151, action: permit, proto: ip, src: 10.188.122.142/32, dest: any }
+  - { name: 99, seq: 160, action: permit, proto: ip, src: 10.188.54.128/27, dest: any }
+  - { name: 99, seq: 170, action: permit, proto: ip, src: 10.188.54.128/27, dest: any }
+  - { name: 99, seq: 180, action: permit, proto: ip, src: 10.188.54.128/27, dest: any }
+  
+ACLlog:
+  - { name: 70, seq: 200, action: deny, proto: ip, src: any, dest: any, log: enable }
+  - { name: 99, seq: 190, action: deny, proto: ip, src: any, dest: any, log: enable }
+  
+VLAN:
+  - {id: 12, name: temp-eat1-dmz-prod-protable, vni: 1000012, mcast:  239.0.1.1 }
+  - {id: 14, name: temp-eat1-dmz-stage-new, vni: 1000014, mcast:  239.0.1.1 }
+  - {id: 16, name: eat1-wifi-aruba-mgmt, vni: 1000016, mcast:  239.0.10.1 }
+  - {id: 28, name: eat1-pan500-demo, vni: 1000028, mcast:  239.0.10.1 }
+  - {id: 30, name: eat1-oldstage-inside-fw, vni: 1000030, mcast:  239.0.10.1 }
+  - {id: 40, name: eat1-dmz-local-1, vni: 1000040, mcast:  239.0.1.1 }
+  - {id: 42, name: eat1-dmz-local-2, vni: 1000042, mcast:  239.0.1.1 }
+  - {id: 45, name: eat1-dmz-devtest, vni: 1000045, mcast:  239.0.1.1 }
+  - {id: 141, name: eat1-dmz-csp, vni: 1000141, mcast:  239.0.1.2 }
+  - {id: 172, name: eat1-oldnim-core-to-firewall, vni: 1000172, mcast:  239.0.10.1 }
+  - {id: 618, name: eat1-wifi-corp-users, vni: 1000618, mcast:  239.0.10.1 }
+  - {id: 1000, name: eat1-sap-prod01, vni: 1001000, mcast:  239.0.0.1 }
+  - {id: 1005, name: sjc05-sap-esxi-mgmt, vni: 1001005, mcast:  239.0.0.1 }
+  - {id: 1007, name: sjc05-sap-vmotion, vni: 1001007, mcast:  239.0.0.1 }
+  - {id: 1013, name: eat1-dr-vsanprod1_2, vni: 1001013, mcast:  239.0.0.2 }
+  - {id: 1021, name: eat1-dr-vsan-prod01-l2-vsandata, vni: 1001021, mcast:  239.0.0.3 }
+  - {id: 1022, name: eat1-dr-vsan-prod01-vmdata, vni: 1001022, mcast:  239.0.0.3 }
+  - {id: 1023, name: eat1-monitoring-tools, vni: 1001023, mcast:  239.0.0.3 }
+  - {id: 1026, name: sjc05-wlan-mgmt, vni: 1001026, mcast:  239.0.0.3 }
+  - {id: 1034, name: sjc05-hadoop-01/02-cluster, vni: 1001034, mcast:  239.0.0.4 }
+  - {id: 1046, name: sjc05-vgrid-rackheartbeat-l2, vni: 1001046, mcast:  239.0.0.5 }
+  - {id: 1063, name: sjc05-loadbalancer-dc, vni: 1001063, mcast:  239.0.0.6 }
+  - {id: 1073, name: sjc05-vgrid-prod1, vni: 1001073, mcast:  239.0.0.7 }
+  - {id: 1074, name: sjc05-vgrid-prod4, vni: 1001074, mcast:  239.0.0.39 }
+  - {id: 1075, name: sjc05-vgrid-prod3, vni: 1001075, mcast:  239.0.0.7 }
+  - {id: 1101, name: sjc05-hadoop-3, vni: 1001101, mcast:  239.0.0.7 }
+  - {id: 1122, name: sjc05-edw-prod-eng, vni: 1001122, mcast:  239.0.0.8 }
+  - {id: 1123, name: sjc05-edw-prod-alm, vni: 1001123, mcast:  239.0.0.8 }
+  - {id: 1505, name: sjc05-mgmt, vni: 1001505, mcast:  239.0.0.8 }
+  - {id: 1509, name: sjc05-prod-greemplum-server, vni: 1001509, mcast:  239.0.0.8 }
+  - {id: 1522, name: sjc05-ebiz-prod-server, vni: 1001522, mcast:  239.0.0.8 }
+  - {id: 1524, name: sjc05_prod_lb_vips, vni: 1001524 , mcast:  239.0.0.8 }
+  - {id: 1526, name: sjc05-tier2-prod-server, vni: 1001526, mcast:  239.0.0.8 }
+  - {id: 1531, name: sjc05-tier2-prod-server-2, vni: 1001531, mcast:  239.0.0.9 }
+  - {id: 1532, name: sjc05-t2-prod-srv-mgmt-2, vni: 1001532 , mcast:  239.0.0.9 }
+  - {id: 1535, name: sjc05-virtual-mgmt, vni: 1001535, mcast:  239.0.0.9 }
+  - {id: 1537, name: sjc05-prod-environment, vni: 1001537 , mcast:  239.0.0.9 }
+  - {id: 1542, name: sjc05-load-balancers, vni: 1001542 , mcast:  239.0.0.75 }
+  - {id: 1551, name: sjc05-unity-hb1-l2, vni: 1001551 , mcast:  239.0.0.75 }
+  - {id: 1555, name: sjc05-unity-p1-cm-l2, vni: 1001555 , mcast:  239.0.0.75 }
+  - {id: 1556, name: sjc05-unity-p1-hb0-l2, vni: 1001556 , mcast:  239.0.0.75 }
+  - {id: 1600, name: sjc05-sap-stage-vm-network, vni: 1001600, mcast:  239.0.0.17 }
+  - {id: 1602, name: sjc05-sap-stage2-vm-network, vni: 1001602, mcast:  239.0.0.17 }
+  - {id: 1604, name: sjc05-Host-A-POC, vni: 1001604, mcast:  239.0.0.10 }
+  - {id: 1605, name: eat1-sap-esxi-mgm, vni: 1001605, mcast:  239.0.0.17 }
+  - {id: 1608, name: eat1-sap-storage-repli, vni: 1001608, mcast:  239.0.0.18 }
+  - {id: 1609, name: eat1-sap-dr-vxlan-overlay, vni: 1001609, mcast:  239.0.0.18 }
+  - {id: 1610, name: eat1-sap-prod-lan, vni: 1001610, mcast:  239.0.0.18 }
+  - {id: 1611, name: sjc05-nsx-poc-l3-1, vni: 1001611, mcast:  239.0.0.19 }
+  - {id: 1612, name: sjc05-nsx-poc-l3-2, vni: 1001612, mcast:  239.0.0.19 }
+  - {id: 1619, name: sjc05-nsx-poc-l2-1, vni: 1001619, mcast:  239.0.0.20 }
+  - {id: 1620, name: sjc05-nsx-poc-l2-2, vni: 1001620, mcast:  239.0.0.20 }
+  - {id: 1700, name: sjc05-eat1-test-vlan, vni: 1001700, mcast:  239.0.0.10 }
+  - {id: 1900, name: sjc05-stage-greemplum-esx, vni: 1001900, mcast:  239.0.0.26 }
+  - {id: 1901, name: sjc05-stage-greemplum-server, vni: 1001901 , mcast:  239.0.0.26 }
+  - {id: 1902, name: sjc05-tier2-staging-server, vni: 1001902, mcast:  239.0.0.26 }
+  - {id: 1903, name: sjc05-t2-stage-srv-mgmt, vni: 1001903 , mcast:  239.0.0.26 }
+  - {id: 1904, name: sjc05-staging-vips, vni: 1001904, mcast:  239.0.0.26 }
+  - {id: 1905, name: sjc05-tier2-staging-mgmt, vni: 1001905, mcast:  239.0.0.26 }
+  - {id: 1906, name: sjc05-tier2-staging-server-2, vni: 1001906 , mcast:  239.0.0.27 }
+  - {id: 1909, name: sjc05-staging-environment, vni: 1001909, mcast:  239.0.0.27 }
+  - {id: 2104, name: sjc05-sfb-edgeserver-internal, vni: 1002104, mcast:  239.0.1.2 }
+  - {id: 2107, name: sjc05-sap-dmz, vni: 1002107, mcast:  239.0.1.2 }
+  - {id: 2112, name: sjc05-DMZ_Hitachi-ONLY, vni: 1002112, mcast:  239.0.1.2 }
+  - {id: 2157, name: sjc05-nsx-poc-dmz, vni: 1002157, mcast:  239.0.1.2 }
+  - {id: 2201, name: eat1-dmz-prod-protable, vni: 1002201, mcast:  239.0.1.3 }
+  - {id: 2202, name: eat1-dmz-stage-new, vni: 1002202, mcast:  239.0.1.3 }
+  - {id: 2214, name: sjc05-dmz-stage-tier1-vplex, vni: 1002214, mcast:  239.0.1.5 }
+  - {id: 2215, name: sjc05-dmz-tier1-prod, vni: 1002215, mcast:  239.0.1.3 }
+  - {id: 2216, name: sjc05-dmz-tier2-staging, vni: 1002216, mcast:  239.0.1.3 }
+  - {id: 2217, name: sjc05-dmz-tier2-prod, vni: 1002217, mcast:  239.0.1.3 }
+  - {id: 2280, name: sjc05-PA-Wlan-Guest, vni: 1002280, mcast:  239.0.1.4 }
+  - {id: 2900, name: eat1-exchange-test, vni: 1002900, mcast:  239.0.0.36 }
+  - {id: 3001, name: eat1-wifi-aps, vni: 1003001, mcast:  239.0.0.36 }
+  - {id: 3087, name: eat1-tkg-avi-ingress-pool, vni: 1003087, mcast:  239.0.0.36 }
+  - {id: 3155, name: eat1-data-domain1, vni: 1003155, mcast:  239.0.0.37 }
+  - {id: 3156, name: eat1-load-test1, vni: 1003156, mcast:  239.0.0.37 }
+  - {id: 3157, name: eat1-load-test2, vni: 1003157, mcast:  239.0.0.37 }
+  - {id: 3161, name: eat1-qa-greemplum, vni: 1003161, mcast:  239.0.0.38 }
+  - {id: 3162, name: eat1-mgmt1, vni: 1003162, mcast:  239.0.0.38 }
+  - {id: 3163, name: eat1-hadoop1, vni: 1003163, mcast:  239.0.0.38 }
+  - {id: 3164, name: eat1-hadoop2, vni: 1003164, mcast:  239.0.0.38 }
+  - {id: 3166, name: eat1-dr-vxlan-backup, vni: 1003166, mcast:  239.0.0.39 }
+  - {id: 3176, name: eat1-vmotion, vni: 1003176, mcast:  239.0.0.39 }
+  - {id: 3182, name: eat1-nsx-poc, vni: 1003182, mcast:  239.0.0.40 }
+  - {id: 3212, name: eat1-esxi-servers, vni: 1003212, mcast:  239.0.0.45 }
+  - {id: 3250, name: eat1-dr-vsan-vmotion, vni: 1003250, mcast:  239.0.0.52 }
+  - {id: 3251, name: eat1-dr-vsan-vm, vni: 1003251, mcast:  239.0.0.52 }
+  - {id: 3338, name: eat1-recovery-point2, vni: 1003338, mcast:  239.0.0.60 }
+  - {id: 3490, name: eat1-corp-inet-gw, vni: 1003490, mcast:  239.0.0.75 }
+  - {id: 3491, name: eat1-cb-fw-dmz, vni: 1003491, mcast:  239.0.0.75 }
+  - {id: 3498, name: eat1-otv-site-vlan, vni: 1003498, mcast:  239.0.0.76 }
+  - {id: 3499, name: eat1-pan-gw, vni: 1003499, mcast:  239.0.0.76 }
+  - {id: 3800, name: eat1-pan-gp2, vni: 1003800, mcast:  239.0.8.1 }
+  - {id: 3801, name: eat1_av_floor_1, vni: 1003801, mcast:  239.0.8.1 }
+  - {id: 3803, name: eat1-cloudinfra-esxi-mgmt, vni: 1003803, mcast:  239.0.8.1 }
+  - {id: 3804, name: eat1-cloudinfra-esxi-vmotion, vni: 1003804, mcast:  239.0.8.1 }
+  - {id: 3805, name: eat1-cloudinfra-vcf-vsan, vni: 1003805, mcast:  239.0.8.2 }
+  - {id: 3806, name: eat1-cloudinfra-vcf-mgmt-vtep, vni: 1003806, mcast:  239.0.8.2 }
+  - {id: 3807, name: eat1-cloudinfra-vcf-mgmt-uplnk01, vni: 1003807, mcast:  239.0.8.2 }
+  - {id: 3808, name: eat1-cloudinfra-vcf-mgmt-uplnk02, vni: 1003808, mcast:  239.0.8.2 }
+  - {id: 3809, name: eat1-cloudinfra-vcf-mgmt-edge-ov, vni: 1003809, mcast:  239.0.8.2 }
+  - {id: 3810, name: eat1_svi_for_peer_link, vni: 1003810, mcast:  239.0.8.3 }
+  - {id: 3811, name: eat1-cloudinfra-vcf-wrkld-uplnk2, vni: 1003811, mcast:  239.0.8.3 }
+  - {id: 3812, name: eat1-cloudinfra-vcf-wkld-edge-ov, vni: 1003812, mcast:  239.0.8.3 }
+  - {id: 3813, name: eat1-edw-prod-esxi-mgmt, vni: 1003813, mcast:  239.0.8.3 }
+  - {id: 3814, name: eat1-edw-prod-vmotion, vni: 1003814, mcast:  239.0.8.3 }
+  - {id: 3815, name: eat1-edw-prod-alm, vni: 1003815, mcast:  239.0.8.4 }
+  - {id: 3816, name: eat1-cloudinfra-vcf-wrkld-uplnk1, vni: 1003816, mcast:  239.0.8.4 }
+  - {id: 3817, name: eat1-eng-prod-esxi-mgmt, vni: 1003817, mcast:  239.0.8.6 }
+  - {id: 3818, name: eat1-eng-prod-esxi-vmotion, vni: 1003818, mcast:  239.0.8.4 }
+  - {id: 3819, name: eat1-eng-prod-esxi-vsan, vni: 1003819, mcast:  239.0.8.4 }
+  - {id: 3820, name: eat1-eng-prod-esxi-vms, vni: 1003820, mcast:  239.0.8.5 }
+  - {id: 3821, name: eat1-eng-prod-esxi-edge-overlay, vni: 1003821, mcast:  239.0.8.5 }
+  - {id: 3822, name: eat1-eng-prod-esxi-esxi-overlay, vni: 1003822, mcast:  239.0.8.5 }
+  - {id: 3823, name: eat1-tkg-infra-esxi-mgmt, vni: 1003823, mcast:  239.0.8.5 }
+  - {id: 3824, name: eat1-tkg-infra-workload, vni: 1003824, mcast:  239.0.8.5 }
+  - {id: 3825, name: eat1-tkg-infra-ingress, vni: 1003825, mcast:  239.0.8.6 }
+  - {id: 3826, name: eat1-tkg-infra-egress, vni: 1003826, mcast:  239.0.8.6 }
+  - {id: 3827, name: eat1-tkg-nsx-uplink01, vni: 1003827, mcast:  239.0.8.6 }
+  - {id: 3828, name: eat1-tkg-nsx-uplink02, vni: 1003828, mcast:  239.0.8.6 }
+  - {id: 3829, name: eat1-tkg-esxi-vms, vni: 1003829, mcast:  239.0.8.6 }
+  - {id: 3830, name: eat1-tkg-infra-workload-s1, vni: 1003830, mcast:  239.0.8.7 }
+  - {id: 3831, name: eat1-tkg-infra-workload-p1, vni: 1003831, mcast:  239.0.8.7 }
+  - {id: 3832, name: eat1-tkg-infra-ingress03, vni: 1003832, mcast:  239.0.8.7}
+  - {id: 3833, name: eat1-tkg-infra-ingress04, vni: 1003833, mcast:  239.0.8.7 }
+  - {id: 3834, name: eat1-tkg-infra-ingress05, vni: 1003834, mcast:  239.0.8.7 }
+  - {id: 3835, name: eat1-tkg-infra-ingress06, vni: 1003835, mcast:  239.0.8.8 }
+  - {id: 3836, name: eat1-vtep-nsx-splunk, vni: 1003831, mcast:  239.0.8.8 }
+  - {id: 3837, name: eat1-oldstage-servers1, vni: 1003837, mcast:  239.0.8.8 }
+  - {id: 3838, name: eat1-vcf-mgmt, vni: 1003838, mcast:  239.0.8.8 }
+  - {id: 3839, name: eat1-vcf-vmotion, vni: 1003839, mcast:  239.0.8.8 }
+  - {id: 3840, name: eat1-vcf-vsan, vni: 1003840, mcast:  239.0.8.9 }
+  - {id: 3841, name: eat1-vcf-vxlan-mgmt-vtep, vni: 1003841, mcast:  239.0.8.9 }
+  - {id: 3842, name: eat1-vcf-m01-mgmt-uplink01, vni: 1003842, mcast:  239.0.8.9 }
+  - {id: 3843, name: eat1-vcf-m01-mgmt-uplink02, vni: 1003843, mcast:  239.0.8.9 }
+  - {id: 3844, name: eat1-vcf-m01-wrkld-uplink01, vni: 1003844, mcast:  239.0.8.9 }
+  - {id: 3845, name: eat1-vcf-m01-wrkld-uplink02, vni: 1003845, mcast:  239.0.8.10 }
+  - {id: 3846, name: eat1-vcf-mgmt-edge-overlay, vni: 1003846, mcast:  239.0.8.10 }
+  - {id: 3847, name: eat1-vcf-vxlan-wrkld-vtep, vni: 1003847, mcast:  239.0.8.10 }
+  - {id: 3848, name: eat1-vcf-wrkld-edge-overlay, vni: 1003848, mcast:  239.0.8.10 }
+  - {id: 3849, name: eat1-vcf-dmz, vni: 1003849, mcast:  239.0.1.5 }
+  - {id: 3850, name: eat1-vcf-m01-k8s-uplink01, vni: 1003850, mcast:  239.0.8.11 }
+  - {id: 3851, name: eat1-vcf-m01-k8s-uplink02, vni: 1003851, mcast:  239.0.8.11 }
+  - {id: 3852, name: eat1-vsan-infosec, vni: 1003852, mcast:  239.0.8.11 }
+  - {id: 3853, name: eat1-vmotion-infosec, vni: 1003853, mcast:  239.0.8.11 }
+  - {id: 3854, name: eat1-ai-ml-ingress, vni: 1003854, mcast:  239.0.8.11 }
+  - {id: 3855, name: eat1-cloud-bugs-dr, vni: 1003855, mcast:  239.0.8.12 }
+  - {id: 3860, name: eat1-esxnetwork, vni: 1003860, mcast:  239.0.8.13 }
+  - {id: 3861, name: eat1-labmanager, vni: 1003861, mcast:  239.0.8.13 }
+  - {id: 3862, name: eat1-devtest-generalserver1, vni: 1003862, mcast:  239.0.8.13 }
+  - {id: 3863, name: eat1-devtest-performancetest, vni: 1003863, mcast:  239.0.8.13 }
+  - {id: 3864, name: eat1-devtest-cloudtest, vni: 1003864, mcast:  239.0.8.13 }
+  - {id: 3866, name: eat1-dmz-oc-transit, vni: 1003866, mcast:  239.0.1.6 }
+  - {id: 3867, name: eat1-dmz-oldprod-internal, vni: 1003867, mcast:  239.0.1.6 }
+  - {id: 3868, name: eat1-dmz-oldstage-tier1-servers, vni: 1003868, mcast:  239.0.1.6 }
+  - {id: 3869, name: eat1-oldprod-cpp_dmz_production, vni: 1003869, mcast:  239.0.1.6 }
+  - {id: 3870, name: eat1-oldstage-esx, vni: 1003870, mcast:  239.0.8.15 }
+  - {id: 3871, name: eat1-oldstage-servers2, vni: 1003871, mcast:  239.0.8.15 }
+  - {id: 3875, name: eat1-vgrid-prod3, vni: 1003875, mcast:  239.0.8.16 }
+  - {id: 3878, name: eat1-vgrid-prod6, vni: 1003878, mcast:  239.0.8.16 }
+  - {id: 3882, name: eat1-oldprod-esx, vni: 1003882, mcast:  239.0.8.17 }
+  - {id: 3883, name: eat1-oldprod-servers, vni: 1003883, mcast:  239.0.8.17 }
+  - {id: 3889, name: eat1-g10-bc1-1, vni: 1003889, mcast:  239.0.8.18 }
+  - {id: 3890, name: eat1-gss-lab-interswitch, vni: 1003890, mcast:  239.0.8.19 }
+  - {id: 3891, name: eat1-g10-bc1-2, vni: 1003891, mcast:  239.0.8.19 }
+  - {id: 3893, name: eat1-security-mgmt, vni: 1003893, mcast:  239.0.8.19 }
+  - {id: 3895, name: eat1-esx-network, vni: 1003895, mcast:  239.0.8.20 }
+  - {id: 3896, name: eat1-server-network, vni: 1003896, mcast:  239.0.8.20 }
+  - {id: 3899, name: eat1-pod3-lt, vni: 1003899, mcast:  239.0.8.20 }
+  - {id: 3901, name: eat1-netinfra01-netinfra01, vni: 1003901, mcast:  239.0.8.21 }
+  - {id: 3902, name: eat1-core-infra-cgpoc, vni: 1003902, mcast:  239.0.8.21 }
+  - {id: 3904, name: eat1-pks-nonprod-esximgmt, vni: 1003904, mcast:  239.0.8.21 }
+  - {id: 3905, name: eat1-pks-nonprod-vmotion01, vni: 1003905, mcast:  239.0.8.22 }
+  - {id: 3906, name: eat1-pks-nonprod-vsan, vni: 1003906, mcast:  239.0.8.22 }
+  - {id: 3911, name: eat1-vtep-vmotion, vni: 1003911, mcast:  239.0.8.23 }
+  - {id: 3916, name: eat1-nsx-v-ip-pool, vni: 1003916, mcast:  239.0.8.24 }
+  - {id: 3917, name: eat1-dr-isilon, vni: 1003917, mcast:  239.0.8.24 }
+  - {id: 3918, name: eat1-vgrid-prod1, vni: 1003918, mcast:  239.0.8.24 }
+  - {id: 3919, name: eat1-vgrid-prod2, vni: 1003919, mcast:  239.0.8.24 }
+  - {id: 3920, name: eat1-vgrid-stage1, vni: 1003920, mcast:  239.0.8.25 }
+  - {id: 3924, name: eat1-decc, vni: 1003924, mcast:  239.0.8.25 }
+  - {id: 3925, name: eat1-dcmetro-esxi-mgmt, vni: 1003925, mcast:  239.0.8.26 }
+  - {id: 3926, name: eat1-dcmetro-vms, vni: 1003926, mcast:  239.0.8.26 }
+  - {id: 3927, name: eat1-dcmetro-vmotion, vni: 1003927, mcast:  239.0.8.26 }
+  - {id: 3928, name: eat1-vgrid-decc-nsx-edge, vni: 1003928, mcast:  239.0.8.26 }
+  - {id: 3929, name: eat1-transport-vlan-ce-to-f5, vni: 1003929, mcast:  239.0.8.26 }
+  - {id: 3930, name: eat1-New-Domain-Controller, vni: 1003930, mcast:  239.0.8.27 }
+  - {id: 3931, name: eat1-dcmetro-scripting, vni: 1003931, mcast:  239.0.8.27 }
+  - {id: 3932, name: eat1-aws-rds-poc-02, vni: 1003932, mcast:  239.0.8.27 }
+  - {id: 3933, name: eat1-vc-dev1, vni: 1003933, mcast:  239.0.8.27 }
+  - {id: 3934, name: eat1-wcp, vni: 1003934, mcast:  239.0.8.27 }
+  - {id: 3935, name: eat1-nsx-poc-l2-1, vni: 1003935, mcast:  239.0.8.28 }
+  - {id: 3936, name: eat1-nsx-poc-l2-2, vni: 1003936, mcast:  239.0.8.28 }
+  - {id: 3937, name: eat1-nsx-poc-l3-1, vni: 1003937, mcast:  239.0.8.28 }
+  - {id: 3938, name: eat1-nsx-poc-l3-2, vni: 1003938, mcast:  239.0.8.28 }
+  - {id: 3939, name: eat1-nsx-poc-P2P-transport, vni: 1003939, mcast:  239.0.8.28 }
+  - {id: 3940, name: eat1-nsxmgr-perimeter-prod, vni: 1003940, mcast:  239.0.8.29 }
+  - {id: 3941, name: eat1-nsxmgr-perimeter-vmk, vni: 1003941, mcast:  239.0.8.29 }
+  - {id: 3942, name: eat1-nsxmgr-perimeter-mgmt, vni: 1003942, mcast:  239.0.8.29 }
+  - {id: 3943, name: eat1-nsxmgr-perimeter-sp, vni: 1003943, mcast:  239.0.8.29 }
+  - {id: 3944, name: eat1-nsxmgr-l2only-01, vni: 1003944, mcast:  239.0.8.29 }
+  - {id: 3945, name: eat1-nsxmgr-l2only-02, vni: 1003945, mcast:  239.0.8.30 }
+  - {id: 3946, name: eat1-nsxmgr-l2only-03, vni: 1003946, mcast:  239.0.8.30 }
+  - {id: 3947, name: eat1-nsxmgr-l2only-04, vni: 1003947, mcast:  239.0.8.30 }
+  - {id: 3948, name: eat1-dr-isilon-extnd, vni: 1003948, mcast:  239.0.8.30 }
+  - {id: 3970, name: eat1-oldstage-esx1, vni: 1003970, mcast:  239.0.1.6 }
+  - {id: 3977, name: eat1-dmz-vce01-eat1_fgp1, vni: 1003977, mcast:  239.0.1.8 }
+  - {id: 3978, name: eat1-dmz-vce01-eat1_fgp2, vni: 1003978, mcast:  239.0.1.8 }
+  - {id: 3979, name: eat1-dmz-vce02-eat1_fgp1, vni: 1003979, mcast:  239.0.1.8 }
+  - {id: 3980, name: eat1-dmz-vce02-eat1_fgp2, vni: 1003980, mcast:  239.0.1.8 }
+
+SVIs:
+  - {id: 16, ipaddr:    10.129.131.77/28 , descr:    eat1-wifi-aruba-mgmt }
+  - {id: 28, ipaddr:    10.128.32.236/28 , descr:    eat1-pan500-demo }
+  - {id: 30, ipaddr:    10.128.32.250/29 , descr:    eat1-oldstage-inside-fw }
+  - {id: 172, ipaddr:    10.130.72.1/29 , descr:    eat1-oldnim-core-to-firewall }
+  - {id: 618, ipaddr:    10.129.130.253/24 , descr:    eat1-wifi-corp-users }
+  - {id: 1000, ipaddr:    10.188.9.253/23, descr:    eat1-sap-prod01 }
+  - {id: 1005, ipaddr:    10.188.10.253/24, descr:    sjc05-sap-esxi-mgmt }
+  - {id: 1013, ipaddr:    10.188.21.253/24 , descr:    eat1-dr-vsanprod1_2 }
+  - {id: 1022, ipaddr:    10.188.27.253/23 , descr:    eat1-dr-vsan-prod01-vmdata }
+  - {id: 1023, ipaddr:    10.253.1.253/24 , descr:    eat1-monitoring-tools }
+  - {id: 1026, ipaddr:    10.188.36.29/27 , descr:    sjc05-wlan-mgmt }
+  - {id: 1034, ipaddr:    10.188.46.253/24 , descr:    sjc05-hadoop-01/02-cluster }
+  - {id: 1046, ipaddr:    10.188.63.253/23 , descr:    sjc05-vgrid-rackheartbeat-l2 }
+  - {id: 1073, ipaddr:    10.188.117.253/23 , descr:    sjc05-vgrid-prod1 }
+  - {id: 1074, ipaddr:    10.188.119.253/23 , descr:    sjc05-vgrid-prod2 }
+  - {id: 1075, ipaddr:    10.188.121.253/23 , descr:    sjc05-vgrid-prod3 }
+  - {id: 1101, ipaddr:    10.189.3.253/24 , descr:    sjc05-hadoop-3 }
+  - {id: 1122, ipaddr:    10.188.56.253/26 , descr:    sjc05-edw-prod-eng }
+  - {id: 1123, ipaddr:    10.188.67.189/26 , descr:    sjc05-edw-prod-alm }
+  - {id: 1505, ipaddr:    10.253.4.253/24 , descr:    sjc05-mgmt }
+  - {id: 1509, ipaddr:    10.113.122.253/24 , descr:    sjc05-prod-greemplum-server }
+  - {id: 1522, ipaddr:    10.113.76.253/24 , descr:    sjc05-ebiz-prod-server }
+  - {id: 1524, ipaddr:    10.113.12.1/23 , descr:    sjc05_prod_lb_vips }
+  - {id: 1526, ipaddr:    10.113.61.253/23 , descr:    sjc05-tier2-prod-server }
+  - {id: 1531, ipaddr:    10.113.191.253/19 , descr:    sjc05-tier2-prod-server-2 }
+  - {id: 1532, ipaddr:    10.113.199.253/21 , descr:    sjc05-t2-prod-srv-mgmt-2 }
+  - {id: 1535, ipaddr:    10.119.7.253/22 , descr:    sjc05-virtual-mgmt }
+  - {id: 1537, ipaddr:    10.119.31.253/20 , descr:    sjc05-prod-environment }
+  - {id: 1542, ipaddr:    10.119.61.253/23 , descr:    sjc05-load-balancers }
+  - {id: 1600, ipaddr:    10.188.13.253/23 , descr:    sjc05-vgrid-prod3 }
+  - {id: 1602, ipaddr:    10.188.45.253/23 , descr:    sjc05-vgrid-prod3 }
+  - {id: 1604, ipaddr:    10.188.15.125/27 , descr:    sjc05-vgrid-prod3 }
+  - {id: 1605, ipaddr:    10.128.22.253/24 , descr:    eat1-sap-esxi-mgmt }
+  - {id: 1608, ipaddr:    10.128.23.125/25 , descr:    eat1-sap-storage-repli }
+  - {id: 1609, ipaddr:    10.128.25.253/23 , descr:    eat1-sap-dr-vxlan-overlay }
+  - {id: 1610, ipaddr:    10.128.21.253/23 , descr:    eat1-sap-prod-lan }
+  - {id: 1611, ipaddr:    10.188.94.253/24, descr:    sjc05-nsx-poc-l3-1 }
+  - {id: 1612, ipaddr:    10.188.95.253/24 , descr:    sjc05-nsx-poc-l3-2 }
+  - {id: 1900, ipaddr:    10.113.123.253/24 , descr:    sjc05-stage-greemplum-esx }
+  - {id: 1901, ipaddr:    10.113.124.253/24 , descr:    sjc05-stage-greemplum-server }
+  - {id: 1902, ipaddr:    10.113.68.253/24 , descr:    sjc05-tier2-staging-server }
+  - {id: 1903, ipaddr:    10.113.66.253/24 , descr:    sjc05-tier2-staging-server-mgmt }
+  - {id: 1904, ipaddr:    10.113.14.1/23 , descr:    sjc05-staging-vips }
+  - {id: 1905, ipaddr:    10.113.51.253/23 , descr:    sjc05-tier2-staging-mgmt }
+  - {id: 1906, ipaddr:    10.113.53.253/23 , descr:    sjc05-tier2-staging-server-2 }
+  - {id: 1909, ipaddr:    10.119.39.253/21 , descr:    sjc05-staging-environment }
+  - {id: 2900, ipaddr:    10.129.16.253/25 , descr:    eat1-exchange-test }
+  - {id: 3001, ipaddr:    10.129.131.61/26 , descr:    eat1-wifi-aps }
+  - {id: 3087, ipaddr:    10.200.25.253/24 , descr:    eat1-tkg-avi-ingress-pool}
+  - {id: 3155, ipaddr:    10.128.125.253/24 , descr:    eat1-data-domain1 }
+  - {id: 3156, ipaddr:    10.128.191.253/22 , descr:    eat1-load-test1 }
+  - {id: 3157, ipaddr:    10.128.247.253/22 , descr:    eat1-load-test2 }
+  - {id: 3161, ipaddr:    10.128.131.253/22 , descr:    eat1-qa-greemplum }
+  - {id: 3162, ipaddr:    10.253.0.253/24 , descr:    eat1-mgmt1 }
+  - {id: 3163, ipaddr:    10.128.145.253/24 , descr:    eat1-hadoop1 }
+  - {id: 3164, ipaddr:    10.128.146.253/24 , descr:    eat1-hadoop2 }
+  - {id: 3166, ipaddr:    10.128.123.253/23 , descr:    eat1-dr-vxlan-backup }
+  - {id: 3176, ipaddr:    10.128.177.253/23 , descr:    eat1-vmotion }
+  - {id: 3182, ipaddr:    10.128.182.253/24 , descr:    eat1-nsx-poc }
+  - {id: 3212, ipaddr:    10.128.215.253/22 , descr:    eat1-esxi-servers }
+  - {id: 3250, ipaddr:    10.128.251.253/23 , descr:    eat1-dr-vsan-vmotion }
+  - {id: 3251, ipaddr:    10.128.147.253/24 , descr:    eat1-dr-vsan-vm }
+  - {id: 3338, ipaddr:    10.128.33.253/24 , descr:    eat1-recovery-point2 }
+  - {id: 3490, ipaddr:    10.128.178.34/27 , descr:    eat1-corp-inet-gw }
+  - {id: 3491, ipaddr:    10.128.142.165/29 , descr:    eat1-cb-fw-dmz }
+  - {id: 3499, ipaddr:    10.128.178.134/29 , descr:    eat1-pan-gw }
+  - {id: 3800, ipaddr:    10.200.60.30/29 , descr:    eat1-pan-gp2 }
+  - {id: 3801, ipaddr:    10.200.61.253/24 , descr:    eat1_av_floor_1 }
+  - {id: 3803, ipaddr:    10.129.152.253/24, descr:    eat1-cloud-infra-esxi-mgmt }
+  - {id: 3804, ipaddr:    10.129.153.126/25, descr:    eat1-cloud-infra-esxi-vmotion }
+  - {id: 3805, ipaddr:    10.129.153.253/25, descr:    eat1-cloud-infra-vcf-vsan }
+  - {id: 3806, ipaddr:    10.129.154.62/26, descr:    eat1-cloud-infra-vcf-vxlan-mgmt-vtep }
+  - {id: 3807, ipaddr:    10.129.154.77/28, descr:    eat1-cloud-infra-vcf-mgmt-uplink01 }
+  - {id: 3808, ipaddr:    10.129.154.93/28, descr:    eat1-cloud-infra-vcf-mgmt-uplink02}
+  - {id: 3809, ipaddr:    10.129.154.109/28, descr:    eat1-cloud-infra-vcf-mgmt-edge-overlayt }
+  - {id: 3811, ipaddr:    10.129.154.141/28, descr:    eat1-cloud-infra-vcf-wrkld-uplink02 }
+  - {id: 3812, ipaddr:    10.129.154.157/28, descr:    eat1-cloud-infra-vcf-wrkld-edge-overlay }
+  - {id: 3816, ipaddr:    10.129.154.126/28, descr:    eat1-cloud-infra-vcf-wrkld-uplink01 }
+  - {id: 3817, ipaddr:    10.129.96.61/26, descr:    eat1-eng-prod-esxi-mgmt }
+  - {id: 3818, ipaddr:    10.129.96.125/26, descr:    eat1-eng-prod-esxi-vmotion }
+  - {id: 3819, ipaddr:    10.129.96.189/26, descr:    eat1-eng-prod-esxi-vsan }
+  - {id: 3820, ipaddr:    10.129.97.253/24, descr:    eat1-eng-prod-esxi-vms }
+  - {id: 3821, ipaddr:    10.129.96.205/28, descr:    eat1-eng-prod-esxi-edge-overlay }
+  - {id: 3822, ipaddr:    10.129.96.221/28, descr:    eat1-eng-prod-esxi-esxi-overlay }
+  - {id: 3823, ipaddr:    10.200.62.253/24, descr:    eat1-tkg-infra-esxi-mgmt }
+  - {id: 3824, ipaddr:    10.200.63.253/24, descr:    eat1-tkg-infra-workload }
+  - {id: 3825, ipaddr:    10.200.64.253/24, descr:    eat1-tkg-infra-ingress }
+  - {id: 3826, ipaddr:    10.200.65.253/24, descr:    eat1-tkg-infra-egress }
+  - {id: 3827, ipaddr:    10.200.60.45/28, descr:    eat1-tkg-nsx-uplink01 }
+  - {id: 3828, ipaddr:    10.200.60.61/28, descr:    eat1-tkg-nsx-uplink02 }
+  - {id: 3829, ipaddr:    10.200.66.253/24, descr:    eat1-tkg-esxi-vms }
+  - {id: 3830, ipaddr:    10.200.67.253/24, descr:    eat1-tkg-infra-workload-s1 }
+  - {id: 3831, ipaddr:    10.200.68.253/24, descr:    eat1-tkg-infra-workload-p1 }
+  - {id: 3832, ipaddr:    10.200.72.253/24, descr:    eat1-tkg-infra-ingress03 }
+  - {id: 3833, ipaddr:    10.200.73.253/24, descr:    eat1-tkg-infra-ingress04 }
+  - {id: 3834, ipaddr:    10.200.74.253/24, descr:    eat1-tkg-infra-ingress05 }
+  - {id: 3835, ipaddr:    10.200.75.253/24, descr:    eat1-tkg-infra-ingress06 }
+  - {id: 3837, ipaddr:    10.128.37.253/24 , descr:    eat1-oldstage-servers1 }
+  - {id: 3854, ipaddr:    10.129.98.253/24 , descr:    eat1-ai-ml-ingress }
+  - {id: 3855, ipaddr:    10.129.99.253/24 , descr:    eat1-cloud-bugs-dr }
+  - {id: 3860, ipaddr:    10.128.71.253/22 , descr:    eat1-esxnetwork }
+  - {id: 3861, ipaddr:    10.128.79.253/22 , descr:    eat1-labmanager }
+  - {id: 3862, ipaddr:    10.128.95.253/20 , descr:    eat1-devtest-generalserver1 }
+  - {id: 3863, ipaddr:    10.128.75.253/22 , descr:    eat1-devtest-performancetest }
+  - {id: 3864, ipaddr:    10.128.99.253/22 , descr:    eat1-devtest-cloudtest }
+  - {id: 3870, ipaddr:    10.128.34.253/24 , descr:    eat1-oldstage-esx }
+  - {id: 3871, ipaddr:    10.128.36.253/24 , descr:    eat1-oldstage-servers2 }
+  - {id: 3875, ipaddr:    10.128.101.253/23 , descr:    eat1-vgrid-prod3 }
+  - {id: 3878, ipaddr:    10.128.107.253/23 , descr:    eat1-vgrid-prod6 }
+  - {id: 3882, ipaddr:    10.128.151.253/22 , descr:    eat1-oldprod-esx }
+  - {id: 3883, ipaddr:    10.128.155.253/22 , descr:    eat1-oldprod-servers }
+  - {id: 3889, ipaddr:    10.128.243.253/23 , descr:    eat1-g10-bc1-1 }
+  - {id: 3890, ipaddr:    10.131.255.33/28 , descr:    eat1-gss-lab-interswitch }
+  - {id: 3891, ipaddr:    10.128.241.253/23 , descr:    eat1-g10-bc1-2 }
+  - {id: 3893, ipaddr:    10.128.12.253/24 , descr:    eat1-security-mgmt }
+  - {id: 3895, ipaddr:    10.128.9.253/24 , descr:    eat1-esx-network }
+  - {id: 3896, ipaddr:    10.128.11.253/23 , descr:    eat1-server-network }
+  - {id: 3899, ipaddr:    10.128.19.253/22 , descr:    eat1-pod3-lt }
+  - {id: 3901, ipaddr:    10.128.255.221/27 , descr:    eat1-netinfra01-netinfra01 }
+  - {id: 3902, ipaddr:    10.128.35.62/26 , descr:    eat1-core-infra-cgpoc }
+  - {id: 3904, ipaddr:    10.200.0.253/24 , descr:    eat1-pks-nonprod01-esximgmt }
+  - {id: 3905, ipaddr:    10.200.1.125/25 , descr:    eat1-pks-nonprod-vmotion01 }
+  - {id: 3911, ipaddr:    10.200.15.253/22 , descr:    eat1-vtep-vmotion }
+  - {id: 3916, ipaddr:    10.200.32.253/24 , descr:    eat1-nsx-v-ip-pool }
+  - {id: 3917, ipaddr:    10.200.11.253/23 , descr:    eat1-dr-isilon }
+  - {id: 3918, ipaddr:    10.200.35.253/23 , descr:    eat1-vgrid-prod1 }
+  - {id: 3919, ipaddr:    10.200.37.253/23 , descr:    eat1-vgrid-prod2 }
+  - {id: 3920, ipaddr:    10.200.39.253/23 , descr:    eat1-vgrid-stage1 }
+  - {id: 3924, ipaddr:    10.200.43.253/23 , descr:    eat1-decc }
+  - {id: 3925, ipaddr:    10.128.39.253/24 , descr:    eat1-dcmetro-esxi-mgmt }
+  - {id: 3926, ipaddr:    10.128.47.253/24 , descr:    eat1-dcmetro-vms }
+  - {id: 3927, ipaddr:    10.128.64.253/24 , descr:    eat1-dcmetro-vmotion }
+  - {id: 3928, ipaddr:    10.200.7.253/23 , descr:    eat1-decc-nsx-edge }
+  - {id: 3929, ipaddr:    10.128.144.51/28 , descr:    eat1-transport-vlan-ce-to-f5 }
+  - {id: 3931, ipaddr:    10.253.20.62/26 , descr:    eat1-dcmetro-scripting }
+  - {id: 3932, ipaddr:    10.200.45.253/24 , descr:    eat1-aws-rds-poc-02 }
+  - {id: 3933, ipaddr:    10.128.249.253/23 , descr:    eat1-vc-dev1 }
+  - {id: 3934, ipaddr:    10.128.207.253/23 , descr:    eat1-wcp }
+  
+DHCP_VLANS:
+  - { Vlan: 618, relay_addr: 10.142.7.86 }
+  - { Vlan: 1027, relay_addr: 10.188.9.100 }
+  - { Vlan: 1509, relay_addr: 10.113.12.123 }
+  - { Vlan: 1522, relay_addr: 10.113.12.123 }
+  - { Vlan: 1900, relay_addr: 10.113.12.123 }
+  - { Vlan: 1901, relay_addr: 10.113.12.123 }
+  - { Vlan: 1904, relay_addr: 10.113.12.123 }
+  - { Vlan: 3001, relay_addr: 10.142.7.86 }
+  - { Vlan: 3823, relay_addr: 10.142.7.86 }
+  - { Vlan: 3824, relay_addr: 10.142.7.86 }
+  - { Vlan: 3830, relay_addr: 10.142.7.86 }
+  - { Vlan: 3831, relay_addr: 10.142.7.86 }
+  - { Vlan: 3837, relay_addr: 10.128.152.108 }
+  - { Vlan: 3837, relay_addr: 10.128.152.109 }
+  - { Vlan: 3860, relay_addr: 10.128.152.108 }
+  - { Vlan: 3860, relay_addr: 10.128.152.109 }
+  - { Vlan: 3861, relay_addr: 10.128.152.108 }
+  - { Vlan: 3861, relay_addr: 10.128.152.109 }
+  - { Vlan: 3862, relay_addr: 10.128.152.108 }
+  - { Vlan: 3862, relay_addr: 10.128.152.109 }
+  - { Vlan: 3863, relay_addr: 10.128.152.108 }
+  - { Vlan: 3863, relay_addr: 10.128.152.109 }
+  - { Vlan: 3864, relay_addr: 10.128.152.108 }
+  - { Vlan: 3864, relay_addr: 10.128.152.109 }
+  - { Vlan: 3870, relay_addr: 10.128.152.108 }
+  - { Vlan: 3870, relay_addr: 10.128.152.109 }
+  - { Vlan: 3871, relay_addr: 10.128.152.108 }
+  - { Vlan: 3871, relay_addr: 10.128.152.109 }
+  - { Vlan: 3882, relay_addr: 10.128.152.108 }
+  - { Vlan: 3882, relay_addr: 10.128.152.109 }
+  - { Vlan: 3883, relay_addr: 10.128.152.108 }
+  - { Vlan: 3883, relay_addr: 10.128.152.109 }
+  - { Vlan: 3896, relay_addr: 10.128.152.109 }
+  - { Vlan: 3931, relay_addr: 10.128.152.109 }
+  - { Vlan: 3932, relay_addr: 10.128.152.109 }
+...

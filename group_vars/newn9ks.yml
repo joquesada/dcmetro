@@ -1,0 +1,56 @@
+---
+ansible_connection: local
+ansible_network_os: nxos
+ansible_user: "admin"
+ansible_password: "Chrys@l1ssucksb1gtim3"
+
+features:
+  - bgp
+  - pim
+  - nv overlay
+  - vn-segment-vlan-based
+  - ospf
+  - interface-vlan
+  - lacp
+  - vpc
+  - sla sender
+  - ngoam
+  - dhcp
+  - lldp
+ 
+L2VNI:
+  - {id: 1079, name: eat1-vgrid-decc-01, vni: 1001079, multicast: 239.0.0.153}
+  - {id: 1080, name: eat1-vgrid-decc-nsx-edge, vni: 1001080, multicast: 239.0.0.154}
+
+VRFs:
+  - {vrf: CORP, rd: 65270:99, vni: 9999}
+  - {vrf: ENG, rd: 65270:96, vni: 9696}
+  - {vrf: INTERNET, rd: 65270:98, vni: 9898}
+  
+  
+L3VNI:
+
+  - {id: 99, name: L3VNI-CORP, vni: 9999}
+  - {id: 98, name: L3VNI-INTERNET, vni: 9898}
+  - {id: 96, name: L3VNI-ENG, vni: 9696}
+
+Underlay_Interfaces:
+  - loopback0
+  - loopback1
+  - Ethernet1/49
+  - Ethernet1/50
+  - Ethernet1/55
+  - Ethernet1/56
+
+OSPF_Type:
+  - Ethernet1/49
+  - Ethernet1/50
+  - Ethernet1/55
+  - Ethernet1/56
+
+asn: 65270
+
+bgp_neighbors:
+  - {remote_as: 65270, neighbor: 10.250.206.1, description: n9k01-spine-eat1, update_source: Loopback0}
+  - {remote_as: 65270, neighbor: 10.250.206.2, description: n9k02-spine-eat1, update_source: Loopback0}
+...

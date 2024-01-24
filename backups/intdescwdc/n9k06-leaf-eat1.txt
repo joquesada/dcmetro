@@ -1,0 +1,32 @@
+Eth1/3        eth    1000    WDC-VXLAN-POC-SERVER-B Port 2
+Eth1/4        eth    1000    WDC-VXLAN-POC-SERVER-B Port 4
+Eth1/5        eth    1000    description wdc-rp-prd4 wan
+Eth1/6        eth    1000    description wdc-rp-prd5 wan
+Eth1/7        eth    1000    description wdc-rp-prd6 wan
+Eth1/8        eth    25G     WDC-DR-PROD23-ESXi04 Port 2
+Eth1/9        eth    25G     WDC-DR-PROD23-ESXi05 Port 2
+Eth1/10       eth    25G     WDC-DR-PROD23-ESXi06 Port 2
+Eth1/11       eth    25G     WDC-DR-PROD22-ESXi03 Port 2
+Eth1/12       eth    25G     WDC-DR-PROD22-ESXi04 Port 2
+Eth1/13       eth    25G     WDC-DR-PROD22-ESXi05 Port 2
+Eth1/14       eth    25G     WDC-STAGE1-ESXi01 Port 2
+Eth1/15       eth    25G     WDC-STAGE1-ESXi02 Port 2
+Eth1/16       eth    25G     WDC-STAGE1-ESXi03 Port 2
+Eth1/17       eth    25G     WDC-STAGE1-ESXi04 Port 2
+Eth1/18       eth    25G     WDC-PROD2-ESXi01 Port 2
+Eth1/19       eth    25G     WDC-PROD2-ESXi02 Port 2
+Eth1/20       eth    25G     WDC-PROD2-ESXi03 Port 2
+Po2                      WDC-VXLAN-POC-SERVER-B
+Po3                      WDC-DR-PROD23-ESXi04
+Po4                      WDC-DR-PROD23-ESXi05
+Po5                      WDC-DR-PROD23-ESXi06
+Po6                      WDC-DR-PROD22-ESXi03
+Po7                      WDC-DR-PROD22-ESXi04
+Po8                      WDC-DR-PROD22-ESXi05
+Po9                      WDC-STAGE1-ESXi01
+Po10                     WDC-STAGE1-ESXi02
+Po11                     WDC-STAGE1-ESXi03
+Po12                     WDC-STAGE1-ESXi04
+Po13                     WDC-PROD2-ESXi01
+Po14                     WDC-PROD2-ESXi02
+Po15                     WDC-PROD2-ESXi03

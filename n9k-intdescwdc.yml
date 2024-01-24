@@ -1,0 +1,17 @@
+---
+- hosts: "WDC_LEAFs"
+  gather_facts: false
+
+  tasks:
+  - name: n9k-intdesc for WDC
+    nxos_command:
+      commands:
+        - "sh int desc | i [Ww][Dd][Cc]"
+    register: config
+    tags: intdesc
+  - name: save config to a file
+    copy:
+      content: "{{config.stdout[0]}}"
+      dest: "/etc/ansible/backups/intdescwdc/{{inventory_hostname}}.txt"
+    tags: intdesc
+...

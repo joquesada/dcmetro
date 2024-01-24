@@ -1,0 +1,17 @@
+---
+- hosts: "WDC_n5ks"
+  gather_facts: false
+
+  tasks:
+  - name: n5k-intstatus for WDC
+    nxos_command:
+      commands:
+        - "sh int status"
+    register: config
+    tags: intstatus
+  - name: save config to /etc/ansible/backups/n5ksintstatuswdc
+    copy:
+      content: "{{config.stdout[0]}}"
+      dest: "/etc/ansible/backups/n5ksintstatuswdc/{{inventory_hostname}}.txt"
+    tags: intstatus
+...

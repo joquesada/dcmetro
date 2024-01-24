@@ -1,0 +1,27 @@
+---
+- hosts: "SVI-preconf"
+  gather_facts: false
+  tasks:
+  
+  - name: Create checkpoint 
+    nxos_command:
+      commands: checkpoint May-test description Checkpoint created to backup config
+  - name: PRECONFIGURE ALL SVIs
+    nxos_command:
+      commands:
+      - config terminal
+      - "interface vlan {{ item.id }}"
+      - vrf member CORP
+      - shutdown
+      - "ip address {{ item.ipaddr }}"
+      - "description {{ item.descr }}"
+      - mtu 9216
+      - no ip redirects
+      - no ipv6 redirects
+      - fabric forwarding mode anycast-gateway
+    with_items: " {{ SVIs }} "
+  - name: Save Config
+    nxos_command:
+      commands:
+        - copy run start
+...

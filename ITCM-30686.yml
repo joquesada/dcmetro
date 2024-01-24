@@ -1,0 +1,44 @@
+---
+- hosts: "ITCM-30686"
+  gather_facts: false
+  tasks:
+
+  - name: Create checkpoint
+    nxos_command:
+      commands: checkpoint ITCM-30686 description Checkpoint created for backup
+  - name: Adding Vlans to N9k Fabric
+    nxos_vlan:
+      vlan_id: "{{ item.id }}"
+      name: "{{ item.name }}"
+      mapped_vni: "{{ item.vni }}"
+    with_items: "{{ VLAN }}"
+    tags: vlan
+  - name: Add VNI to NVE Interface
+    nxos_vxlan_vtep_vni:
+      interface: nve1
+      vni: "{{ item.vni }}"
+      multicast_group: "{{ item.mcast }}"
+    with_items: "{{ VLAN }}"
+    tags: vni
+  - name: PRECONFIGURE ALL SVIs
+    nxos_command:
+      commands:
+        - config terminal
+        - "interface vlan {{ item.id }}"
+        - vrf member CORP
+        - no shutdown
+        - "ip address {{ item.ipaddr }}"
+        - "description {{ item.descr }}"
+        - mtu 9216
+        - no ip redirects
+        - no ipv6 redirects
+        - fabric forwarding mode anycast-gateway
+    with_items: "{{ SVIs }}"
+  - name: Configure dhcp-relay
+    nxos_command:
+      commands:
+        - config terminal
+        - "interface vlan {{ item.Vlan }}"
+        - "ip dhcp relay address {{ item.relay_addr }}"
+    with_items: "{{ DHCP_VLANS }}"
+...

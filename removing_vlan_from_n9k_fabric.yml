@@ -1,0 +1,28 @@
+---
+- hosts: "removing_vlan_from_n9k_fabric"
+  gather_facts: false
+
+  tasks:
+  - name: Remove the SVI
+    nxos_command:
+      commands:
+        - config terminal
+        - no interface vlan 3182
+    tags: svi  
+  - name: Remove VNI from NVE Interface
+    nxos_vxlan_vtep_vni:
+      interface: nve1
+      vni: 1003182
+      state: absent
+    tags: vni
+  - name: Remove L2 Vlan
+    nxos_command:
+      commands:
+        - config terminal
+        - no vlan 3182
+    tags: svi
+  - name: Save Config
+    nxos_command:
+      commands:
+        - copy run start
+...

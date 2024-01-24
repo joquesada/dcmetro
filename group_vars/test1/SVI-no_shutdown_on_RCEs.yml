@@ -1,0 +1,94 @@
+---
+#ansible_python_interpreter: /usr/bin/python3
+ansible_connection: network_cli
+ansible_network_os: nxos
+ansible_user: "admin"
+ansible_password: "st@rf1sh"
+
+SVInoshut:
+  - {id: 16, ipaddr:    10.129.131.77/28 , descr:    eat1-wifi-aruba-mgmt }
+  - {id: 28, ipaddr:    10.128.32.236/28 , descr:    eat1-pan500-demo }
+  - {id: 30, ipaddr:    10.128.32.250/29 , descr:    eat1-oldstage-inside-fw }
+  - {id: 172, ipaddr:    10.130.72.1/29 , descr:    eat1-oldnim-core-to-firewall }
+  - {id: 618, ipaddr:    10.129.130.253/24 , descr:    eat1-wifi-corp-users }
+  - {id: 1000, ipaddr:    10.188.9.253/23, descr:    eat1-sap-prod01 }
+  - {id: 1005, ipaddr:    10.188.10.253/24, descr:    sjc05-sap-esxi-mgmt }
+  - {id: 1013, ipaddr:    10.188.21.253/24 , descr:    eat1-dr-vsanprod1_2 }
+  - {id: 1022, ipaddr:    10.188.27.253/23 , descr:    eat1-dr-vsan-prod01-vmdata }
+  - {id: 1023, ipaddr:    10.253.1.253/24 , descr:    eat1-monitoring-tools }
+  - {id: 1026, ipaddr:    10.188.36.29/27 , descr:    sjc05-wlan-mgmt }
+  - {id: 1034, ipaddr:    10.188.46.253/24 , descr:    sjc05-hadoop-01/02-cluster }
+  - {id: 1046, ipaddr:    10.188.63.253/23 , descr:    sjc05-vgrid-rackheartbeat-l2 }
+  - {id: 1073, ipaddr:    10.188.117.253/23 , descr:    sjc05-vgrid-prod1 }
+  - {id: 1074, ipaddr:    10.188.119.253/23 , descr:    sjc05-vgrid-prod2 }
+  - {id: 1605, ipaddr:    10.128.22.253/24 , descr:    eat1-sap-esxi-mgmt }
+  - {id: 1608, ipaddr:    10.128.23.125/25 , descr:    eat1-sap-storage-repli }
+  - {id: 1609, ipaddr:    10.128.25.253/23 , descr:    eat1-sap-dr-vxlan-overlay }
+  - {id: 1610, ipaddr:    10.128.21.253/23 , descr:    eat1-sap-prod-lan }
+  - {id: 2900, ipaddr:    10.129.16.253/25 , descr:    eat1-exchange-test }
+  - {id: 3001, ipaddr:    10.129.131.61/26 , descr:    eat1-wifi-aps }
+  - {id: 3101, ipaddr:    10.253.4.253/24 , descr:    sjc05-mgmt }
+  - {id: 3105, ipaddr:    10.113.122.253/24 , descr:    sjc05-prod-greemplum-server }
+  - {id: 3155, ipaddr:    10.128.125.253/24 , descr:    eat1-data-domain1 }
+  - {id: 3156, ipaddr:    10.128.191.253/22 , descr:    eat1-load-test1 }
+  - {id: 3157, ipaddr:    10.128.247.253/22 , descr:    eat1-load-test2 }
+  - {id: 3160, ipaddr:    10.128.135.253/22 , descr:    eat1-esxi-mgmt }
+  - {id: 3161, ipaddr:    10.128.131.253/22 , descr:    eat1-qa-greemplum }
+  - {id: 3162, ipaddr:    10.253.0.253/24 , descr:    eat1-mgmt1 }
+  - {id: 3163, ipaddr:    10.128.145.253/24 , descr:    eat1-hadoop1 }
+  - {id: 3164, ipaddr:    10.128.146.253/24 , descr:    eat1-hadoop2 }
+  - {id: 3166, ipaddr:    10.128.123.253/23 , descr:    eat1-dr-vxlan-backup }
+  - {id: 3176, ipaddr:    10.128.177.253/23 , descr:    eat1-vmotion }
+  - {id: 3182, ipaddr:    10.128.182.253/24 , descr:    eat1-nsx-poc }
+  - {id: 3212, ipaddr:    10.128.215.253/22 , descr:    eat1-esxi-servers }
+  - {id: 3250, ipaddr:    10.128.251.253/23 , descr:    eat1-dr-vsan-vmotion }
+  - {id: 3251, ipaddr:    10.128.147.253/24 , descr:    eat1-dr-vsan-vm }
+  - {id: 3338, ipaddr:    10.128.33.253/24 , descr:    eat1-recovery-point2 }
+  - {id: 3422, ipaddr:    10.113.76.253/24 , descr:    sjc05-ebiz-prod-server }
+  - {id: 3427, ipaddr:    10.113.12.1/23 , descr:    sjc05-staging-production-vips }
+  - {id: 3432, ipaddr:    10.113.51.253/23 , descr:    sjc05-tier2-staging-mgmt }
+  - {id: 3433, ipaddr:    10.113.53.253/23 , descr:    sjc05-tier2-staging-server-2 }
+  - {id: 3437, ipaddr:    10.113.61.253/23 , descr:    sjc05-tier2-prod-server }
+  - {id: 3460, ipaddr:    10.113.191.253/19 , descr:    sjc05-tier2-prod-server-2 }
+  - {id: 3461, ipaddr:    10.113.199.253/21 , descr:    sjc05-tier2-prod-server-mgmt-2 }
+  - {id: 3471, ipaddr:    10.119.7.253/22 , descr:    sjc05-virtual-mgmt }
+  - {id: 3473, ipaddr:    10.119.31.253/20 , descr:    sjc05-production-environment }
+  - {id: 3479, ipaddr:    10.119.61.253/23 , descr:    sjc05-load-balancers }
+  - {id: 3480, ipaddr:    10.119.2.253/24 , descr:    sjc05-catalog }
+  - {id: 3490, ipaddr:    10.128.178.34/27 , descr:    eat1-corp-inet-gw }
+  - {id: 3499, ipaddr:    10.128.178.134/29 , descr:    eat1-pan-gw }
+  - {id: 3837, ipaddr:    10.128.37.253/24 , descr:    eat1-oldstage-servers1 }
+  - {id: 3860, ipaddr:    10.128.71.253/22 , descr:    eat1-esxnetwork }
+  - {id: 3861, ipaddr:    10.128.79.253/22 , descr:    eat1-labmanager }
+  - {id: 3862, ipaddr:    10.128.95.253/20 , descr:    eat1-devtest-generalserver1 }
+  - {id: 3863, ipaddr:    10.128.75.253/22 , descr:    eat1-devtest-performancetest }
+  - {id: 3864, ipaddr:    10.128.99.253/22 , descr:    eat1-devtest-cloudtest }
+  - {id: 3870, ipaddr:    10.128.34.253/24 , descr:    eat1-oldstage-esx }
+  - {id: 3871, ipaddr:    10.128.36.253/24 , descr:    eat1-oldstage-servers2 }
+  - {id: 3875, ipaddr:    10.128.101.253/23 , descr:    eat1-vgrid-prod3 }
+  - {id: 3878, ipaddr:    10.128.107.253/23 , descr:    eat1-vgrid-prod6 }
+  - {id: 3882, ipaddr:    10.128.151.253/22 , descr:    eat1-oldprod-esx }
+  - {id: 3883, ipaddr:    10.128.155.253/22 , descr:    eat1-oldprod-servers }
+  - {id: 3889, ipaddr:    10.128.243.253/23 , descr:    eat1-g10-bc1-1 }
+  - {id: 3890, ipaddr:    10.131.255.33/28 , descr:    eat1-gss-lab-interswitch }
+  - {id: 3891, ipaddr:    10.128.241.253/23 , descr:    eat1-g10-bc1-2 }
+  - {id: 3893, ipaddr:    10.128.12.253/24 , descr:    eat1-security-mgmt }
+  - {id: 3895, ipaddr:    10.128.9.253/24 , descr:    eat1-esx-network }
+  - {id: 3896, ipaddr:    10.128.11.253/23 , descr:    eat1-server-network }
+  - {id: 3899, ipaddr:    10.128.19.253/22 , descr:    eat1-pod3-lt }
+  - {id: 3901, ipaddr:    10.128.255.221/27 , descr:    eat1-netinfra01-netinfra01 }
+  - {id: 3902, ipaddr:    10.128.35.62/26 , descr:    eat1-core-infra-cgpoc }
+  - {id: 3905, ipaddr:    10.200.1.125/25 , descr:    eat1-pks-nonprod-vmotion01 }
+  - {id: 3910, ipaddr:    10.200.9.141/28 , descr:    eat1-pks-nonprod01-nsxt0uplk2 }
+  - {id: 3911, ipaddr:    10.200.15.253/22 , descr:    eat1-vtep-vmotion }
+  - {id: 3916, ipaddr:    10.200.32.253/24 , descr:    eat1-nsx-v-ip-pool }
+  - {id: 3917, ipaddr:    10.200.11.253/23 , descr:    eat1-dr-isilon }
+  - {id: 3918, ipaddr:    10.200.35.253/23 , descr:    eat1-vgrid-prod1 }
+  - {id: 3919, ipaddr:    10.200.37.253/23 , descr:    eat1-vgrid-prod2 }
+  - {id: 3920, ipaddr:    10.200.39.253/23 , descr:    eat1-vgrid-stage1 }
+  - {id: 3924, ipaddr:    10.200.43.253/23 , descr:    eat1-decc }
+  - {id: 3928, ipaddr:    10.200.7.253/23 , descr:    eat1-decc-nsx-edge }
+  - {id: 3929, ipaddr:    10.128.144.51/28 , descr:    eat1-transport-vlan-ce-to-f5 }
+  - {id: 3931, ipaddr:    10.200.44.253/24 , descr:    eat1-aws-rds-poc-01 }
+  - {id: 3932, ipaddr:    10.200.45.253/24 , descr:    eat1-aws-rds-poc-02 }
+...

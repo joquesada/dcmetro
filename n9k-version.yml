@@ -1,0 +1,17 @@
+---
+- hosts: "n9k-version"
+  gather_facts: false
+
+  tasks:
+  - name: n9k-version
+    nxos_command:
+      commands:
+        - "sh int status | ex connected"
+    register: config
+    tags: version
+  - name: save config to /etc/ansible/backups
+    copy:
+      content: "{{config.stdout[0]}}"
+      dest: "/etc/ansible/backups/{{inventory_hostname}}.txt"
+    tags: version
+...

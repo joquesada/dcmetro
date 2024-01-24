@@ -1,0 +1,6 @@
+---
+ansible_connection: local
+ansible_network_os: nxos
+ansible_user: "svc.dcmetroscript"
+ansible_password: "H6@!Sd9h3Z^c67!TQbd"
+...

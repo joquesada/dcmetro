@@ -1,0 +1,3 @@
+IP Interface Status for VRF "CORP"(3)
+Interface            IP Address      Interface Status
+Vlan99               forward-enabled protocol-down/link-down/admin-up

@@ -1,0 +1,20 @@
+---
+- hosts: "STAGE"
+  gather_facts: false
+  tasks:
+
+  - name: PRECONFIGURE STAGE VLANS
+    nxos_command:
+      commands:
+      - config terminal
+      - "interface vlan {{ item.id }}"
+      - vrf member ASD
+      - shutdown
+      - "ip address {{ item.ipaddr }}"
+      - "description {{ item.descr }}"
+      - mtu 9216
+      - no ip redirects
+      - no ipv6 redirects
+      - fabric forwarding mode anycast-gateway
+    with_items: " {{ VLANS }} "
+...

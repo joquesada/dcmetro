@@ -1,0 +1,31 @@
+---
+
+- hosts: STAGE
+  vars_prompt:
+  - name: switch_number
+    prompt: "\nPlease neter a choice for switch \n1- n9k01-corp-dci-sjc05\n2- n9k01-leaf-sjc05\n3- n9k02-leaf-sjc05"
+    private: no
+  - name: switch_command
+    prompt: "\nWhich type of server would you like to deploy?\n1- Show run\n2- Show module\n3- Show interface statsu\n4- Show interface description\n5- Show ip route\n6- Show l2vpn evpn summary"
+    private: no
+  tasks:
+    - name: show run
+      nxos_command:
+         commands:
+         - "show run"
+      register: output1
+      when: ( switch_number == "1" and switch_command == "1")
+    - name: show run
+      debug: 
+        var: output1.stdout_lines
+    - name: show module
+      nxos_command:
+         commands:
+         - "show module"
+      register: output2
+      when: ( switch_number == "1" and switch_command == "2")
+    - name: show module
+      debug:
+         var: output2.stdout_lines   
+...
+

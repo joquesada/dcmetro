@@ -1,0 +1,10 @@
+---
+- hosts: "Nexus_AAA_auth_on_RCEs"
+  gather_facts: false
+  tasks:
+  - name: Configure Local authentication
+    cisco.nxos.nxos_command:
+      commands:
+        - aaa authentication login default group RADIUS-ISE 
+      tag: Local_auth
+...

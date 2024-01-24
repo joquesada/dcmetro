@@ -1,0 +1,43 @@
+Eth1/1        eth    25G     wdc-splunk3-esxi-01 port 1 TKT2711226
+Eth1/2        eth    25G     wdc-splunk3-esxi-02 port 1 TKT2711226
+Eth1/3        eth    25G     wdc-splunk3-esxi-03 port 1 TKT2711226
+Eth1/4        eth    25G     wdc-splunk3-esxi-04 port 1 TKT2711226
+Eth1/5        eth    25G     wdc-splunk3-esxi-05 port 1 TKT2711226
+Eth1/6        eth    25G     wdc-splunk3-esxi-06 port 1 TKT2711226
+Eth1/7        eth    25G     wdc-splunk3-esxi-07 port 1 TKT2711226
+Eth1/8        eth    10G     wdc-splunk3-esxi-08 port 1 TKT2891054
+Eth1/9        eth    10G     wdc-splunk3-esxi-08 port 2 TKT2891054
+Eth1/10       eth    10G     wdc-splunk3-esxi-09 port 1 TKT2891054
+Eth1/11       eth    10G     wdc-splunk3-esxi-09 port 2 TKT2891054
+Eth1/12       eth    25G     WDC-Splunk3-esxi-10 port 1
+Eth1/13       eth    25G     WDC-Splunk3-esxi-11 port 1
+Eth1/14       eth    25G     WDC-Splunk3-esxi-12 port 1
+Eth1/15       eth    25G     WDC-Splunk3-esxi-13 port 1
+Eth1/16       eth    25G     WDC-Splunk3-esxi-14 port 1
+Eth1/17       eth    25G     WDC-Splunk3-esxi-15 port 1
+Eth1/18       eth    25G     WDC-Splunk3-esxi-16 port 1
+Eth1/19       eth    25G     WDC-Splunk3-esxi-17 port 1
+Eth1/20       eth    25G     wdc-splunk3-esxi-18 Port 1 TKT3343020
+Eth1/21       eth    25G     wdc-splunk3-esxi-19 Port 1 TKT3343020
+Eth1/22       eth    25G     wdc-splunk3-esxi-20 Port 1 TKT3343020
+Eth1/23       eth    25G     wdc-splunk3-esxi-21 Port 1 TKT3343020
+Po2                      wdc-splunk3-esxi-01 TKT2711226
+Po3                      wdc-splunk3-esxi-02 TKT2711226
+Po4                      wdc-splunk3-esxi-03 TKT2711226
+Po5                      wdc-splunk3-esxi-04 TKT2711226
+Po6                      wdc-splunk3-esxi-05 TKT2711226
+Po7                      wdc-splunk3-esxi-06 TKT2711226
+Po8                      wdc-splunk3-esxi-07 TKT2711226
+Po9                      wdc-splunk3-esxi-08 TKT2891054
+Po10                     wdc-splunk3-esxi-09 TKT2891054
+Po11                     WDC-Splunk3-esxi-10
+Po13                     WDC-Splunk3-esxi-12
+Po14                     WDC-Splunk3-esxi-13
+Po15                     WDC-Splunk3-esxi-14
+Po16                     WDC-Splunk3-esxi-15
+Po17                     WDC-Splunk3-esxi-16
+Po18                     WDC-Splunk3-esxi-17
+Po19                     wdc-splunk3-esxi-18 TKT3343020
+Po20                     wdc-splunk3-esxi-19 TKT3343020
+Po21                     wdc-splunk3-esxi-20 TKT3343020
+Po22                     wdc-splunk3-esxi-21 TKT3343020

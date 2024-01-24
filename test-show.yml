@@ -1,0 +1,13 @@
+---
+- hosts: "test-show"
+  gather_facts: false
+  tasks:
+
+  - name: SHOW COMMANDS
+    ignore_errors: yes
+    nxos_command:
+      commands:
+      - show interface descrip
+      - show inventory
+      - show version
+...

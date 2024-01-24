@@ -1,0 +1,8 @@
+Eth1/1        eth    40G     wdc-isi-ace-bd-n1:2 - TKT3241922
+Eth1/2        eth    40G     wdc-isi-ace-bd-n2:2 - TKT3241922
+Eth1/3        eth    40G     wdc-isi-ace-bd-n3:2 - TKT3241922
+Eth1/4        eth    40G     wdc-isi-ace-bd-n4:2 - TKT3241922
+Eth1/5        eth    40G     wdc-isi-ace-bd-n5:2 - TKT3241922
+Eth1/6        eth    40G     wdc-isi-ace-bd-n6:2 - TKT3241922
+Eth1/7        eth    40G     wdc-isi-ace-bd-n7:2 - TKT3241922
+Eth1/8        eth    40G     wdc-isi-ace-bd-n8:2 - TKT3241922

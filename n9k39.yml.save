@@ -1,0 +1,383 @@
+---
+- hosts: "n9k39"
+  gather_facts: false
+
+  tasks:
+  - name: Create checkpoint
+    nxos_command:
+      commands: checkpoint clean-config description Checkpoint to backup config
+  - name: Enable features
+    nxos_feature:
+      feature: "{{ item }}"
+      state: enabled
+    with_items: "{{ features }}"
+  - name: Configure Interfaces
+    nxos_interface:
+      aggregate:
+        - { name: Loopback0, description: BGP/OSPF Router-ID }
+        - { name: Loopback1, description: Anycast VTEP }
+        - { name: Ethernet1/49, mtu: 9216, description: n9k01-spine-eat1 Eth3/7 }
+        - { name: Ethernet1/50, mtu: 9216, description: n9k02-spine-eat1 Eth3/7 }
+        - { name: Ethernet1/55, mtu: 9216, description: n9k01-spine-eat1 Eth4/7 }
+        - { name: Ethernet1/56, mtu: 9216, description: n9k02-spine-eat1 Eth4/7 }
+    tags: ips
+  - name: Configure IPs
+    nxos_l3_interface:
+      aggregate:
+        - { name: Loopback0, ipv4: 10.250.206.91/32 }
+        - { name: Loopback1, ipv4: 10.250.206.92/32 }
+        - { name: Loopback10, ipv4: 10.0.5.39/32 }
+        - { name: Ethernet1/49, ipv4: 10.250.205.97/31 }
+        - { name: Ethernet1/50, ipv4: 10.250.205.105/31 }
+        - { name: Ethernet1/55, ipv4: 10.250.205.99/31 }
+        - { name: Ethernet1/56, ipv4: 10.250.205.107/31 }
+    tags: ips
+  - name: Configure Secondary IP
+    nxos_config:
+      lines:
+        - ip address 10.250.206.223/32 secondary
+      parents: interface loopback1
+    tags: ips
+  - name: Configure VxLAN Overlay
+    nxos_evpn_global:
+      nv_overlay_evpn: true
+    tags: nv
+  - name: Configure Anycast GW
+    nxos_overlay_global:
+      anycast_gateway_mac: 6666.6666.6666
+    tags: gw
+  - name: Configure VRF
+    nxos_vrf:
+      vrf: "{{ item.vrf }}"
+      rd: "{{ item.rd }}"
+      vni: "{{ item.vni }}"
+    with_items:
+      - "{{ VRFs }}"
+  - name: Configure VRF RTs
+    nxos_vrf_af:
+      vrf: "{{ item.vrf }}"
+      afi: ipv4
+      route_target_both_auto_evpn: true
+      state: present
+    with_items:
+      - "{{ VRFs }}"
+    tags: rts
+  - name: Configure VRF RTs for IPv6
+    nxos_vrf_af:
+      vrf: "{{ item.vrf }}"
+      afi: ipv6
+      route_target_both_auto_evpn: true
+      state: present
+    with_items:
+      - "{{ VRFs }}"
+    tags: rts
+  - name: Configure VTEP
+    nxos_vxlan_vtep:
+      interface: nve1
+      host_reachability: true
+      shutdown: false
+      source_interface: Loopback1
+    tags: vtep
+  - name: Configure VTEP association
+    nxos_vxlan_vtep_vni:
+      interface: nve1
+      vni: "{{ item }}"
+      assoc_vrf: true
+    with_items:
+      - "9999"
+      - "9898"
+      - "9797"
+      - "9696"
+    tags: l3vtep
+  - name: Configure OSPF
+    nxos_ospf_vrf:
+      ospf: "65270"
+      router_id: 10.250.206.91
+      timer_throttle_spf_start: "100"
+      timer_throttle_spf_hold: "500"
+      timer_throttle_spf_max: "5000"
+      timer_throttle_lsa_start: "100"
+      timer_throttle_lsa_hold: "500"
+      timer_throttle_lsa_max: "5000"
+      vrf: default
+    tags: ospf
+  - name: Configure OSPF Interfaces
+    nxos_interface_ospf:
+      interface: "{{ item }}"
+      ospf: "65270"
+      area: "0"
+    with_items: "{{ Underlay_Interfaces }}"
+    tags: ospf
+  - name: Configure OSPF Network Type
+    nxos_interface_ospf:
+      interface: "{{ item }}"
+      ospf: "65270"
+      area: "0"
+      network: point-to-point
+    with_items: "{{ OSPF_Type }}"
+    tags: ospf
+  - name: Configure PIM Interfaces
+    nxos_pim_interface:
+      interface: "{{ item }}"
+      sparse: true
+    with_items:
+      - "{{ Underlay_Interfaces }}"
+    tags: pim
+  - name: Configure RP
+    nxos_pim_rp_address:
+      rp_address: 10.250.206.200
+      group_list: 239.0.0.0/16
+    tags: pim
+  - name: Configure SSM
+    nxos_pim:
+      ssm_range: default
+    tags: pim
+  - name: Configure BGP
+    nxos_bgp:
+      asn: "{{ asn }}"
+      router_id: 10.250.206.91
+      state: present
+    tags: bgp
+  - name: Configure BGP Default AFI
+    nxos_bgp_af:
+      asn: "{{ asn }}"
+      vrf: default
+      afi: l2vpn
+      safi: evpn
+      maximum_paths_ibgp: "4"
+      additional_paths_send: true
+      additional_paths_receive: true
+      additional_paths_selection: BGP_Multipath
+    tags: bgp
+  - name: Configure BGP Tenant
+    nxos_bgp_af:
+      asn: "{{ asn }}"
+      vrf: CORP
+      afi: ipv4
+      safi: unicast
+      advertise_l2vpn_evpn: true
+      maximum_paths_ibgp: 4
+      redistribute: [['direct', 'CONNECTED']]
+    tags: bgp
+  - name: Advertise PIP
+    nxos_bgp_address_family:
+      asn: "{{ asn }}"
+      afi: l2vpn
+      advertise_pip: true
+    tags: pip
+  - name: Configure iBGP Neighbor
+    nxos_bgp_neighbor:
+      asn: "{{ asn }}"
+      neighbor: "{{ item.neighbor }}"
+      remote_as: "{{ item.remote_as }}"
+      description: "{{ item.description }}"
+      update_source: "{{ item.update_source }}"
+      timers_keepalive: "3"
+      timers_holdtime: "10"
+    with_items:
+      - "{{ bgp_neighbors }}"
+    tags: bgp
+  - name: Configure iBGP Neighbor L2VPN
+    nxos_bgp_neighbor_af:
+      asn: "{{ asn }}"
+      neighbor: "{{ item.neighbor }}"
+      afi: l2vpn
+      safi: evpn
+      send_community: both
+    with_items:
+      - "{{ bgp_neighbors }}"
+    tags: bgp
+  - name: insert ACLs for SNMP and SSH
+    nxos_acl:
+      name: "{{ item.name }}"
+      seq: "{{ item.seq }}"
+      action: "{{ item.action }}"
+      proto: "{{ item.proto }}"
+      src: "{{ item.src }}"
+      dest: "{{ item.dest }}"
+      state: present
+    with_items: " {{ ACL }} "
+    tags: acls
+  - name: insert log ACLs for SNMP and SSH
+    nxos_acl:
+      name: "{{ item.name }}"
+      seq: "{{ item.seq }}"
+      action: "{{ item.action }}"
+      proto: "{{ item.proto }}"
+      src: "{{ item.src }}"
+      dest: "{{ item.dest }}"
+      log: "{{ item.log }}"
+      state: present
+    with_items: " {{ ACLlog }} "
+    tags: acls
+  - name: Configure VPC with delay restore and existing keepalive VRF
+    nxos_vpc:
+      domain: 939
+      role_priority: 100
+      delay_restore_orphan_port: 200
+      peer_gw: true
+      pkl_dest: 10.128.166.23
+      auto_recovery: true
+  - name: Peer switch configuration
+    nxos_command:
+      commands:
+       - config terminal
+       - vpc domain 939
+       - peer-switch
+  - name: Create Po1 for VPC
+    nxos_linkagg:
+      group: 1
+      state: present
+      mode: active
+      members: 
+      - Ethernet1/57
+      - Ethernet1/58
+  - name: Configure Interfaces
+    nxos_interface:
+      aggregate:
+        - { name: Ethernet1/57, description: n9k40-leaf-eat1 Eth1/57 VPC Peer Link }
+        - { name: Ethernet1/58, description: n9k40-leaf-eat1 Eth1/58 VPC Peer Link }
+        - { name: PortChannel1, mtu: "9216", description: n9k40-leaf-eat1 VPC Peer Link }
+  - name: Peer Link creation
+    nxos_command:
+      commands: 
+       - config terminal
+       - int po 1
+       - switchport
+       - switchport mode trunk
+       - spanning-tree port type network
+       - vpc peer-link
+  - name: Adding Vlans to N9k Fabric
+    nxos_vlan:
+      vlan_id: "{{ item.id }}"
+      name: "{{ item.name }}"
+      mapped_vni: "{{ item.vni }}"
+    with_items: "{{ VLAN }}"
+    tags: vni
+  - name: Add VNI to NVE Interface
+    nxos_vxlan_vtep_vni:
+      interface: nve1
+      vni: "{{ item.vni }}"
+      multicast_group: "{{ item.mcast }}"
+      state: present
+    with_items: "{{ VLAN }}"
+    tags: vnis
+  - name: Configure virtual rmac
+    nxos_command:
+      commands:
+      - config terminal
+      - interface nve1
+      - advertise virtual-rmac
+    tags: rmac
+  - name: PRECONFIGURE ALL SVIs
+    nxos_command:
+      commands:
+      - config terminal
+      - "interface vlan {{ item.id }}"
+      - vrf member CORP
+      - no shutdown
+      - "ip address {{ item.ipaddr }}"
+      - "description {{ item.descr }}"
+      - mtu 9216
+      - no ip redirects
+      - no ipv6 redirects
+      - fabric forwarding mode anycast-gateway
+    with_items: "{{ SVIs }}"
+    tags: svis
+  - name: Configure dhcp-relay
+    nxos_command:
+      commands:
+        - config terminal
+        - "interface vlan {{ item.Vlan }}"
+        - "ip dhcp relay address {{ item.relay_addr }}"
+        - ip dhcp relay source-interface loopback10
+    with_items: "{{ DHCP_VLANS }}"
+    tags: dhcp
+  - name: Create New Radius ISE Group
+    nxos_command:
+      commands:
+       - config terminal
+       - radius-server host 10.113.12.78 key 7 YIa4j3 authentication accounting
+       - radius-server host 10.128.153.226 key 7 YIa4j3 authentication accounti
+       - aaa group server radius RADIUS-ISE
+       - use-vrf management
+       - source-interface mgmt0
+       - server 10.113.12.78
+       - server 10.128.153.226
+    tags: ise
+  - name: Add SNMP commands for monitoring
+    nxos_command:
+      commands:
+       - conf t
+       - snmp-server contact net-dcmetro@vmware.com
+       - snmp-server location US, Wenatchee DC, eat1
+       - snmp-server source-interface traps mgmt0
+       - snmp-server source-interface informs mgmt0
+       - snmp-server user admin network-admin auth md5 0x5d933fb3d6e9d8d6da5769b2d13c6e82 priv 0x5d933fb3d6e9d8d6da5769b2d13c6e82 localizedkey
+       - snmp-server host 10.253.4.5 traps version 2c G00d9a55w0rd9vmw9r3
+       - snmp-server host 10.253.4.5 use-vrf management
+       - snmp-server host 10.253.1.10 traps version 2c G00d9a55w0rd9vmw9r3
+       - snmp-server host 10.253.1.10 use-vrf management
+       - snmp-server host 10.253.4.200 traps version 2c G00d9a55w0rd9vmw9r3
+       - snmp-server host 10.253.4.200 use-vrf management
+       - snmp-server host 10.253.4.12 traps version 2c G00d9a55w0rd9vmw9r3
+       - snmp-server host 10.253.4.12 use-vrf management
+       - snmp-server host 10.253.1.61 traps version 3 auth Solarwinds
+       - snmp-server host 10.253.1.63 traps version 2c G00d9a55w0rd9vmw9r3
+       - snmp-server counter cache timeout 10
+       - snmp-server community G00d9a55w0rd9vmw9r3 group network-operator
+       - snmp-server community b35t9a55w0rd9vmw9r3 group network-admin
+       - snmp-server community G00d9a55w0rd9vmw9r3 use-acl 70
+       - snmp-server community b35t9a55w0rd9vmw9r3 use-acl 70
+       - snmp-server enable traps bgp
+       - snmp-server enable traps ospf
+       - snmp-server enable traps callhome event-notify
+       - snmp-server enable traps callhome smtp-send-fail
+       - snmp-server enable traps cfs state-change-notif
+       - snmp-server enable traps cfs merge-failure
+       - snmp-server enable traps aaa server-state-change
+       - snmp-server enable traps feature-control FeatureOpStatusChange
+       - snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+       - snmp-server enable traps config ccmCLIRunningConfigChanged
+       - snmp-server enable traps snmp authentication
+       - snmp-server enable traps link cisco-xcvr-mon-status-chg
+       - snmp-server enable traps vtp notifs
+       - snmp-server enable traps vtp vlancreate
+       - snmp-server enable traps vtp vlandelete
+       - snmp-server enable traps bridge newroot
+       - snmp-server enable traps bridge topologychange
+       - snmp-server enable traps stpx inconsistency
+       - snmp-server enable traps stpx root-inconsistency
+       - snmp-server enable traps stpx loop-inconsistency
+       - snmp-server enable traps feature-control ciscoFeatOpStatusChange
+    tags: snmp     
+  - name: Change AAA group to ISE
+    nxos_command:
+      commands:
+       - conf t
+       - aaa authentication login default group RADIUS-ISE
+       - aaa authentication login console local
+    tags: aaa
+  - name: configure the exec banner
+    nxos_banner:
+      banner: exec
+      text: |
+        **********************************************************************************
+        *                 Welcome to Nexus (Nexus C93240YC-FX2)                          *
+        *                       Hostname n9k39-leaf-eat1                                 *
+        *                   Physical location POD 3 (ROW2C10U38)                         *
+        *                                                                                *
+        *           This is a private system operated for and by VMWare Inc.             *
+        *   Authorization from VMWare Inc. management is required to use this system.    *
+        *                   Use by unauthorized persons is prohibited.                   *
+        **********************************************************************************
+      state: present
+    tags: banner
+  - name: Save Config
+    nxos_command:
+      commands:
+       - conf t
+       - cli alias name wr copy running-config startup-config
+       - copy run start
+    tags: wr
+...

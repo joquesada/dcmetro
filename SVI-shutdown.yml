@@ -1,0 +1,17 @@
+---
+- hosts: "SVI-shutdown"
+  gather_facts: false
+  tasks:
+
+  - name: DISABLE_L3_VLAN_INTERFACE
+    nxos_command:
+      commands:
+        - config terminal
+        - "interface vlan {{ item.id }}"
+        - shutdown
+    with_items: " {{ SVI }} "
+  - name: Save Config
+    nxos_command:
+      commands:
+        - copy run start
+...

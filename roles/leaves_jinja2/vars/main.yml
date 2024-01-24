@@ -1,0 +1,14 @@
+---
+# vars file for leaves_jinja2
+ ansible_connection: network_cli
+ ansible_network_os: nxos
+ ansible_user: "svc.dcmetroscript"
+ ansible_password: "n6s.G7BDh7AaoK7!..@"
+ asn: 65181
+ bgp_neighbors:
+ - remote_as: 65181
+   neighbor: 10.189.6.1
+   update_source: loopback0
+ - remote_as: 65181
+   neighbor: 10.189.6.2
+   update_source: loopback0 

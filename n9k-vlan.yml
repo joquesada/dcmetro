@@ -1,0 +1,57 @@
+---
+- hosts: "n9k-vlan"
+  gather_facts: false
+  
+  tasks:
+
+  - name: Create New VLAN.
+    nxos_vlans:
+      config:
+        - vlan_id: 1010
+          name: IAD03-DX-N9K01-CORP-010
+      state: merged
+    tags: only_vlan
+  - name: Create SVI.
+    nxos_interface:
+      aggregate:
+      - { name: Vlan1010, mtu: 9001, description: IAD03-DX-N9K01-CORP-010 }
+  - name: Configure VLAN in VRF CORP
+    nxos_vrf_interface:
+      vrf: AWS-CORP
+      interface: Vlan1010
+  - name: ipaddr_svi
+    nxos_l3_interface:
+      aggregate:
+      - { name: Vlan1010, ipv4: 10.75.40.45/30 }
+    tags: ipaddr
+  - name: Configure BGP
+   #  nxos_bgp:
+   #  asn: 65288
+   #  vrf: AWS-CORP
+   #  state: present
+    nxos_bgp_af:
+      asn: 65288
+      vrf: AWS-CORP
+      afi: ipv4
+      safi: unicast
+      state: present
+    tags: bgp
+  - name: Configure BGP with AWS 
+    nxos_bgp_neighbor:
+      asn: 65288
+      vrf: AWS-CORP
+      neighbor: 10.75.40.46
+      remote_as: 7224
+      state: present
+  - name: Configure BGP with AWS in VRF
+    nxos_bgp_neighbor_af:
+      asn: 65288      
+      afi: ipv4
+      safi: unicast
+      send_community: extended
+    tags: aws_vrf
+  - name: save config
+    nxos_command:
+      commands:
+       - copy run start
+...

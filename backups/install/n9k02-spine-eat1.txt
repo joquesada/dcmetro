@@ -1,0 +1,76 @@
+Installer will perform impact only check. Please wait. 
+
+Verifying image bootflash:/nxos.9.3.9.bin for boot variable "nxos".
+[#                   ]   0%####################] 100% -- SUCCESS
+
+Verifying image type.
+[#                   ]   0%####################] 100% -- SUCCESS
+
+Preparing "bios" version info using image bootflash:/nxos.9.3.9.bin.
+[#                   ]   0%####################] 100% -- SUCCESS
+
+Preparing "nxos" version info using image bootflash:/nxos.9.3.9.bin.
+[#                   ]   0%####################] 100% -- SUCCESS
+
+Performing module support checks.
+####################] 100% -- SUCCESS
+
+Notifying services about system upgrade.
+####################] 100% -- SUCCESS
+
+
+
+Compatibility check is done:
+Module  bootable          Impact  Install-type  Reason
+------  --------  --------------  ------------  ------
+     1       yes      disruptive         reset  default upgrade is not hitless
+     2       yes      disruptive         reset  default upgrade is not hitless
+     3       yes      disruptive         reset  default upgrade is not hitless
+     4       yes      disruptive         reset  default upgrade is not hitless
+     5       yes      disruptive         reset  default upgrade is not hitless
+     6       yes      disruptive         reset  default upgrade is not hitless
+    22       yes      disruptive         reset  default upgrade is not hitless
+    23       yes      disruptive         reset  default upgrade is not hitless
+    24       yes      disruptive         reset  default upgrade is not hitless
+    25       yes      disruptive         reset  default upgrade is not hitless
+    26       yes      disruptive         reset  default upgrade is not hitless
+    27       yes      disruptive         reset  default upgrade is not hitless
+    28       yes      disruptive         reset  default upgrade is not hitless
+    29       yes      disruptive         reset  default upgrade is not hitless
+    30       yes      disruptive         reset  default upgrade is not hitless
+
+
+
+Images will be upgraded according to following table:
+Module       Image                  Running-Version(pri:alt)           New-Version  Upg-Required
+------  ----------  ----------------------------------------  --------------------  ------------
+     1       lcn9k                                    9.3(4)                9.3(9)           yes
+     1        bios     v03.48(04/24/2018):v03.43(12/13/2017)    v03.48(04/24/2018)            no
+     2       lcn9k                                    9.3(4)                9.3(9)           yes
+     2        bios     v03.48(04/24/2018):v03.43(12/13/2017)    v03.48(04/24/2018)            no
+     3       lcn9k                                    9.3(4)                9.3(9)           yes
+     3        bios     v03.48(04/24/2018):v03.48(04/24/2018)    v03.48(04/24/2018)            no
+     4       lcn9k                                    9.3(4)                9.3(9)           yes
+     4        bios     v03.48(04/24/2018):v03.48(04/24/2018)    v03.48(04/24/2018)            no
+     5       lcn9k                                    9.3(4)                9.3(9)           yes
+     5        bios     v03.48(04/24/2018):v03.48(04/24/2018)    v03.48(04/24/2018)            no
+     6       lcn9k                                    9.3(4)                9.3(9)           yes
+     6        bios     v03.48(04/24/2018):v03.48(04/24/2018)    v03.48(04/24/2018)            no
+    22       lcn9k                                    9.3(4)                9.3(9)           yes
+    22        bios     v03.48(04/24/2018):v03.45(02/08/2018)    v03.48(04/24/2018)            no
+    23       lcn9k                                    9.3(4)                9.3(9)           yes
+    23        bios     v03.48(04/24/2018):v03.45(02/08/2018)    v03.48(04/24/2018)            no
+    24       lcn9k                                    9.3(4)                9.3(9)           yes
+    24        bios     v03.48(04/24/2018):v03.45(02/08/2018)    v03.48(04/24/2018)            no
+    25       lcn9k                                    9.3(4)                9.3(9)           yes
+    25        bios     v03.48(04/24/2018):v03.45(02/08/2018)    v03.48(04/24/2018)            no
+    26       lcn9k                                    9.3(4)                9.3(9)           yes
+    26        bios     v03.48(04/24/2018):v03.45(02/08/2018)    v03.48(04/24/2018)            no
+    27        nxos                                    9.3(4)                9.3(9)           yes
+    27        bios     v05.40(01/17/2020):v05.24(08/02/2017)    v05.45(07/05/2021)           yes
+    28        nxos                                    9.3(4)                9.3(9)           yes
+    28        bios     v05.40(01/17/2020):v05.24(08/02/2017)    v05.45(07/05/2021)           yes
+    29       lcn9k                                    9.3(4)                9.3(9)           yes
+    29        bios                       v01.48(00:v01.48(00             v01.48(00            no
+    30       lcn9k                                    9.3(4)                9.3(9)           yes
+    30        bios                       v01.48(00:v01.48(00             v01.48(00            no

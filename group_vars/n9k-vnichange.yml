@@ -1,0 +1,30 @@
+---
+ansible_connection: network_cli
+ansible_network_os: nxos
+ansible_user: "svc.dcmetroscript"
+ansible_password: "n6s.G7BDh7AaoK7!..@"
+
+VNI:
+  - {oldvni: 1003101, id: 3101, name: sjc05-mgmt, vni: 1001505, multicast: 239.0.0.12}
+  - {oldvni: 1003105, id: 3105, name: sjc05-prod-greemplum-server, vni: 1001509, multicast: 239.0.0.13}
+  - {oldvni: 1003107, id: 3107, name: sjc05-stage-greemplum-server, vni: 1001901, multicast: 239.0.0.13}
+  - {oldvni: 1003412, id: 3412, name: sjc05-tier2-staging-server, vni: 1001902, multicast: 239.0.0.17}
+  - {oldvni: 1003413, id: 3413, name: sjc05-tier2-staging-server-mgmt, vni: 1001903, multicast: 239.0.0.17}
+  - {oldvni: 1003422, id: 3422, name: sjc05-ebiz-prod-server, vni: 1001522, multicast: 239.0.0.18}
+  - {oldvni: 1003427, id: 3427, name: sjc05-staging-production-vips, vni: 1001524, multicast: 239.0.0.18}
+  - {oldvni: 1003428, id: 3428, name: sjc05-staging-vips, vni: 1001904, multicast: 239.0.0.18}
+  - {oldvni: 1003432, id: 3432, name: sjc05-tier2-staging-mgmt, vni: 1001905, multicast: 239.0.0.19}
+  - {oldvni: 1003433, id: 3433, name: sjc05-tier2-staging-server-2, vni: 1001906, multicast: 239.0.0.19}
+  - {oldvni: 1003437, id: 3437, name: sjc05-tier2-prod-server, vni: 1001526, multicast: 239.0.0.19}
+  - {oldvni: 1003460, id: 3460, name: sjc05-tier2-prod-server-2, vni: 1001531, multicast: 239.0.0.21}
+  - {oldvni: 1003461, id: 3461, name: sjc05-tier2-prod-server-mgmt-2, vni: 1001532, multicast: 239.0.0.21}
+  - {oldvni: 1003471, id: 3471, name: sjc05-virtual-mgmt, vni: 1001535, multicast: 239.0.0.22}
+  - {oldvni: 1003473, id: 3473, name: sjc05-production-environment, vni: 1001537, multicast: 239.0.0.22}
+  - {oldvni: 1003474, id: 3474, name: sjc05-staging-environment, vni: 1001909, multicast: 239.0.0.22}
+  - {oldvni: 1000012, id: 12, name: eat1-dmz-prod-protable, vni: 1002201, multicast: 239.0.1.1}
+  - {oldvni: 1000014, id: 14, name: eat1-dmz-stage-new, vni: 1002202, multicast: 239.0.1.1}
+  - {oldvni: 1003411, id: 3411, name: sjc05-prod-greemplum-server, vni: 1002214, multicast: 239.0.1.3}
+  - {oldvni: 1003421, id: 3421, name: sjc05-prod-greemplum-server, vni: 1002215, multicast: 239.0.1.3}
+  - {oldvni: 1003434, id: 3434, name: sjc05-prod-greemplum-server, vni: 1002216, multicast: 239.0.1.3}
+  - {oldvni: 1003438, id: 3438, name: sjc05-prod-greemplum-server, vni: 1002217, multicast: 239.0.1.3}
+...

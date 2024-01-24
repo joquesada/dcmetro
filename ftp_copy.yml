@@ -1,0 +1,24 @@
+---
+- hosts: "ftp_copy"
+  gather_facts: false
+  tasks:
+
+  - name: initiate file copy from device
+    nxos_command:
+      commands:
+        - conf t
+        - "copy ftp://dcmetro:VMware1!@10.128.39.7/nxos.9.3.8.bin bootflash: vrf management"
+
+  - name: verify the file is in the bootflash
+    nxos_command:
+      commands:
+        - "dir bootflash: | i nxos.9.3.8.bin"
+    register: output
+    tags: verify
+
+  - name: save config to /etc/ansible/backups/ftpcopy
+    copy:
+      content: "{{output.stdout[0]}}"
+      dest: "/etc/ansible/backups/ftpcopy/{{inventory_hostname}}.txt"
+    tags: verify
+...

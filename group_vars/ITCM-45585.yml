@@ -1,0 +1,79 @@
+---
+ansible_connection: local
+ansible_network_os: nxos
+ansible_user: "svc.dcmetroscript"
+ansible_password: "H6@!Sd9h3Z^c67!TQbd"
+
+VLAN:
+
+  - {id: 2901, name: eat1-bz11-vcenter-mgmt-1, vni: 1002901, mcast: 239.0.7.1 }
+  - {id: 2902, name: eat1-bz11-vcenter-mgmt-2, vni: 1002902, mcast: 239.0.7.1 }
+  - {id: 2903, name: eat1-bz11-vcenter-mgmt-3, vni: 1002903, mcast: 239.0.7.1 }
+  - {id: 2904, name: eat1-bz11-vsan1, vni: 1002904, mcast: 239.0.7.1 }
+  - {id: 2905, name: eat1-bz11-vsan2, vni: 1002905, mcast: 239.0.7.1 }
+  - {id: 2906, name: eat1-bz11-vsan3, vni: 1002906, mcast: 239.0.7.2 }
+  - {id: 2907, name: eat1-bz11-vsan4, vni: 1002907, mcast: 239.0.7.2 }
+  - {id: 2908, name: eat1-bz11-vmotion1, vni: 1002908, mcast: 239.0.7.2 }
+  - {id: 2909, name: eat1-bz11-vmotion2, vni: 1002909, mcast: 239.0.7.2 }
+  - {id: 2910, name: eat1-bz11-vmotion3, vni: 1002910, mcast: 239.0.7.2 }
+  - {id: 2911, name: eat1-bz11-wkld1, vni: 1002911, mcast: 239.0.7.3 }
+  - {id: 2912, name: eat1-bz11-wkld2, vni: 1002912, mcast: 239.0.7.3 }
+  - {id: 2913, name: eat1-bz11-wkld3, vni: 1002913, mcast: 239.0.7.3 }
+  - {id: 2914, name: eat1-bz11-wcp1, vni: 1002914, mcast: 239.0.7.3 }
+  - {id: 2915, name: eat1-bz11-wcp2, vni: 1002915, mcast: 239.0.7.3 }
+  - {id: 2916, name: eat1-bz11-wcp3, vni: 1002916, mcast: 239.0.7.4 }
+  - {id: 2917, name: eat1-bz11-wcp4, vni: 1002917, mcast: 239.0.7.4 }
+  - {id: 2918, name: eat1-bz11-wcp5, vni: 1002918, mcast: 239.0.7.4 }
+  - {id: 2919, name: eat1-bz11-wcp6, vni: 1002919, mcast: 239.0.7.4 }
+  - {id: 2920, name: eat1-bz11-avi-mgmt1, vni: 1002920, mcast: 239.0.7.4 }
+  - {id: 2921, name: eat1-bz11-avi-mgmt2, vni: 1002921, mcast: 239.0.7.5 }
+  - {id: 2922, name: eat1-bz11-avi-stg-trust1, vni: 1002922, mcast: 239.0.7.5 }
+  - {id: 2923, name: eat1-bz11-avi-prd-trust1, vni: 1002923, mcast: 239.0.7.5 }
+  - {id: 2924, name: eat1-bz11-avi-stg-dmz1, vni: 1002924, mcast: 239.0.7.5 }
+  - {id: 2925, name: eat1-bz11-avi-prd-dmz1, vni: 1002925, mcast: 239.0.7.5 }
+  - {id: 2926, name: eat1-bz11-avi-wkld1, vni: 1002926, mcast: 239.0.7.6 }
+  - {id: 2927, name: eat1-bz11-avi-wkld2, vni: 1002927, mcast: 239.0.7.6 }
+  - {id: 2928, name: eat1-bz11-tk1-tkg-fnd1, vni: 1002928, mcast: 239.0.7.6 }
+  - {id: 2929, name: eat1-bz11-tk1-tkg-mgmt, vni: 1002929, mcast: 239.0.7.6 }
+  - {id: 2930, name: eat1-bz11-tk1-tkg-hap, vni: 1002930, mcast: 239.0.7.6 }
+  - {id: 2931, name: eat1-bz11-tk1-tkg-wkld, vni: 1002931, mcast: 239.0.7.7 }
+  - {id: 2932, name: eat1-bz11-idfw-wkld1, vni: 1002932, mcast: 239.0.7.7 }
+  - {id: 2933, name: eat1-bz11-idfw-wkld2, vni: 1002933, mcast: 239.0.7.7 }
+  - {id: 2934, name: eat1-bz11-idfw-wkld3, vni: 1002934, mcast: 239.0.7.7 }
+  - {id: 2935, name: eat1-bz11-idfw-wkld4, vni: 1002935, mcast: 239.0.7.7 }
+  - {id: 2936, name: eat1-bz11-idfw-wkld5, vni: 1002936, mcast: 239.0.7.8 }
+  - {id: 2937, name: eat1-bz11-idfw-wkld6, vni: 1002937, mcast: 239.0.7.8 }
+
+SVIs:
+
+  - {id: 2901, ipaddr: 10.129.166.189/27, descr: eat1-bz11-vcenter-mgmt-1 }
+  - {id: 2902, ipaddr: 10.129.166.221/27, descr: eat1-bz11-vcenter-mgmt-2 }
+  - {id: 2903, ipaddr: 10.129.166.253/27, descr: eat1-bz11-vcenter-mgmt-3 }
+  - {id: 2908, ipaddr: 10.129.167.29/27, descr: eat1-bz11-vmotion1 }
+  - {id: 2909, ipaddr: 10.129.167.61/27, descr: eat1-bz11-vmotion2 }
+  - {id: 2910, ipaddr: 10.129.167.93/27, descr: eat1-bz11-vmotion3 }
+  - {id: 2911, ipaddr: 10.129.160.253/24, descr: eat1-bz11-wkld1 }
+  - {id: 2912, ipaddr: 10.129.161.253/24, descr: eat1-bz11-wkld2 }
+  - {id: 2913, ipaddr: 10.129.162.253/24, descr: eat1-bz11-wkld3 }
+  - {id: 2914, ipaddr: 10.129.165.253/26, descr: eat1-bz11-wcp1 }
+  - {id: 2915, ipaddr: 10.129.166.61/26, descr: eat1-bz11-wcp2 }
+  - {id: 2916, ipaddr: 10.129.166.125/26, descr: eat1-bz11-wcp3 }
+  - {id: 2920, ipaddr: 10.129.167.125/27, descr: eat1-bz11-avi-mgmt1 }
+  - {id: 2921, ipaddr: 10.129.167.157/27, descr: eat1-bz11-avi-mgmt2 }
+  - {id: 2922, ipaddr: 10.129.164.125/25, descr: eat1-bz11-avi-stg-trust1 }
+  - {id: 2923, ipaddr: 10.129.164.253/25, descr: eat1-bz11-avi-prd-trust1 }
+  - {id: 2924, ipaddr: 10.129.167.189/27, descr: eat1-bz11-avi-stg-dmz1 }
+  - {id: 2925, ipaddr: 10.129.167.221/27, descr: eat1-bz11-avi-prd-dmz1 }
+  - {id: 2926, ipaddr: 10.129.167.253/27, descr: eat1-bz11-avi-wkld1 }
+  - {id: 2927, ipaddr: 10.129.168.29/27, descr: eat1-bz11-avi-wkld2 }
+  - {id: 2928, ipaddr: 10.129.165.125/25, descr: eat1-bz11-tk1-tkg-fnd1 }
+  - {id: 2929, ipaddr: 10.129.168.61/27, descr: eat1-bz11-tk1-tkg-mgmt }
+  - {id: 2930, ipaddr: 10.129.168.93/27, descr: eat1-bz11-tk1-tkg-hap }
+  - {id: 2931, ipaddr: 10.129.168.125/27, descr: eat1-bz11-tk1-tkg-wkld }
+  - {id: 2932, ipaddr: 10.129.169.253/24, descr: eat1-bz11-idfw-wkld1 }
+  - {id: 2933, ipaddr: 10.129.165.189/26, descr: eat1-bz11-idfw-wkld2 }
+  - {id: 2934, ipaddr: 10.129.163.253/24, descr: eat1-bz11-idfw-wkld3 }
+  - {id: 2935, ipaddr: 10.129.168.157/27, descr: eat1-bz11-idfw-wkld4 }
+  - {id: 2936, ipaddr: 10.129.168.189/27, descr: eat1-bz11-idfw-wkld5 }
+  - {id: 2937, ipaddr: 10.129.168.221/27, descr: eat1-bz11-idfw-wkld6 }
+...

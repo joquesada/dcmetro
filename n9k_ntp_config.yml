@@ -1,0 +1,16 @@
+---
+- hosts: "n9k_ntp_config"  
+  gather_facts: false
+
+  tasks:
+  - name: ntp config             
+    nxos_command:
+      commands:
+        - config        
+        - no ntp server 10.113.15.158 prefer use-vrf management
+        - ntp server 10.128.152.81 prefer use-vrf management
+        - ntp server 10.166.1.120 use-vrf management         
+        - no ntp server 10.113.60.176 use-vrf management
+        - copy r s
+    tags: ntp
+...

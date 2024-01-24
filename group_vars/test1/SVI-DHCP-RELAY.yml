@@ -1,0 +1,33 @@
+---
+ansible_connection: network_cli
+ansible_network_os: nxos
+ansible_user: "admin"
+ansible_password: "Chrys@l1ssucksb1gtim3"
+
+DHCP_VLANS:
+  - { Vlan: 618, relay_addr: 10.142.7.86 }
+  - { Vlan: 1027, relay_addr: 10.188.9.100 }
+  - { Vlan: 3001, relay_addr: 10.142.7.86 }
+  - { Vlan: 3105, relay_addr: 10.113.12.123 }
+  - { Vlan: 3837, relay_addr: 10.128.152.108 }
+  - { Vlan: 3837, relay_addr: 10.128.152.109 }
+  - { Vlan: 3860, relay_addr: 10.128.152.108 }
+  - { Vlan: 3860, relay_addr: 10.128.152.109 }
+  - { Vlan: 3861, relay_addr: 10.128.152.108 }
+  - { Vlan: 3861, relay_addr: 10.128.152.109 }
+  - { Vlan: 3862, relay_addr: 10.128.152.108 }
+  - { Vlan: 3862, relay_addr: 10.128.152.109 }
+  - { Vlan: 3863, relay_addr: 10.128.152.108 }
+  - { Vlan: 3863, relay_addr: 10.128.152.109 }
+  - { Vlan: 3864, relay_addr: 10.128.152.108 }
+  - { Vlan: 3864, relay_addr: 10.128.152.109 }
+  - { Vlan: 3870, relay_addr: 10.128.152.108 }
+  - { Vlan: 3870, relay_addr: 10.128.152.109 }
+  - { Vlan: 3871, relay_addr: 10.128.152.108 }
+  - { Vlan: 3871, relay_addr: 10.128.152.109 }
+  - { Vlan: 3882, relay_addr: 10.128.152.108 }
+  - { Vlan: 3882, relay_addr: 10.128.152.109 }
+  - { Vlan: 3883, relay_addr: 10.128.152.108 }
+  - { Vlan: 3883, relay_addr: 10.128.152.109 }
+  - { Vlan: 3896, relay_addr: 10.128.152.109 }
+...

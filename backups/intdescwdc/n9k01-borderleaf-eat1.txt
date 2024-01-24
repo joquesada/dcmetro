@@ -1,0 +1,2 @@
+Eth1/3        eth    10G     wdc-asbr01-dmz eth1/62
+Eth1/47       eth    10G     TO WDC-POD2-PSO-CNSLTNG-B 1/53/1

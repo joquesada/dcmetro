@@ -1,0 +1,260 @@
+---
+- hosts: apic1
+  connection: local 
+  gather_facts: no
+
+  tasks:
+
+  - name: Create tenant 
+    aci_tenant:
+      hostname: "10.188.224.101"
+      username: "admin"
+      password: "VMware1!"
+      validate_certs: no
+      tenant: "Scripting"
+      state: present
+
+  - name: Create vrf 
+    aci_vrf:
+      hostname: "10.188.224.101"
+      username: "admin"
+      password: "VMware1!"
+      validate_certs: no
+      tenant: "Scripting"
+      vrf: "Scripting"
+      state: present
+
+  - name: Create BD
+    aci_bd:
+      hostname: "10.188.224.101"
+      username: "admin"
+      password: "VMware1!"
+      validate_certs: no
+      tenant: "Scripting" 
+      vrf: "Scripting"
+      bd: "Scripting_BD"
+      state: present
+
+  - name: Create Application Profile
+    aci_ap:
+      hostname: "10.188.224.101"
+      username: "admin"
+      password: "VMware1!"
+      validate_certs: no
+      tenant: "Scripting"
+      ap: "{{ item.ap }}"
+    loop:
+       - ap: App01
+       - ap: App02
+       - ap: App03
+       - ap: App04
+       - ap: App05
+       - ap: App06
+       - ap: App07
+       - ap: App08
+       - ap: App09
+       - ap: App10
+       - ap: App11
+       - ap: App12
+       - ap: App13
+       - ap: App14
+       - ap: App15
+       - ap: App16
+       - ap: App17
+       - ap: App18
+       - ap: App19
+       - ap: App20
+       - ap: App21
+       - ap: App22
+       - ap: App23
+       - ap: App24
+       - ap: App25
+       - ap: App26
+       - ap: App27
+       - ap: App28
+       - ap: App29
+       - ap: App30
+       - ap: App31
+       - ap: App32
+       - ap: App33
+       - ap: App34
+       - ap: App35
+       - ap: App36
+       - ap: App37
+       - ap: App38
+       - ap: App39
+       - ap: App40
+       - ap: App41
+       - ap: App42
+       - ap: App43
+       - ap: App44
+       - ap: App45
+       - ap: App46
+       - ap: App47
+       - ap: App48
+       - ap: App49
+       - ap: App50
+       - ap: App51
+       - ap: App52
+       - ap: App53
+       - ap: App54
+       - ap: App55
+       - ap: App56
+       - ap: App57
+       - ap: App58
+       - ap: App59
+       - ap: App60
+       - ap: App61
+       - ap: App62
+       - ap: App63
+       - ap: App64
+       - ap: App65
+       - ap: App66
+       - ap: App67
+       - ap: App68
+       - ap: App69
+       - ap: App70
+       - ap: App71
+       - ap: App72
+       - ap: App73
+       - ap: App74
+       - ap: App75
+       - ap: App76
+       - ap: App77
+       - ap: App78
+       - ap: App79
+       - ap: App80
+       - ap: App81
+       - ap: App82
+       - ap: App83
+       - ap: App84
+       - ap: App85
+       - ap: App86
+       - ap: App87
+       - ap: App88
+       - ap: App89
+       - ap: App90
+       - ap: App91
+       - ap: App92
+       - ap: App93
+       - ap: App94
+       - ap: App95
+       - ap: App96
+       - ap: App97
+       - ap: App98
+       - ap: App99
+       - ap: App100
+
+  - name: Create EPG ACI Rest Module
+    aci_epg:
+      hostname: "10.188.224.101"
+      username: "admin"
+      password: "VMware1!"
+      validate_certs: no
+      tenant: "Scripting"
+      ap: "{{ item.ap }}"
+      epg: "Web"
+      bd: "Scripting_BD"
+      state: present
+    loop:
+       - ap: App01
+       - ap: App02
+       - ap: App03
+       - ap: App04
+       - ap: App05
+       - ap: App06
+       - ap: App07
+       - ap: App08
+       - ap: App09
+       - ap: App10
+       - ap: App11
+       - ap: App12
+       - ap: App13
+       - ap: App14
+       - ap: App15
+       - ap: App16
+       - ap: App17
+       - ap: App18
+       - ap: App19
+       - ap: App20
+       - ap: App21
+       - ap: App22
+       - ap: App23
+       - ap: App24
+       - ap: App25
+       - ap: App26
+       - ap: App27
+       - ap: App28
+       - ap: App29
+       - ap: App30
+       - ap: App31
+       - ap: App32
+       - ap: App33
+       - ap: App34
+       - ap: App35
+       - ap: App36
+       - ap: App37
+       - ap: App38
+       - ap: App39
+       - ap: App40
+       - ap: App41
+       - ap: App42
+       - ap: App43
+       - ap: App44
+       - ap: App45
+       - ap: App46
+       - ap: App47
+       - ap: App48
+       - ap: App49
+       - ap: App50
+       - ap: App51
+       - ap: App52
+       - ap: App53
+       - ap: App54
+       - ap: App55
+       - ap: App56
+       - ap: App57
+       - ap: App58
+       - ap: App59
+       - ap: App60
+       - ap: App61
+       - ap: App62
+       - ap: App63
+       - ap: App64
+       - ap: App65
+       - ap: App66
+       - ap: App67
+       - ap: App68
+       - ap: App69
+       - ap: App70
+       - ap: App71
+       - ap: App72
+       - ap: App73
+       - ap: App74
+       - ap: App75
+       - ap: App76
+       - ap: App77
+       - ap: App78
+       - ap: App79
+       - ap: App80
+       - ap: App81
+       - ap: App82
+       - ap: App83
+       - ap: App84
+       - ap: App85
+       - ap: App86
+       - ap: App87
+       - ap: App88
+       - ap: App89
+       - ap: App90
+       - ap: App91
+       - ap: App92
+       - ap: App93
+       - ap: App94
+       - ap: App95
+       - ap: App96
+       - ap: App97
+       - ap: App98
+       - ap: App99
+       - ap: App100
+...

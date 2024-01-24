@@ -1,0 +1,8 @@
+Eth1/1        eth    25G     WDC-VCF-M01 Port 1 - TKT3246811
+Eth1/2        eth    25G     WDC-VCF-M02 Port 1 - TKT3246811
+Eth1/3        eth    25G     WDC-VCF-M03 Port 1 - TKT3246811
+Eth1/4        eth    25G     WDC-VCF-M04 Port 1 - TKT3246811
+Eth1/5        eth    25G     WDC-VCF-W01 Port 1 - TKT3246811
+Eth1/6        eth    25G     WDC-VCF-W02 Port 1 - TKT3246811
+Eth1/7        eth    25G     WDC-VCF-W03 Port 1 - TKT3246811
+Eth1/8        eth    25G     WDC-VCF-W04 Port 1 - TKT3246811

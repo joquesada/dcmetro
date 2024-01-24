@@ -1,0 +1,40 @@
+Installer will perform impact only check. Please wait. 
+
+Verifying image bootflash:/nxos.9.3.9.bin for boot variable "nxos".
+[#                   ]   0%####################] 100% -- SUCCESS
+
+Verifying image type.
+[#                   ]   0%####################] 100% -- SUCCESS
+
+Preparing "nxos" version info using image bootflash:/nxos.9.3.9.bin.
+[#                   ]   0%####################] 100% -- SUCCESS
+
+Preparing "bios" version info using image bootflash:/nxos.9.3.9.bin.
+[#                   ]   0%####################] 100% -- SUCCESS
+
+Performing module support checks.
+####################] 100% -- SUCCESS
+
+Notifying services about system upgrade.
+####################] 100% -- SUCCESS
+
+
+
+Compatibility check is done:
+Module  bootable          Impact  Install-type  Reason
+------  --------  --------------  ------------  ------
+     1       yes      disruptive         reset  default upgrade is not hitless
+
+
+
+Images will be upgraded according to following table:
+Module       Image                  Running-Version(pri:alt)           New-Version  Upg-Required
+------  ----------  ----------------------------------------  --------------------  ------------
+     1        nxos                                    9.3(4)                9.3(9)           yes
+     1        bios     v07.67(01/29/2020):v07.56(06/08/2016)    v07.69(04/07/2021)           yes
+
+
+Additional info for this installation:
+--------------------------------------
+
+Service "vpc" in vdc 1: Vpc is enabled, Please make sure both Vpc peer switches have same boot mode using 'show boot mode' and proceed

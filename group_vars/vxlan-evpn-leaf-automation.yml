@@ -1,0 +1,46 @@
+---
+ansible_connection: local
+ansible_network_os: nxos
+ansible_user: "svc.dcmetroscript"
+ansible_password: "n6s.G7BDh7AaoK7!..@"
+
+features:
+  - bgp
+  - pim
+  - nv overlay
+  - vn-segment-vlan-based
+  - ospf
+  - interface-vlan
+  - lacp
+  - vpc
+  - sla sender
+  - ngoam
+ 
+L2VNI:
+  - {id: 1079, name: sjc05-vgrid-decc-01, vni: 1001079, multicast: 239.0.0.153}
+  - {id: 1080, name: sjc05-vgrid-decc-nsx-edge, vni: 1001080, multicast: 239.0.0.154}
+
+L3VNI:
+
+  - {id: 99, name: L3VNI-CORP, vni: 9999}
+
+Underlay_Interfaces:
+  - loopback0
+  - loopback1
+  - Ethernet1/49
+  - Ethernet1/50
+  - Ethernet1/55
+  - Ethernet1/56
+
+OSPF_Type:
+  - Ethernet1/49
+  - Ethernet1/50
+  - Ethernet1/55
+  - Ethernet1/56
+
+asn: 65181
+
+bgp_neighbors:
+  - {remote_as: 65181, neighbor: 10.189.6.1, description: n9k01-spine-sjc05, update_source: Loopback0}
+  - {remote_as: 65181, neighbor: 10.189.6.2, description: n9k02-spine-sjc05, update_source: Loopback0}
+...

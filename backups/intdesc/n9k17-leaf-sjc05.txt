@@ -1,0 +1,16 @@
+Eth1/1        eth    40G     SC2-ISI-ACE-BD-N1-1:1 - TKT3060059
+Eth1/2        eth    40G     SC2-ISI-ACE-BD-N2-1:1 - TKT3060059
+Eth1/3        eth    40G     SC2-ISI-ACE-BD-N3-1:1 - TKT3060059
+Eth1/4        eth    40G     SC2-ISI-ACE-BD-N4-1:1 - TKT3060059
+Eth1/5        eth    40G     SC2-ISI-ACE-BD-N5-1:1 - TKT3060059
+Eth1/6        eth    40G     SC2-ISI-ACE-BD-N6-1:1 - TKT3060059
+Eth1/7        eth    40G     SC2-ISI-ACE-BD-N7-1:1 - TKT3060059
+Eth1/8        eth    40G     SC2-ISI-ACE-BD-N8-1:1 - TKT3060059
+Po20                     SC2-ISI-ACE-BD-N1 - TKT3060059
+Po21                     SC2-ISI-ACE-BD-N2 - TKT3060059
+Po22                     SC2-ISI-ACE-BD-N3 - TKT3060059
+Po23                     SC2-ISI-ACE-BD-N4 - TKT3060059
+Po24                     SC2-ISI-ACE-BD-N5 - TKT3060059
+Po25                     SC2-ISI-ACE-BD-N6 - TKT3060059
+Po26                     SC2-ISI-ACE-BD-N7 - TKT3060059
+Po27                     SC2-ISI-ACE-BD-N8 - TKT3060059

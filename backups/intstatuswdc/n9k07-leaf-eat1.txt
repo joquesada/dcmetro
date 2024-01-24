@@ -1,0 +1,104 @@
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+mgmt0         --                 connected routed    full    1000    --         
+
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+Eth1/1        wdc-splunk3-esxi-0 connected trunk     full    25G     SFP-H25GB-SR-S
+Eth1/2        wdc-splunk3-esxi-0 connected trunk     full    25G     SFP-H25GB-SR-S
+Eth1/3        wdc-splunk3-esxi-0 connected trunk     full    25G     SFP-H25GB-SR-S
+Eth1/4        wdc-splunk3-esxi-0 connected trunk     full    25G     SFP-H25GB-SR-S
+Eth1/5        wdc-splunk3-esxi-0 connected trunk     full    25G     SFP-H25GB-SR-S
+Eth1/6        wdc-splunk3-esxi-0 connected trunk     full    25G     SFP-H25GB-SR-S
+Eth1/7        wdc-splunk3-esxi-0 connected trunk     full    25G     SFP-H25GB-SR-S
+Eth1/8        wdc-splunk3-esxi-0 connected trunk     full    10G     SFP-H10GB-CU5M
+Eth1/9        wdc-splunk3-esxi-0 connected trunk     full    10G     SFP-H10GB-CU5M
+Eth1/10       wdc-splunk3-esxi-0 connected trunk     full    10G     SFP-H10GB-CU5M
+Eth1/11       wdc-splunk3-esxi-0 connected trunk     full    10G     SFP-H10GB-CU5M
+Eth1/12       WDC-Splunk3-esxi-1 connected trunk     full    25G     SFP-H25GB-SR-S
+Eth1/13       WDC-Splunk3-esxi-1 connected trunk     full    25G     SFP-H25GB-SR-S
+Eth1/14       WDC-Splunk3-esxi-1 connected trunk     full    25G     SFP-H25GB-SR-S
+Eth1/15       WDC-Splunk3-esxi-1 connected trunk     full    25G     SFP-H25GB-SR-S
+Eth1/16       WDC-Splunk3-esxi-1 connected trunk     full    25G     SFP-H25GB-SR-S
+Eth1/17       WDC-Splunk3-esxi-1 connected trunk     full    25G     SFP-H25GB-SR-S
+Eth1/18       WDC-Splunk3-esxi-1 connected trunk     full    25G     SFP-H25GB-SR-S
+Eth1/19       WDC-Splunk3-esxi-1 connected trunk     full    25G     SFP-H25GB-SR-S
+Eth1/20       reserved for TKT33 xcvrAbsen routed    auto    auto    --         
+Eth1/21       reserved for TKT33 xcvrAbsen routed    auto    auto    --         
+Eth1/22       reserved for TKT33 xcvrAbsen routed    auto    auto    --         
+Eth1/23       reserved for TKT33 xcvrAbsen routed    auto    auto    --         
+Eth1/24       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/25       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/26       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/27       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/28       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/29       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/30       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/31       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/32       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/33       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/34       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/35       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/36       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/37       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/38       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/39       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/40       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/41       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/42       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/43       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/44       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/45       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/46       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/47       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/48       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/49       n9k01-spine-eat1 e connected routed    full    100G    QSFP-100G40G-BIDI
+Eth1/50       n9k02-spine-eat1 e connected routed    full    100G    QSFP-100G40G-BIDI
+Eth1/51       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/52       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/53       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/54       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/55       n9k01-spine-eat1 e connected routed    full    100G    QSFP-100G40G-BIDI
+Eth1/56       n9k02-spine-eat1 e connected routed    full    100G    QSFP-100G40G-BIDI
+Eth1/57       n9k08-leaf-eat1 Et connected trunk     full    100G    QSFP-100G40G-BIDI
+Eth1/58       n9k08-leaf-eat1 Et connected trunk     full    100G    QSFP-100G40G-BIDI
+Eth1/59       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/60       --                 xcvrAbsen routed    auto    auto    --         
+Po1           n9k08-leaf-eat1 VP connected trunk     full    100G    --         
+Po2           wdc-splunk3-esxi-0 connected trunk     full    25G     --         
+Po3           wdc-splunk3-esxi-0 connected trunk     full    25G     --         
+Po4           wdc-splunk3-esxi-0 connected trunk     full    25G     --         
+Po5           wdc-splunk3-esxi-0 connected trunk     full    25G     --         
+Po6           wdc-splunk3-esxi-0 connected trunk     full    25G     --         
+Po7           wdc-splunk3-esxi-0 connected trunk     full    25G     --         
+Po8           wdc-splunk3-esxi-0 connected trunk     full    25G     --         
+Po9           wdc-splunk3-esxi-0 connected trunk     full    10G     --         
+Po10          wdc-splunk3-esxi-0 connected trunk     full    10G     --         
+Po11          WDC-Splunk3-esxi-1 connected trunk     full    25G     --         
+Po12          --                 connected trunk     full    25G     --         
+Po13          WDC-Splunk3-esxi-1 connected trunk     full    25G     --         
+Po14          WDC-Splunk3-esxi-1 connected trunk     full    25G     --         
+Po15          WDC-Splunk3-esxi-1 connected trunk     full    25G     --         
+Po16          WDC-Splunk3-esxi-1 connected trunk     full    25G     --         
+Po17          WDC-Splunk3-esxi-1 connected trunk     full    25G     --         
+Po18          WDC-Splunk3-esxi-1 connected trunk     full    25G     --         
+Lo0           BGP/OSPF Router-ID connected routed    auto    auto    --         
+Lo1           Anycast VTEP addre connected routed    auto    auto    --         
+Vlan1         --                 down      routed    auto    auto    --
+Vlan96        L3VNI-96           connected routed    auto    auto    --
+Vlan97        L3VNI-97           connected routed    auto    auto    --
+Vlan98        L3VNI-98           connected routed    auto    auto    --
+Vlan99        L3VNI              connected routed    auto    auto    --
+Vlan1023      eat1-monitoring-to down      routed    auto    auto    --
+Vlan1026      sjc05-wlan-mgmt    down      routed    auto    auto    --
+Vlan1046      sjc05-vgrid-rackhe down      routed    auto    auto    --
+Vlan3087      eat1-tkg-avi-ingre connected routed    auto    auto    --
+Vlan3101      sjc05-mgmt         down      routed    auto    auto    --
+Vlan3413      sjc05-tier2-stagin down      routed    auto    auto    --
+nve1          --                 connected --        auto    auto    --         
+
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------

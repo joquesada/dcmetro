@@ -1,0 +1,26 @@
+---
+ansible_connection: local
+ansible_network_os: nxos
+ansible_user: "svc.dcmetroscript"
+ansible_password: "Kp!@9z2@EdSp3F1p.^R"
+
+VLAN:
+#  - {id: 3940, name: eat1-nsxmgr-perimeter-prod, vni: 1003940, mcast: 239.0.8.29 }
+#  - {id: 3941, name: eat1-nsxmgr-perimeter-vmk, vni: 1003941, mcast: 239.0.8.29 }
+#  - {id: 3942, name: eat1-nsxmgr-perimeter-mgmt, vni: 1003942, mcast: 239.0.8.29 }
+#  - {id: 3943, name: eat1-nsxmgr-perimeter-sp, vni: 1003943, mcast: 239.0.8.29 }
+#  - {id: 3944, name: eat1-nsxmgr-l2only-01, vni: 1003944, mcast: 239.0.8.29 }
+#  - {id: 3945, name: eat1-nsxmgr-l2only-02, vni: 1003945, mcast: 239.0.8.30 }
+#  - {id: 3946, name: eat1-nsxmgr-l2only-03, vni: 1003946, mcast: 239.0.8.30 }
+#  - {id: 3947, name: eat1-nsxmgr-l2only-04, vni: 1003947, mcast: 239.0.8.30 }
+#  - {id: 3948, name: eat1-dr-isilon-extnd, vni: 1003948, mcast: 239.0.8.30 }
+#  - {id: 3949, name: eat1-cloud-infra-ops-esxi-mgmt, vni: 1003949, mcast: 239.0.8.30 }
+  - {id: 3856, name: eat1-cloudinfra-wld04-ingress08-LS, vni: 1003856, mcast: 239.0.8.12 }
+
+SVIs:
+#  - {id: 3940, ipaddr:    10.200.33.61/26, descr:    eat1-nsxmgr-perimeter-prod }
+#  - {id: 3941, ipaddr:    10.200.33.125/26, descr:    eat1-nsxmgr-perimeter-vmk }
+#  - {id: 3942, ipaddr:    10.200.33.189/26, descr:    eat1-nsxmgr-perimeter-mgmt }
+#  - {id: 3943, ipaddr:    10.200.33.253/26, descr:    eat1-nsxmgr-perimeter-sp }
+  - {id: 3856, ipaddr:    10.200.76.253/24, descr:    eat1-cloudinfra-wld04-ingress08-LS }
+...

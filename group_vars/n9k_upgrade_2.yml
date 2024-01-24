@@ -1,0 +1,8 @@
+---
+ansible_connection: network_cli
+ansible_network_os: nxos
+ansible_user: "admin"
+ansible_password: "Chrys@l1ssucksb1gtim3"
+#ansible_user: "svc.dcmetroscript"
+#ansible_password: "Kp!@9z2@EdSp3F1p.^R"
+...

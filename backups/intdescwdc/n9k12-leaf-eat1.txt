@@ -1,0 +1,26 @@
+Eth1/1        eth    25G     WDC-PROD3-ESXi01 Port 2 - TKT3105114
+Eth1/2        eth    25G     WDC-PROD3-ESXi02 Port 2 - TKT3105114
+Eth1/3        eth    25G     WDC-PROD3-ESXi03 Port 2 - TKT3105114
+Eth1/4        eth    25G     WDC-PROD3-ESXi04 Port 2 - TKT3105114
+Eth1/5        eth    25G     WDC-PROD3-ESXi05 Port 2 - TKT3105114
+Eth1/6        eth    25G     wdc-prod26-esxi-01 port2 - TKT3351054
+Eth1/7        eth    25G     wdc-prod26-esxi-02 port2 - TKT3351054
+Eth1/8        eth    25G     wdc-prod26-esxi-03 port2 - TKT3351054
+Eth1/9        eth    25G     wdc-prod26-esxi-04 port2 - TKT3351054
+Eth1/10       eth    25G     wdc-prod26-esxi-05 port2 - TKT3351054
+Eth1/11       eth    25G     wdc-prod2-esxi-04  port2 - TKT3351054
+Eth1/12       eth    25G     wdc-prod2-esxi-05  port2 - TKT3351054
+Eth1/13       eth    25G     wdc-prod2-esxi-06  port2 - TKT3351054"
+Po3                      WDC-PROD3-ESXi01 - TKT3105114
+Po4                      WDC-PROD3-ESXi02 - TKT3105114
+Po5                      WDC-PROD3-ESXi03 - TKT3105114
+Po6                      WDC-PROD3-ESXi04 - TKT3105114
+Po7                      WDC-PROD3-ESXi05 - TKT3105114
+Po8                      WDC-Prod26-esxi-01 - TKT3351054
+Po9                      WDC-Prod26-esxi-02 - TKT3351054
+Po10                     WDC-Prod26-esxi-03 - TKT3351054
+Po11                     WDC-Prod26-esxi-04 - TKT3351054
+Po12                     WDC-Prod26-esxi-05 - TKT3351054
+Po13                     wdc-prod2-esxi-04 - TKT3351054
+Po14                     wdc-prod2-esxi-05 - TKT3351054
+Po15                     wdc-prod2-esxi-06- TKT3351054

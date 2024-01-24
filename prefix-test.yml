@@ -1,0 +1,46 @@
+---
+- hosts: "n9k35"
+  gather_facts: false
+
+  tasks:
+
+  - name: Route-map for OSPF
+    cisco.nxos.nxos_route_maps:
+      config:
+        - route-map: /32
+          entries:
+            - sequence: 5
+              action: permit
+              match:
+                ip:
+                  address:
+                    prefix_lists: /32
+                    
+  - name: Route-map for BGP
+    cisco.nxos.nxos_route_maps:
+      config:
+        - route_map: BGP_Multipath
+          entries:
+            - sequence: 10
+              action: permit
+              set: 
+                path_selection: all
+  - name: CONNECTED
+    cisco.nxos.nxos_route_maps:
+      config:
+        - route-map: /32
+          entries:
+            - sequence: 9
+              action: permit
+              match:
+                tags: 999
+              set:
+                community:
+                  number: 65270:999
+            - sequence: 10
+              action:
+              match:
+                ip:
+                  address:
+                    prefix_lists: CONNECTED
+...

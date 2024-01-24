@@ -1,0 +1,48 @@
+Eth1/3        eth    1000    WDC-VXLAN-POC-SERVER-A Port 2
+Eth1/4        eth    1000    WDC-VXLAN-POC-SERVER-A Port 4
+Eth1/5        eth    25G     wdc-loadtest5-esxi-01 port 2 TKT2837486
+Eth1/6        eth    25G     wdc-loadtest5-esxi-02 port 2 TKT2837486
+Eth1/7        eth    25G     wdc-loadtest5-esxi-03 port 2 TKT2837486
+Eth1/8        eth    25G     wdc-loadtest5-esxi-04 port 2 TKT2837486
+Eth1/9        eth    25G     wdc-loadtest5-esxi-05 port 2 TKT2837486
+Eth1/10       eth    25G     wdc-dr-prod8-esxi-01 port 2 TKT2827395
+Eth1/11       eth    25G     wdc-dr-prod8-esxi-02 port 2 TKT2827395
+Eth1/12       eth    25G     wdc-dr-prod8-esxi-03 port 2 TKT2827395
+Eth1/13       eth    25G     wdc-dr-prod13-esxi-01 port 2 TKT2827395
+Eth1/14       eth    25G     wdc-dr-prod13-esxi-02 port 2 TKT2827395
+Eth1/15       eth    25G     wdc-dr-prod13-esxi-03 port 2 TKT2827395
+Eth1/16       eth    25G     wdc-dr-prod10-esxi-04 port 2 TKT2827395
+Eth1/17       eth    25G     wdc-dr-prod11-esxi-05 port 2 TKT2827395
+Eth1/18       eth    25G     WDC-Prod24-esxi-01 port 2
+Eth1/19       eth    25G     WDC-Prod24-esxi-02 port 2
+Eth1/20       eth    25G     WDC-Prod24-esxi-03 port 2
+Eth1/21       eth    25G     WDC-Prod24-esxi-04 port 2
+Eth1/22       eth    25G     WDC-Prod24-esxi-05 port 2
+Eth1/23       eth    25G     WDC-Prod25-esxi-01 port 2
+Eth1/24       eth    25G     WDC-Prod25-esxi-02 port 2
+Eth1/25       eth    25G     WDC-Prod25-esxi-03 port 2
+Eth1/26       eth    25G     WDC-Prod25-esxi-04 port 2
+Eth1/27       eth    25G     WDC-Prod25-esxi-05 port 2
+Eth1/28       eth    25G     WDC-Prod25-esxi-06 port 2
+Eth1/29       eth    25G     WDC-Prod25-esxi-07 port 2
+Po2                      WDC-VXLAN-POC-SERVER-A
+Po3                      wdc-loadtest5-esxi-01 TKT2837486
+Po4                      wdc-loadtest5-esxi-02 TKT2837486
+Po5                      wdc-loadtest5-esxi-03 TKT2837486
+Po6                      wdc-loadtest5-esxi-04 TKT2837486
+Po7                      wdc-loadtest5-esxi-05 TKT2837486
+Po11                     wdc-dr-prod13-esxi-01 TKT2827395
+Po12                     wdc-dr-prod13-esxi-02 TKT2827395
+Po13                     wdc-dr-prod13-esxi-03 TKT2827395
+Po16                     WDC-Prod24-esxi-01
+Po17                     WDC-Prod24-esxi-02
+Po18                     WDC-Prod24-esxi-03
+Po19                     WDC-Prod24-esxi-04
+Po20                     WDC-Prod24-esxi-05
+Po21                     WDC-Prod25-esxi-01
+Po22                     WDC-Prod25-esxi-02
+Po23                     WDC-Prod25-esxi-03
+Po24                     WDC-Prod25-esxi-04
+Po25                     WDC-Prod25-esxi-05
+Po26                     WDC-Prod25-esxi-06
+Po27                     WDC-Prod25-esxi-077

@@ -1,0 +1,18 @@
+---
+- hosts: "ITCM-20841"
+  gather_facts: false
+
+  tasks:
+  - name: Create checkpoint 
+    nxos_command:
+      commands: checkpoint Feb05-2 description Checkpoint created for ITCM-20841
+  - name: Adding Stretched Vlans to N9k Fabric
+    nxos_vlan:
+      vlan_id: "{{ item.id }}"
+      name: "{{ item.name }}"
+    with_items: "{{ VNI20841 }}"
+  - name: Save Config
+    nxos_command:
+      commands:
+        - copy run start
+...

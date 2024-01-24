@@ -1,0 +1,5 @@
+['Enter configuration commands
+ one per line. End with CNTL/Z.'
+ ''
+ 'Device Model:     Micron_5100_MTFDDAV240TCB\nFirmware Version: D0MU069\n  9 Power_On_Hours          0x0032   100   100   001    Old_age   Always       -       7388'
+ '']

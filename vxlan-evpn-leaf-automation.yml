@@ -1,0 +1,207 @@
+---
+- hosts: "vxlan-evpn-leaf-automation"
+  gather_facts: false
+
+  tasks:
+  - name: Enable features
+    nxos_feature:
+      feature: "{{ item }}"
+      state: enabled
+    with_items: "{{ features }}"
+  - name: Configure Interfaces
+    nxos_interface:
+      aggregate:
+        - { name: Loopback0, description: BGP/OSPF Router-ID }
+        - { name: Loopback1, description: Anycast VTEP }
+        - { name: Ethernet1/49, mtu: 9216, description: n9k01-spine-sjc05 EthX/Y } 
+        - { name: Ethernet1/50, mtu: 9216, description: n9k02-spine-sjc05 EthX/Y } 
+        - { name: Ethernet1/55, mtu: 9216, description: n9k01-spine-sjc05 EthX/Y }
+        - { name: Ethernet1/56, mtu: 9216, description: n9k02-spine-sjc05 EthX/Y }  
+    tags: ips
+  - name: Configure IPs
+    nxos_l3_interface:
+      aggregate:
+        - { name: Loopback0, ipv4: 10.189.6.37/32 }
+        - { name: Loopback1, ipv4: 10.189.6.38/32 }
+        - { name: Ethernet1/49, ipv4: 10.189.4.117/31 }
+        - { name: Ethernet1/50, ipv4: 10.189.4.125/31 }
+        - { name: Ethernet1/55, ipv4: 10.189.4.119/31 }
+        - { name: Ethernet1/56, ipv4: 10.189.4.127/31 }
+    tags: ips
+  - name: Configure Secondary IP 
+    nxos_config:
+      lines:
+        - ip address 10.189.6.209/32 secondary
+      parents: interface loopback1
+    tags: ips
+  - name: Configure VxLAN Overlay
+    nxos_evpn_global:
+      nv_overlay_evpn: true
+    tags: nv
+  - name: Configure L2 L3 VNI
+    nxos_vlan:
+      vlan_id: "{{ item.id }}"
+      name: "{{ item.name }}"
+      mapped_vni: "{{ item.vni }}"
+    with_items: 
+    - "{{ L2VNI }}"
+    - "{{ L3VNI }}"
+    tags: vlan
+  - name: Configure Anycast GW
+    nxos_overlay_global:
+      anycast_gateway_mac: 6666.6666.6666
+    tags: gw
+  - name: Configure VRF
+    nxos_vrf:
+      vrf: CORP
+      rd: 65181:99
+      vni: 9999
+    tags: vrf
+  - name: Configure VRF RTs
+    nxos_vrf_af:
+      vrf: CORP
+      afi: ipv4
+      afi: ipv6
+      route_target_both_auto_evpn: true
+    tags: vrf
+  - name: Enable L2-VNI Interfaces
+    nxos_interface:
+      interface: "vlan{{ item.id }}"
+      fabric_forwarding_anycast_gateway: true
+      mtu: 9216
+    with_items: "{{ L2VNI }}"       
+    tags: vlan
+  - name: Enable L3-VNI Interfaces
+    nxos_interface:
+      interface: "vlan{{ item.id }}"
+      ip_forward: enable
+      mtu: 9216
+    with_items: "{{ L3VNI }}"
+    tags: vlan
+  - name: Configure VRF on SVI
+    nxos_vrf_interface:
+      vrf: CORP
+      interface: "vlan{{ item.id }}"
+    with_items: 
+    - "{{ L2VNI }}"
+    - "{{ L3VNI }}" 
+    tags: vlan
+  - name: Configure L3 on SVI
+    nxos_l3_interface:
+      aggregate:
+        - { name: Vlan1079, ipv4: 10.188.131.253/23 }
+        - { name: Vlan1080, ipv4: 10.188.75.253/22 }
+    tags: vlan
+  - name: Configure VTEP
+    nxos_vxlan_vtep:
+      interface: nve1
+      host_reachability: true
+      shutdown: true
+      source_interface: Loopback1
+    tags: vtep
+  - name: Configure VTEP association    
+    nxos_vxlan_vtep_vni: 
+      interface: nve1
+      vni: "{{ item }}"
+      assoc_vrf: true
+    with_items:
+    - 9999
+    tags: vtep
+  - name: Configure BUM for VTEP
+    nxos_vxlan_vtep_vni:
+      interface: nve1
+      vni: "{{ item.vni }}"
+      multicast_group: "{{ item.multicast }}"
+    with_items: 
+    - "{{ L2VNI }}"
+    tags: vtep
+  - name: Configure OSPF
+    nxos_ospf_vrf:
+      ospf: 65181
+      router_id: 10.189.6.37
+      timer_throttle_spf_start: 100
+      timer_throttle_spf_hold: 500
+      timer_throttle_spf_max: 5000
+      timer_throttle_lsa_start: 100
+      timer_throttle_lsa_hold: 500
+      timer_throttle_lsa_max: 5000
+      vrf: default
+    tags: ospf
+  - name: Configure OSPF Interfaces
+    nxos_interface_ospf: 
+      interface: "{{ item }}"
+      ospf: 65181
+      area: 0
+    with_items: "{{ Underlay_Interfaces }}"
+    tags: ospf
+  - name: Configure OSPF Network Type
+    nxos_interface_ospf: 
+      interface: "{{ item }}"
+      ospf: 65181
+      area: 0
+      network: point-to-point
+    with_items: "{{ OSPF_Type }}"
+    tags: ospf
+  - name: Configure PIM Interfaces
+    nxos_pim_interface:
+      interface: "{{ item }}"
+      sparse: true
+    with_items: "{{ Underlay_Interfaces }}"
+    tags: pim
+  - name: Configure RP
+    nxos_pim_rp_address:
+      rp_address: 10.189.6.200
+      group_list: 239.0.0.0/8
+    tags: pim
+  - name: Configure SSM 
+    nxos_pim:
+      ssm_range: default
+    tags: pim  
+  - name: Configure BGP 
+    nxos_bgp:
+      asn: "{{ asn }}"
+      router_id: 10.189.6.37
+      state: present
+    tags: bgp
+  - name: Configure BGP Default AFI 
+    nxos_bgp_af:
+      asn: "{{ asn }}"
+      vrf: default
+      afi: l2vpn
+      safi: evpn
+      maximum_paths_ibgp: 4
+      additional_paths_send: true
+      additional_paths_receive: true
+      additional_paths_selection: BGP_Multipath
+    tags: bgp
+  - name: Configure BGP Tenant
+    nxos_bgp_af:
+      asn: "{{ asn }}"
+      vrf: CORP
+      afi: ipv4
+      safi: unicast
+      advertise_l2vpn_evpn: true
+      maximum_paths_ibgp: 4
+      redistribute: [['direct', 'CONNECTED']]
+    tags: bgp
+  - name: Configure iBGP Neighbor
+    nxos_bgp_neighbor:
+      asn: "{{ asn }}"
+      neighbor: "{{ item.neighbor }}"
+      remote_as: "{{ item.remote_as }}"
+      description: "{{ item.description }}"
+      update_source: "{{ item.update_source }}"
+      timers_keepalive: 3
+      timers_holdtime: 10
+    with_items: "{{ bgp_neighbors }}"
+    tags: bgp
+  - name: Configure iBGP Neighbor L2VPN
+    nxos_bgp_neighbor_af:
+      asn: "{{ asn }}"
+      neighbor: "{{ item.neighbor }}"
+      afi: l2vpn
+      safi: evpn
+      send_community: both
+    with_items: "{{ bgp_neighbors }}"
+    tags: bgp
+...

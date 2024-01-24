@@ -1,0 +1,35 @@
+IP Interface Status for VRF "CORP"(3)
+Interface            IP Address      Interface Status
+Vlan99               forward-enabled protocol-up/link-up/admin-up       
+Vlan1122             10.188.56.253   protocol-up/link-up/admin-up       
+Vlan1123             10.188.67.189   protocol-up/link-up/admin-up       
+Vlan1600             10.188.13.253   protocol-up/link-up/admin-up       
+Vlan1602             10.188.45.253   protocol-up/link-up/admin-up       
+Vlan1900             10.113.123.253  protocol-up/link-up/admin-up       
+Vlan1901             10.113.124.253  protocol-up/link-up/admin-up       
+Vlan1902             10.113.68.253   protocol-up/link-up/admin-up       
+Vlan1903             10.113.66.253   protocol-up/link-up/admin-up       
+Vlan1904             10.113.14.1     protocol-up/link-up/admin-up       
+Vlan1909             10.119.39.253   protocol-up/link-up/admin-up       
+Vlan3087             10.200.25.253   protocol-up/link-up/admin-up       
+Vlan3813             10.128.67.61    protocol-up/link-up/admin-up       
+Vlan3814             10.128.67.125   protocol-up/link-up/admin-up       
+Vlan3815             10.128.67.190   protocol-up/link-up/admin-up       
+Vlan3838             10.200.46.253   protocol-up/link-up/admin-up       
+Vlan3839             10.200.47.253   protocol-up/link-up/admin-up       
+Vlan3840             10.200.48.253   protocol-up/link-up/admin-up       
+Vlan3841             10.200.49.126   protocol-up/link-up/admin-up       
+Vlan3842             10.200.50.1     protocol-up/link-up/admin-up       
+Vlan3843             10.200.50.17    protocol-up/link-up/admin-up       
+Vlan3844             10.200.50.33    protocol-up/link-up/admin-up       
+Vlan3845             10.200.50.49    protocol-up/link-up/admin-up       
+Vlan3846             10.200.51.30    protocol-up/link-up/admin-up       
+Vlan3847             10.200.49.253   protocol-up/link-up/admin-up       
+Vlan3848             10.200.51.62    protocol-up/link-up/admin-up       
+Vlan3850             10.200.50.65    protocol-up/link-up/admin-up       
+Vlan3851             10.200.50.81    protocol-up/link-up/admin-up       
+Vlan3904             10.200.0.253    protocol-up/link-up/admin-up       
+Vlan3925             10.128.39.253   protocol-up/link-up/admin-up       
+Vlan3926             10.128.47.253   protocol-up/link-up/admin-up       
+Vlan3927             10.128.64.253   protocol-up/link-up/admin-up       
+Vlan3931             10.253.20.61    protocol-up/link-up/admin-up

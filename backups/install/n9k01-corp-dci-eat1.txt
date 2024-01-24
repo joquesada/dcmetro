@@ -1,0 +1,4 @@
+Installer will perform impact only check. Please wait. 
+
+"Failed to process nxos image".
+Pre-upgrade check failed. Return code 0x807B0002 (No such file or directory).

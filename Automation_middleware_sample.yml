@@ -1,0 +1,25 @@
+---
+- hosts: "Target_Switches"
+  gather_facts: false
+
+  tasks:
+  - name: Create checkpoint 
+    nxos_command:
+      commands: checkpoint Jun20 description Checkpoint created for ITCM-12596
+  - name: Remove Vlan_VXLAN_from_Fabric
+    nxos_vxlan_vtep_vni:
+      interface: nve1
+      vni: "{{ item.vni }}"
+      state: absent
+    with_items: "{{ OLDVNI }}"
+  - name: Create Vlan_VXLAN_t-_Fabric
+    nxos_vxlan_vtep_vni:
+      interface: nve1
+      vni: "{{ item.vni }}"
+      multicast_group: "{{ item.multicast }}"
+    with_items: "{{ NEWVNI }}"
+  - name: Save Config
+    nxos_command:
+      commands:
+        - copy run start
+...

@@ -1,0 +1,44 @@
+---
+- hosts: "SVI-change"
+  gather_facts: false
+  tasks:
+
+  - name: Add L2 VLAN missing
+    nxos_vlan:
+      vlan_id: "{{ item.id }}"
+      name: "{{ item.name }}"
+      mapped_vni: "{{ item.vni }}"
+    with_items: "{{ missVLAN }}"
+  - name: Add miss VNI to NVE Interface
+    nxos_vxlan_vtep_vni:
+      interface: nve1
+      vni: "{{ item.vni }}"
+      state: present
+    with_items: "{{ missVLAN }}"
+  - name: Add VLAN Description to some VLANs that are missing a description
+    nxos_vlan:
+      vlan_id: "{{ item.id }}"
+      name: "{{ item.name }}"
+    with_items: "{{ VLANDESC1 }}"
+  - name: Remove OLD SVIs
+    nxos_command:
+      commands:
+        - config terminal
+        - "no interface vlan {{ item.id }}"
+    with_items: " {{ DELVNI1 }} "
+  - name: Remove un-used VLANs in WDC. Task 1-> remove VNI on the NVE1 Int.
+    nxos_vxlan_vtep_vni:
+      interface: nve1
+      vni: "{{ item.vni }}"
+      state: absent
+    with_items: "{{ DELVNI1 }}"
+  - name: Remove un-used VLANs in WDC. Task 2-> Remove L2 VLANs
+    nxos_vlan:
+      vlan_id: "{{ item.id }}"
+      state: absent
+    with_items: "{{ DELVNI1 }}"
+  - name: Save Config
+    nxos_command:
+      commands:
+        - copy run start
+...

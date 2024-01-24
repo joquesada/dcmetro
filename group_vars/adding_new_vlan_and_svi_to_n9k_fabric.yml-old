@@ -1,0 +1,56 @@
+---
+ansible_connection: local
+ansible_network_os: nxos
+ansible_user: "svc.dcmetroscript"
+ansible_password: "Kp!@9z2@EdSp3F1p.^R"
+
+VLAN:
+  - {id: 3817, name: eat1-eng-prod-esxi-mgmt, vni: 1003817, mcast: 239.0.8.6 }
+  - {id: 3818, name: eat1-eng-prod-esxi-vmotion, vni: 1003818, mcast: 239.0.8.4 }
+  - {id: 3819, name: eat1-eng-prod-esxi-vsan, vni: 1003819, mcast: 239.0.8.4 }
+  - {id: 3820, name: eat1-eng-prod-esxi-vms, vni: 1003820, mcast: 239.0.8.5 }
+  - {id: 3821, name: eat1-eng-prod-esxi-edge-overlay, vni: 1003821, mcast: 239.0.8.5 }
+  - {id: 3822, name: eat1-eng-prod-esxi-esxi-overlay, vni: 1003822, mcast: 239.0.8.5 }
+  - {id: 3823, name: eat1-tkg-infra-esxi-mgmt, vni: 1003823, mcast: 239.0.8.5 }
+  - {id: 3824, name: eat1-tkg-infra-workload, vni: 1003824, mcast: 239.0.8.5 }
+  - {id: 3825, name: eat1-tkg-infra-ingress, vni: 1003825, mcast: 239.0.8.6 }
+  - {id: 3826, name: eat1-tkg-infra-egress, vni: 1003826, mcast: 239.0.8.6 }
+  - {id: 3827, name: eat1-tkg-nsx-uplink01, vni: 1003827, mcast: 239.0.8.6 }
+  - {id: 3828, name: eat1-tkg-nsx-uplink02, vni: 1003828, mcast: 239.0.8.6 }
+  - {id: 3829, name: eat1-tkg-esxi-vms, vni: 1003829, mcast: 239.0.8.6 }
+  - {id: 3830, name: eat1-tkg-infra-workload-s1, vni: 1003830, mcast: 239.0.8.7 }
+  - {id: 3831, name: eat1-tkg-infra-workload-p1, vni: 1003831, mcast: 239.0.8.7 }
+  - {id: 3832, name: eat1-tkg-infra-ingress03, vni: 1003832, mcast: 239.0.8.7 }
+  - {id: 3833, name: eat1-tkg-infra-ingress04, vni: 1003833, mcast: 239.0.8.7 }
+  - {id: 3834, name: eat1-tkg-infra-ingress05, vni: 1003834, mcast: 239.0.8.7 }
+  - {id: 3835, name: eat1-tkg-infra-ingress06, vni: 1003835, mcast: 239.0.8.8 }
+  - {id: 3836, name: eat1-vtep-nsx-splunk, vni: 1003836, mcast: 239.0.8.8 }
+  - {id: 3837, name: eat1-oldstage-servers1, vni: 1003837, mcast: 239.0.8.8 }
+  - {id: 3838, name: eat-vcf-mgmt, vni: 1003838, mcast: 239.0.8.8 }
+  - {id: 3855, name: eat1-cloud-bugs-dr, vni: 1003855, mcast:  239.0.8.12 }
+
+SVIs:
+  - {id: 3817, ipaddr:    10.129.96.61/26, descr:    eat1-eng-prod-esxi-mgmt }
+  - {id: 3818, ipaddr:    10.129.96.125/26, descr:    eat1-eng-prod-esxi-vmotion }
+  - {id: 3819, ipaddr:    10.129.96.189/26, descr:    eat1-eng-prod-esxi-vsan }
+  - {id: 3820, ipaddr:    10.129.97.253/24, descr:    eat1-eng-prod-esxi-vms }
+  - {id: 3821, ipaddr:    10.129.96.205/28, descr:    eat1-eng-prod-esxi-edge-overlay }
+  - {id: 3822, ipaddr:    10.129.96.221/28, descr:    eat1-eng-prod-esxi-esxi-overlay }
+  - {id: 3823, ipaddr:    10.200.62.253/24, descr:    eat1-tkg-infra-esxi-mgmt }
+  - {id: 3824, ipaddr:    10.200.63.253/24, descr:    eat1-tkg-infra-workload }
+  - {id: 3825, ipaddr:    10.200.64.253/24, descr:    eat1-tkg-infra-ingress }
+  - {id: 3826, ipaddr:    10.200.65.253/24, descr:    eat1-tkg-infra-egress }
+  - {id: 3827, ipaddr:    10.200.60.45/28, descr:    eat1-tkg-nsx-uplink01 }
+  - {id: 3828, ipaddr:    10.200.60.61/28, descr:    eat1-tkg-nsx-uplink02 }
+  - {id: 3829, ipaddr:    10.200.66.253/24, descr:    eat1-tkg-esxi-vms }
+  - {id: 3830, ipaddr:    10.200.67.253/24, descr:    eat1-tkg-infra-workload-s1 }
+  - {id: 3831, ipaddr:    10.200.68.253/24, descr:    eat1-tkg-infra-workload-p1 }
+  - {id: 3832, ipaddr:    10.200.72.253/24, descr:    eat1-tkg-infra-ingress03 }
+  - {id: 3833, ipaddr:    10.200.73.253/24, descr:    eat1-tkg-infra-ingress04 }
+  - {id: 3834, ipaddr:    10.200.74.253/24, descr:    eat1-tkg-infra-ingress05 }
+  - {id: 3835, ipaddr:    10.200.75.253/24, descr:    eat1-tkg-infra-ingress06 }
+  - {id: 3836, ipaddr:    10.200.71.253/24 , descr:    eat1-vtep-nsx-splunk }
+  - {id: 3837, ipaddr:    10.128.37.253/24 , descr:    eat1-oldstage-servers1 } 
+  - {id: 3838, ipaddr:    10.200.46.253/24 , descr:    eat1-eat-vcf-mgmt } 
+  - {id: 3855, ipaddr:    10.129.99.253/24 , descr:    eat1-cloud-bugs-dr }
+...

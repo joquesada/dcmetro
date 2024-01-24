@@ -1,0 +1,18 @@
+---
+- hosts: "WDC_LEAFs"
+  gather_facts: false
+
+  tasks:
+  - name: Interface_bringup
+    nxos_command:
+      commands:
+        - "configure terminal"
+        - "interface {{item}}"
+        - "shutdown"
+    with_items:
+      - vlan 1023
+      - vlan 1026
+      - vlan 1046
+      - vlan 3101
+      - vlan 3413
+...

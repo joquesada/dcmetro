@@ -1,0 +1,17 @@
+---
+- hosts: "n9k_ntp_checkout"
+  gather_facts: false
+
+  tasks:
+  - name: ntp config verification
+    nxos_command:
+      commands:
+        - show ntp peers
+    register: config
+    tags: ntp
+  - name: save config to /etc/ansible/backups/ntp-wdc
+    copy:
+      content: "{{config.stdout[0]}}"
+      dest: "/etc/ansible/backups/ntp-wdc/{{inventory_hostname}}.txt"
+    tags: ntp1
+...

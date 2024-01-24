@@ -1,0 +1,17 @@
+---
+- hosts: "n9k-intdesc"
+  gather_facts: false
+
+  tasks:
+  - name: n9k-intdesc
+    nxos_command:
+      commands:
+        - "sh int desc | i SC2"
+    register: config
+    tags: intdesc
+  - name: save config to /etc/ansible/backups/intdesc
+    copy:
+      content: "{{config.stdout[0]}}"
+      dest: "/etc/ansible/backups/intdesc/{{inventory_hostname}}.txt"
+    tags: intdesc
+...

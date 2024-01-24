@@ -1,0 +1,54 @@
+---
+- hosts: apic1
+  connection: local 
+  gather_facts: no
+
+  vars:
+       apic_info: &apic_info
+         hostname: 10.188.224.100
+         username: "admin"
+         password: "VMware1!"
+         validate_certs: no
+
+  tasks:
+
+  - name: Create tenant 
+    aci_tenant:
+      <<: *apic_info
+      tenant: "Scripting"
+      state: present
+
+  - name: Create vrf 
+    aci_vrf:
+      <<: *apic_info
+      tenant: "Scripting"
+      vrf: "Scripting"
+      state: present
+
+  - name: Create BD
+    aci_bd:
+      <<: *apic_info
+      tenant: "Scripting" 
+      vrf: "Scripting"
+      bd: "BD"
+      state: present
+
+  - name: Create AP
+    aci_ap:
+      <<: *apic_info
+      tenant: "Scripting"
+      ap: App{{ item }}
+      state: present
+    with_sequence: start=1 end=10
+
+  - name: Create EPG ACI Rest Module
+    aci_epg:
+      <<: *apic_info
+      tenant: "Scripting"
+      ap: App{{ item }}
+      bd: "BD"
+      epg: "Web"
+      state: present
+    with_sequence: start=1 end=10
+    tags: epg
+...

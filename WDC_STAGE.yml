@@ -1,0 +1,14 @@
+---
+- hosts: "WDC_STAGE"
+  gather_facts: false
+
+  tasks:
+  - name: Interface_bringup
+    nxos_command:
+      commands:
+        - "configure terminal"
+        - "interface {{item}}"
+        - "no shutdown"
+    with_items:
+      - vlan 3413
+...

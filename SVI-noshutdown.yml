@@ -1,0 +1,17 @@
+---
+- hosts: "SVI-noshutdown"
+  gather_facts: false
+  tasks:
+ 
+  - name: ENABLE L3 VLAN INTERFACE
+    nxos_command:
+      commands:
+      - config terminal
+      - "interface vlan {{ item.id }}"
+      - no shutdown
+    with_items: " {{ SVInoshut }} "
+  - name: Save Config
+    nxos_command:
+      commands:
+        - copy run start
+...

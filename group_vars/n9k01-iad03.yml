@@ -1,0 +1,16 @@
+---
+ansible_connection: network_cli
+ansible_network_os: nxos
+ansible_user: "svc.dcmetroscript"
+ansible_password: "n6s.G7BDh7AaoK7!..@"
+
+
+L2VLAN: 
+  - {id: 1014, name: IAD03-DX-N9K01-CORP-014}
+
+L3VLAN:
+  - {interface: Vlan1014, name: IAD03-DX-N9K01-CORP-014, vrf: AWS-ENG, ipv4_vm: 10.75.40.61/30}
+
+bgp_neighbors:
+        - {remote_as: 7224, vrf: AWS-ENG, neighbor: 10.75.40.62, description: IAD03-DX-N9K01-CORP-013, pass: 289fb7822f05f764497b17106c1ac7d6cb9ce5426414c29a, map_in: AWS-IN-PRIV-VMW-CORP, map_out: AWS-DEFAULT-OUT}
+...

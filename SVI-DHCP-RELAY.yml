@@ -1,0 +1,23 @@
+---
+- hosts: "SVI-DHCP-RELAY"
+  gather_facts: false
+  tasks:
+
+  - name: Ensure DHCP is enabled
+    nxos_feature:
+      feature: dhcp
+      state: enabled
+
+  - name: Configure dhcp-relay
+    nxos_command:
+      commands:
+        - config terminal
+        - "interface vlan {{ item.Vlan }}"
+        - "ip dhcp relay address {{ item.relay_addr }}"
+    with_items: "{{ DHCP_VLANS }}"
+
+  - name: Save Config
+    nxos_command:
+      commands:
+        - copy run start
+...

@@ -1,0 +1,34 @@
+Installer will perform impact only check. Please wait. 
+
+Verifying image bootflash:/nxos.9.3.4.bin for boot variable "nxos".
+[#                   ]   0%####################] 100% -- SUCCESS
+
+Verifying image type.
+[#                   ]   0%####################] 100% -- SUCCESS
+
+Preparing "nxos" version info using image bootflash:/nxos.9.3.4.bin.
+[#                   ]   0%####################] 100% -- SUCCESS
+
+Preparing "bios" version info using image bootflash:/nxos.9.3.4.bin.
+[#                   ]   0%####################] 100% -- SUCCESS
+
+Performing module support checks.
+####################] 100% -- SUCCESS
+
+Notifying services about system upgrade.
+####################] 100% -- SUCCESS
+
+
+
+Compatibility check is done:
+Module  bootable          Impact  Install-type  Reason
+------  --------  --------------  ------------  ------
+     1       yes      disruptive         reset  default upgrade is not hitless
+
+
+
+Images will be upgraded according to following table:
+Module       Image                  Running-Version(pri:alt)           New-Version  Upg-Required
+------  ----------  ----------------------------------------  --------------------  ------------
+     1        nxos                                    9.2(3)                9.3(4)           yes
+     1        bios     v05.28(01/18/2018):v05.28(01/18/2018)    v05.40(01/17/2020)           yes

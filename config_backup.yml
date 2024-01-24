@@ -1,0 +1,26 @@
+---
+- hosts: "config_backup"
+  gather_facts: false
+  tasks:
+
+  - name: Create checkpoint 
+    nxos_command:
+      commands: checkpoint Oct_8 description Checkpoint created for SCDC2 fabric upgrade
+  - name: initiate file copy from device
+    nxos_command:
+      commands:
+        - conf t
+        - "copy running-config ftp://dcmetro:VMware1!@10.188.224.51/{{inventory_hostname}}.txt vrf management"
+  - name: backup config to scripting VM
+    nxos_command:
+      commands:
+        - "ter len 0"
+        - "sh run"
+    register: output
+    tags: backup
+  - name: save config to /etc/ansible/backups/running
+    copy:
+      content: "{{output.stdout[0]}}"
+      dest: "/etc/ansible/backups/running/{{inventory_hostname}}.txt"
+    tags: backup
+...

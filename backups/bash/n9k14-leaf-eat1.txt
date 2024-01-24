@@ -1,0 +1,5 @@
+['Enter configuration commands
+ one per line. End with CNTL/Z.'
+ ''
+ 'Device Model:     INTEL SSDSCKKB240G8K\nFirmware Version: XC311102\n  9 Power_On_Hours          0x0032   100   100   000    Old_age   Always       -       12299'
+ '']

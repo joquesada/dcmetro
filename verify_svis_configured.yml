@@ -1,0 +1,17 @@
+---
+- hosts: "verify_svis_configured"
+  gather_facts: false
+
+  tasks:
+  - name: svis_verify
+    nxos_command:
+      commands:
+        - "sh ip int br vrf CORP"
+    register: config
+    tags: svis   
+  - name: save config to /etc/ansible/dcmetro/backups/svis 
+    copy:
+      content: "{{config.stdout[0]}}"
+      dest: "/etc/ansible/dcmetro/backups/svis/{{inventory_hostname}}.txt" 
+    tags: svis
+...

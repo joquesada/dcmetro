@@ -1,0 +1,84 @@
+---
+- hosts: "n9k01-iad03"
+  gather_facts: false
+  
+  tasks:
+
+  - name: Create New VLAN.
+    nxos_vlans:
+      config:
+        - vlan_id: "{{ item.id }}"
+          name: "{{ item.name }}"
+      state: merged
+    with_items:
+    - "{{ L2VLAN }}"
+    tags: l2vlan
+  - name: Create SVI.
+    nxos_interface:
+      aggregate:
+      - { name: "{{ item.interface }}", mtu: 9001, description: "{{ item.name }}" }
+    with_items:
+    - "{{ L3VLAN }}"
+  - name: Configure VLAN in VRF CORP
+    nxos_vrf_interface:
+      vrf: "{{ item.vrf }}"
+      interface: "{{ item.interface }}"
+    with_items:
+    - "{{ L3VLAN }}"
+  - name: ipaddr_svi
+    nxos_l3_interface:
+      aggregate:
+      - { name: "{{ item.interface }}", ipv4: "{{ item.ipv4_vm }}" }
+    with_items:
+    - "{{ L3VLAN }}"
+    tags: ipaddr
+  - name: Add vlan to DX connect 
+    nxos_l2_interfaces:
+      config:
+        - name: Ethernet1/2
+          trunk:
+            allowed_vlans: "{{ item.id }}"
+      state: merged
+    with_items:
+    - "{{ L2VLAN }}"
+  - name: Configure BGP
+    nxos_bgp_af:
+      asn: 65288
+      vrf: "{{ item.vrf }}"
+      afi: ipv4
+      safi: unicast
+      state: present
+    with_items:
+    - "{{ bgp_neighbors }}"
+    tags: bgp
+  - name: Configure BGP with AWS 
+    nxos_bgp_neighbor:
+      asn: 65288
+      vrf: "{{ item.vrf }}"
+      neighbor: "{{ item.neighbor }}"
+      remote_as: "{{ item.remote_as }}"
+      pwd: "{{ item.pass }}"
+      pwd_type: 3des
+      state: present
+    with_items:
+    - "{{ bgp_neighbors }}"
+    tags: bgp_vrf
+  - name: Configure BGP with AWS in VRF
+    nxos_bgp_neighbor_af:
+      asn: 65288      
+      afi: ipv4
+      safi: unicast
+      vrf: "{{ item.vrf }}"
+      neighbor: "{{ item.neighbor }}"
+      send_community: extended
+      route_map_in: "{{ item.map_in }}"
+      route_map_out: "{{ item.map_out }}"
+      state: present
+    with_items:
+    - "{{ bgp_neighbors }}"
+    tags: aws_vrf
+  - name: save config
+    nxos_command:
+      commands:
+       - copy run start
+...

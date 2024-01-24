@@ -1,0 +1,137 @@
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+mgmt0         156-MGMT-P3R02C12U connected routed    full    1000    --         
+
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+Eth1/1        --                 xcvrAbsen routed    auto    auto    --         
+Eth1/2        --                 xcvrAbsen routed    auto    auto    --         
+Eth1/3        --                 xcvrAbsen routed    auto    auto    --         
+Eth1/4        --                 xcvrAbsen routed    auto    auto    --         
+Eth1/5        --                 xcvrAbsen routed    auto    auto    --         
+Eth1/6        --                 xcvrAbsen routed    auto    auto    --         
+Eth1/7        --                 xcvrAbsen routed    auto    auto    --         
+Eth1/8        --                 xcvrAbsen routed    auto    auto    --         
+Eth1/9        --                 xcvrAbsen routed    auto    auto    --         
+Eth1/10       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/11       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/12       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/13       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/14       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/15       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/16       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/17       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/18       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/19       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/20       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/21       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/22       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/23       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/24       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/25       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/26       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/27       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/28       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/29       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/30       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/31       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/32       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/33       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/34       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/35       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/36       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/37       wdc-hadoop1-esxi-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/38       wdc-hadoop1-esxi-1 connected trunk     full    10G     10Gbase-SR 
+Eth1/39       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/40       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/41       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/42       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/43       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/44       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/45       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/46       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/47       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/48       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/49       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/50       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/51       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/52       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/53       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/54       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/55       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/56       wdc-hadoop1-esxi-2 connected trunk     full    10G     10Gbase-SR 
+Eth1/57       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/58       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/59       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/60       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/61       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/62       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/63       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/64       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/65       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/66       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/67       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/68       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/69       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/70       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/71       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/72       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/73       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/74       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/75       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/76       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/77       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/78       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/79       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/80       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/81       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/82       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/83       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/84       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/85       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/86       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/87       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/88       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/89       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/90       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/91       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/92       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/93       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/94       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/95       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/96       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/97       n9k01-spine-eat1 e connected routed    full    100G    QSFP-100G40G-BIDI
+Eth1/98       n9k02-spine-eat1 e connected routed    full    100G    QSFP-100G40G-BIDI
+Eth1/99       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/100      --                 xcvrAbsen routed    auto    auto    --         
+Eth1/101      --                 xcvrAbsen routed    auto    auto    --         
+Eth1/102      --                 xcvrAbsen routed    auto    auto    --         
+Eth1/103      n9k01-spine-eat1 e connected routed    full    100G    QSFP-100G40G-BIDI
+Eth1/104      n9k02-spine-eat1 e connected routed    full    100G    QSFP-100G40G-BIDI
+Eth1/105      n9k13-leaf-eat1 Et connected trunk     full    100G    QSFP-100G40G-BIDI
+Eth1/106      n9k13-leaf-eat1 Et connected trunk     full    100G    QSFP-100G40G-BIDI
+Eth1/107      --                 xcvrAbsen routed    auto    auto    --         
+Eth1/108      --                 xcvrAbsen routed    auto    auto    --         
+Po1           n9k13-leaf-eat1 VP connected trunk     full    100G    --         
+Po38          wdc-hadoop1-esxi-1 noOperMem trunk     auto    auto    --         
+Po39          wdc-hadoop1-esxi-2 noOperMem trunk     auto    auto    --         
+Po40          wdc-hadoop1-esxi-2 noOperMem trunk     auto    auto    --         
+Po41          wdc-hadoop1-esxi-2 noOperMem trunk     auto    auto    --         
+Po42          wdc-hadoop1-esxi-2 noOperMem trunk     auto    auto    --         
+Po43          wdc-hadoop1-esxi-2 noOperMem trunk     auto    auto    --         
+Po44          wdc-hadoop1-esxi-2 noOperMem trunk     auto    auto    --         
+Po45          wdc-hadoop1-esxi-2 noOperMem trunk     auto    auto    --         
+Po46          wdc-hadoop1-esxi-2 noOperMem trunk     auto    auto    --         
+Po47          wdc-hadoop1-esxi-2 noOperMem trunk     auto    auto    --         
+Lo0           BGP/OSPF Router-ID connected routed    auto    auto    --         
+Lo1           Anycast VTEP addre connected routed    auto    auto    --         
+Vlan1         --                 down      routed    auto    auto    --
+Vlan96        L3VNI-96           connected routed    auto    auto    --
+Vlan97        L3VNI-97           connected routed    auto    auto    --
+Vlan98        L3VNI-98           connected routed    auto    auto    --
+Vlan99        L3VNI              connected routed    auto    auto    --
+Vlan3810      eat1_svi_for_peer_ connected routed    auto    auto    --
+Vlan3934      eat1-wcp           connected routed    auto    auto    --
+nve1          --                 connected --        auto    auto    --

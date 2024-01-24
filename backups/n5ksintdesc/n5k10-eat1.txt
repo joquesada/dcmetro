@@ -1,0 +1,363 @@
+-------------------------------------------------------------------------------
+Port          Type   Speed   Description
+-------------------------------------------------------------------------------
+Eth1/1        eth    40G     INFRA UPLINK - 101-5K91-P3R02C19U32 - UPLINK2
+Eth1/2        eth    40G     INFRA UPLINK - 102-5K91-P3R02C19U34 - UPLINK2
+Eth1/3        eth    40G     INFRA UPLINK - 103-5K91-P3R02C12U38 - UPLINK2
+Eth1/4        eth    40G     INFRA UPLINK - 104-5K91-P3R02C12U36 - UPLINK2
+Eth1/5        eth    40G     INFRA UPLINK - 105-5K91-P3R02C05U36 - UPLINK2
+Eth1/6        eth    40G     INFRA UPLINK - 106-5K91-P3R02C06U36 - UPLINK2
+Eth1/7        eth    40G     --
+Eth1/8        eth    40G     --
+Eth1/9        eth    40G     --
+Eth1/10       eth    40G     --
+Eth1/11       eth    40G     --
+Eth1/12       eth    40G     --
+Eth2/1        eth    40G     --
+Eth2/2        eth    40G     --
+Eth2/3        eth    40G     --
+Eth2/4        eth    40G     --
+Eth2/5        eth    40G     --
+Eth2/6        eth    40G     --
+Eth2/7        eth    40G     --
+Eth2/8        eth    40G     INFRA UPLINK - N5K09/10-EAT1 VPC PEER LINK
+Eth2/9        eth    40G     --
+Eth2/10       eth    40G     --
+Eth2/11       eth    40G     INFRA UPLINK - N9K01-AGGREGATION-EAT1 ETH 1/19
+Eth2/12       eth    40G     INFRA UPLINK - N9K02-AGGREGATION-EAT1 ETH 1/19
+Eth3/1        eth    40G     --
+Eth3/2        eth    40G     --
+Eth3/3        eth    40G     --
+Eth3/4        eth    40G     --
+Eth3/5        eth    40G     --
+Eth3/6        eth    40G     --
+Eth3/7        eth    40G     --
+Eth3/8        eth    40G     INFRA UPLINK - N5K09/10-EAT1 VPC PEER LINK
+Eth3/9        eth    40G     --
+Eth3/10       eth    40G     --
+Eth3/11       eth    40G     INFRA UPLINK - N9K01-AGGREGATION-EAT1 ETH 1/20
+Eth3/12       eth    40G     INFRA UPLINK - N9K02-AGGREGATION-EAT1 ETH 1/20
+Eth4/1        eth    40G     101-5K91-P3R02C19U32 - UPLINK4
+Eth4/2        eth    40G     102-5K91-P3R02C19U34 - UPLINK4
+Eth4/3        eth    40G     103-5K91-P3R02C12U38 - UPLINK4
+Eth4/4        eth    40G     104-5K91-P3R02C12U36 - UPLINK4
+Eth4/5        eth    40G     105-5K91-P3R02C05U36 - UPLINK4
+Eth4/6        eth    40G     106-5K91-P3R02C06U36 - UPLINK4
+Eth4/7        eth    40G     --
+Eth4/8        eth    40G     --
+Eth4/9        eth    40G     --
+Eth4/10       eth    40G     --
+Eth4/11       eth    40G     --
+Eth4/12       eth    40G     --
+
+-------------------------------------------------------------------------------
+Interface                Description                                            
+-------------------------------------------------------------------------------
+Po10                     N5K09/10-EAT1 VPC PEER LINK
+Po101                    101-5K91-P3R02C19U32
+Po102                    102-5K91-P3R02C19U34
+Po103                    103-5K91-P3R02C12U38
+Po104                    104-5K91-P3R02C12U36
+Po105                    105-5K91-P3R02C05U36
+Po106                    106-5K91-P3R02C06U36
+Po107                    wdc-r02-c02-bc2-Bay1 - TKT2568574
+Po108                    wdc-r02-c02-bc2-Bay2 - TKT2568574
+Po109                    wdc-r02-c03-bc1-Bay1 - TKT2568574
+Po110                    wdc-r02-c03-bc1-Bay2 - TKT2568574
+Po111                    wdc-r02-c03-bc2-Bay1 - TKT2568574
+Po112                    wdc-r02-c03-bc2-Bay2 - TKT2568574
+Po115                    wdc-r02-c07-bc1 Bay1 - TKT2568574
+Po116                    wdc-r02-c07-bc1 Bay2 - TKT2568574
+Po240                    N9K01/02-AGGREGATION-EAT1 PO240
+
+-------------------------------------------------------------------------------
+Port          Type   Speed   Description
+-------------------------------------------------------------------------------
+Eth101/1/1    eth    10G     WDC-SPLUNK2-ESXi-01 - CARD1-PORT1 - TKT2339446
+Eth101/1/2    eth    10G     WDC-SPLUNK2-ESXi-01 - CARD2-PORT1 - TKT2339446
+Eth101/1/3    eth    10G     WDC-SPLUNK2-ESXi-02 - CARD1-PORT1 - TKT2339446
+Eth101/1/4    eth    10G     WDC-SPLUNK2-ESXi-02 - CARD2-PORT1 - TKT2339446
+Eth101/1/5    eth    10G     WDC-SPLUNK2-ESXi-03 - CARD1-PORT1 - TKT2339446
+Eth101/1/6    eth    10G     WDC-SPLUNK2-ESXi-03 - CARD2-PORT1 - TKT2339446
+Eth101/1/7    eth    10G     WDC-SPLUNK2-ESXi-04 - CARD1-PORT1 - TKT2339446
+Eth101/1/8    eth    10G     WDC-SPLUNK2-ESXi-04 - CARD2-PORT1 - TKT2339446
+Eth101/1/9    eth    10G     WDC-SPLUNK2-ESXi-05 - CARD1-PORT1 - TKT2339446
+Eth101/1/10   eth    10G     WDC-SPLUNK2-ESXi-05 - CARD2-PORT1 - TKT2339446
+Eth101/1/11   eth    10G     WDC-SPLUNK2-ESXi-06 - CARD1-PORT1 - TKT2339446
+Eth101/1/12   eth    10G     WDC-SPLUNK2-ESXi-06 - CARD2-PORT1 - TKT2339446
+Eth101/1/13   eth    10G     WDC-SPLUNK2-ESXi-07 - CARD1-PORT1 - TKT2339446
+Eth101/1/14   eth    10G     WDC-SPLUNK2-ESXi-07 - CARD2-PORT1 - TKT2339446
+Eth101/1/15   eth    10G     WDC-SPLUNK2-ESXi-08 - CARD1-PORT1 - TKT2339446
+Eth101/1/16   eth    10G     WDC-SPLUNK2-ESXi-08 - CARD2-PORT1 - TKT2339446
+Eth101/1/17   eth    10G     WDC-SPLUNK2-ESXi-09 - CARD1-PORT1 - TKT2339446
+Eth101/1/18   eth    10G     WDC-SPLUNK2-ESXi-09 - CARD2-PORT1 - TKT2339446
+Eth101/1/19   eth    10G     WDC-SPLUNK2-ESXi-10 - CARD1-PORT1 - TKT2339446
+Eth101/1/20   eth    10G     WDC-SPLUNK2-ESXi-10 - CARD2-PORT1 - TKT2339446
+Eth101/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth101/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth101/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth101/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth101/1/25   eth    10G     WDC-SPLUNK2-ESXi-11 - CARD1-PORT1 - TKT2339446
+Eth101/1/26   eth    10G     WDC-SPLUNK2-ESXi-11 - CARD2-PORT1 - TKT2339446
+Eth101/1/27   eth    10G     WDC-SPLUNK2-ESXi-12 - CARD1-PORT1 - TKT2339446
+Eth101/1/28   eth    10G     WDC-SPLUNK2-ESXi-12 - CARD2-PORT1 - TKT2339446
+Eth101/1/29   eth    10G     WDC-SPLUNK2-ESXi-13 - CARD1-PORT1 - TKT2339446
+Eth101/1/30   eth    10G     WDC-SPLUNK2-ESXi-13 - CARD2-PORT1 - TKT2339446
+Eth101/1/31   eth    10G     WDC-SPLUNK2-ESXi-14 - CARD1-PORT1 - TKT2339446
+Eth101/1/32   eth    10G     WDC-SPLUNK2-ESXi-14 - CARD2-PORT1 - TKT2339446
+Eth101/1/33   eth    10G     WDC-SPLUNK2-ESXi-15 - CARD1-PORT1 - TKT2339446
+Eth101/1/34   eth    10G     WDC-SPLUNK2-ESXi-15 - CARD2-PORT1 - TKT2339446
+Eth101/1/35   eth    10G     WDC-SPLUNK2-ESXi-16 - CARD1-PORT1 - TKT2339446
+Eth101/1/36   eth    10G     WDC-SPLUNK2-ESXi-16 - CARD2-PORT1 - TKT2339446
+Eth101/1/37   eth    10G     WDC-SPLUNK2-ESXi-17 - CARD1-PORT1 - TKT2339446
+Eth101/1/38   eth    10G     WDC-SPLUNK2-ESXi-17 - CARD2-PORT1 - TKT2339446
+Eth101/1/39   eth    10G     WDC-SPLUNK2-ESXi-18 - CARD1-PORT1 - TKT2339446
+Eth101/1/40   eth    10G     WDC-SPLUNK2-ESXi-18 - CARD2-PORT1 - TKT2339446
+Eth101/1/41   eth    10G     WDC-SPLUNK2-ESXi-19 - CARD1-PORT1 - TKT2339446
+Eth101/1/42   eth    10G     WDC-SPLUNK2-ESXi-19 - CARD2-PORT1 - TKT2339446
+Eth101/1/43   eth    10G     --
+Eth101/1/44   eth    10G     --
+Eth101/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth101/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth101/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth101/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/1    eth    10G     WDC-SPLUNK2-ESXi-01 - CARD1-PORT2 - TKT2339446
+Eth102/1/2    eth    10G     WDC-SPLUNK2-ESXi-01 - CARD2-PORT2 - TKT2339446
+Eth102/1/3    eth    10G     WDC-SPLUNK2-ESXi-02 - CARD1-PORT2 - TKT2339446
+Eth102/1/4    eth    10G     WDC-SPLUNK2-ESXi-02 - CARD2-PORT2 - TKT2339446
+Eth102/1/5    eth    10G     WDC-SPLUNK2-ESXi-03 - CARD1-PORT2 - TKT2339446
+Eth102/1/6    eth    10G     WDC-SPLUNK2-ESXi-03 - CARD2-PORT2 - TKT2339446
+Eth102/1/7    eth    10G     WDC-SPLUNK2-ESXi-04 - CARD1-PORT2 - TKT2339446
+Eth102/1/8    eth    10G     WDC-SPLUNK2-ESXi-04 - CARD2-PORT2 - TKT2339446
+Eth102/1/9    eth    10G     WDC-SPLUNK2-ESXi-05 - CARD1-PORT2 - TKT2339446
+Eth102/1/10   eth    10G     WDC-SPLUNK2-ESXi-05 - CARD2-PORT2 - TKT2339446
+Eth102/1/11   eth    10G     WDC-SPLUNK2-ESXi-06 - CARD1-PORT2 - TKT2339446
+Eth102/1/12   eth    10G     WDC-SPLUNK2-ESXi-06 - CARD2-PORT2 - TKT2339446
+Eth102/1/13   eth    10G     WDC-SPLUNK2-ESXi-07 - CARD1-PORT2 - TKT2339446
+Eth102/1/14   eth    10G     WDC-SPLUNK2-ESXi-07 - CARD2-PORT2 - TKT2339446
+Eth102/1/15   eth    10G     WDC-SPLUNK2-ESXi-08 - CARD1-PORT2 - TKT2339446
+Eth102/1/16   eth    10G     WDC-SPLUNK2-ESXi-08 - CARD2-PORT2 - TKT2339446
+Eth102/1/17   eth    10G     WDC-SPLUNK2-ESXi-09 - CARD1-PORT2 - TKT2339446
+Eth102/1/18   eth    10G     WDC-SPLUNK2-ESXi-09 - CARD2-PORT2 - TKT2339446
+Eth102/1/19   eth    10G     WDC-SPLUNK2-ESXi-10 - CARD1-PORT2 - TKT2339446
+Eth102/1/20   eth    10G     WDC-SPLUNK2-ESXi-10 - CARD2-PORT2 - TKT2339446
+Eth102/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/25   eth    10G     WDC-SPLUNK2-ESXi-11 - CARD1-PORT2 - TKT2339446
+Eth102/1/26   eth    10G     WDC-SPLUNK2-ESXi-11 - CARD2-PORT2 - TKT2339446
+Eth102/1/27   eth    10G     WDC-SPLUNK2-ESXi-12 - CARD1-PORT2 - TKT2339446
+Eth102/1/28   eth    10G     WDC-SPLUNK2-ESXi-12 - CARD2-PORT2 - TKT2339446
+Eth102/1/29   eth    10G     WDC-SPLUNK2-ESXi-13 - CARD1-PORT2 - TKT2339446
+Eth102/1/30   eth    10G     WDC-SPLUNK2-ESXi-13 - CARD2-PORT2 - TKT2339446
+Eth102/1/31   eth    10G     WDC-SPLUNK2-ESXi-14 - CARD1-PORT2 - TKT2339446
+Eth102/1/32   eth    10G     WDC-SPLUNK2-ESXi-14 - CARD2-PORT2 - TKT2339446
+Eth102/1/33   eth    10G     WDC-SPLUNK2-ESXi-15 - CARD1-PORT2 - TKT2339446
+Eth102/1/34   eth    10G     WDC-SPLUNK2-ESXi-15 - CARD2-PORT2 - TKT2339446
+Eth102/1/35   eth    10G     WDC-SPLUNK2-ESXi-16 - CARD1-PORT2 - TKT2339446
+Eth102/1/36   eth    10G     WDC-SPLUNK2-ESXi-16 - CARD2-PORT2 - TKT2339446
+Eth102/1/37   eth    10G     WDC-SPLUNK2-ESXi-17 - CARD1-PORT2 - TKT2339446
+Eth102/1/38   eth    10G     WDC-SPLUNK2-ESXi-17 - CARD2-PORT2 - TKT2339446
+Eth102/1/39   eth    10G     WDC-SPLUNK2-ESXi-18 - CARD1-PORT2 - TKT2339446
+Eth102/1/40   eth    10G     WDC-SPLUNK2-ESXi-18 - CARD2-PORT2 - TKT2339446
+Eth102/1/41   eth    10G     WDC-SPLUNK2-ESXi-19 - CARD1-PORT2 - TKT2339446
+Eth102/1/42   eth    10G     WDC-SPLUNK2-ESXi-19 - CARD2-PORT2 - TKT2339446
+Eth102/1/43   eth    10G     --
+Eth102/1/44   eth    10G     --
+Eth102/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth103/1/1    eth    10G     WDC-LT-VMG7-01 - PORT1 - TKT2384672
+Eth103/1/2    eth    10G     WDC-LT-VMG7-02 - PORT1 - TKT2384672
+Eth103/1/3    eth    10G     WDC-LT-VMG7-03 - PORT1 - TKT2384672
+Eth103/1/4    eth    10G     WDC-LT-VMG7-04 - PORT1 - TKT2384672
+Eth103/1/5    eth    10G     WDC-LT-VMG7-05 - PORT1 - TKT2384672
+Eth103/1/6    eth    10G     WDC-LT-VMG7-06 - PORT1 - TKT2384672
+Eth103/1/7    eth    10G     WDC-LT-VMG7-07 - PORT1 - TKT2384672
+Eth103/1/8    eth    10G     WDC-LT-VMG7-08 - PORT1 - TKT2384672
+Eth103/1/9    eth    10G     WDC-LT-VMG7-01 - PORT3 - TKT2384672
+Eth103/1/10   eth    10G     WDC-LT-VMG7-02 - PORT3 - TKT2384672
+Eth103/1/11   eth    10G     WDC-LT-VMG7-03 - PORT3 - TKT2384672
+Eth103/1/12   eth    10G     WDC-LT-VMG7-04 - PORT3 - TKT2384672
+Eth103/1/13   eth    10G     WDC-LT-VMG7-05 - PORT3 - TKT2384672
+Eth103/1/14   eth    10G     WDC-LT-VMG7-06 - PORT3 - TKT2384672
+Eth103/1/15   eth    10G     WDC-LT-VMG7-07 - PORT3 - TKT2384672
+Eth103/1/16   eth    10G     WDC-LT-VMG7-08 - PORT3 - TKT2384672
+Eth103/1/17   eth    10G     WDC-SPLUNK2-ESXi-20 - CARD1-PORT1 - TKT2442142
+Eth103/1/18   eth    10G     WDC-SPLUNK2-ESXi-20 - CARD2-PORT1 - TKT2442142
+Eth103/1/19   eth    10G     WDC-SPLUNK2-ESXi-21 - CARD1-PORT1 - TKT2442142
+Eth103/1/20   eth    10G     WDC-SPLUNK2-ESXi-21 - CARD2-PORT1 - TKT2442142
+Eth103/1/21   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth103/1/22   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth103/1/23   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth103/1/24   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth103/1/25   eth    10G     WDC-SPLUNK2-ESXi-22 - CARD1-PORT1 - TKT2442142
+Eth103/1/26   eth    10G     WDC-SPLUNK2-ESXi-22 - CARD2-PORT1 - TKT2442142
+Eth103/1/27   eth    10G     WDC-SPLUNK2-ESXi-23 - CARD1-PORT1 - TKT2442142
+Eth103/1/28   eth    10G     WDC-SPLUNK2-ESXi-23 - CARD2-PORT1 - TKT2442142
+Eth103/1/29   eth    10G     --
+Eth103/1/30   eth    10G     --
+Eth103/1/31   eth    10G     --
+Eth103/1/32   eth    10G     --
+Eth103/1/33   eth    10G     --
+Eth103/1/34   eth    10G     --
+Eth103/1/35   eth    10G     --
+Eth103/1/36   eth    10G     --
+Eth103/1/37   eth    10G     --
+Eth103/1/38   eth    10G     --
+Eth103/1/39   eth    10G     --
+Eth103/1/40   eth    10G     --
+Eth103/1/41   eth    10G     --
+Eth103/1/42   eth    10G     --
+Eth103/1/43   eth    10G     --
+Eth103/1/44   eth    10G     DCMETRO-ESX4-EAT1 - VMNIC2
+Eth103/1/45   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth103/1/46   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth103/1/47   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth103/1/48   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth104/1/1    eth    10G     WDC-LT-VMG7-01 - PORT2 - TKT2384672
+Eth104/1/2    eth    10G     WDC-LT-VMG7-02 - PORT2 - TKT2384672
+Eth104/1/3    eth    10G     WDC-LT-VMG7-03 - PORT2 - TKT2384672
+Eth104/1/4    eth    10G     WDC-LT-VMG7-04 - PORT2 - TKT2384672
+Eth104/1/5    eth    10G     WDC-LT-VMG7-05 - PORT2 - TKT2384672
+Eth104/1/6    eth    10G     WDC-LT-VMG7-06 - PORT2 - TKT2384672
+Eth104/1/7    eth    10G     WDC-LT-VMG7-07 - PORT2 - TKT2384672
+Eth104/1/8    eth    10G     WDC-LT-VMG7-08 - PORT2 - TKT2384672
+Eth104/1/9    eth    10G     WDC-LT-VMG7-01 - PORT4 - TKT2384672
+Eth104/1/10   eth    10G     WDC-LT-VMG7-02 - PORT4 - TKT2384672
+Eth104/1/11   eth    10G     WDC-LT-VMG7-03 - PORT4 - TKT2384672
+Eth104/1/12   eth    10G     WDC-LT-VMG7-04 - PORT4 - TKT2384672
+Eth104/1/13   eth    10G     WDC-LT-VMG7-05 - PORT4 - TKT2384672
+Eth104/1/14   eth    10G     WDC-LT-VMG7-06 - PORT4 - TKT2384672
+Eth104/1/15   eth    10G     WDC-LT-VMG7-07 - PORT4 - TKT2384672
+Eth104/1/16   eth    10G     WDC-LT-VMG7-08 - PORT4 - TKT2384672
+Eth104/1/17   eth    10G     WDC-SPLUNK2-ESXi-20 - CARD1-PORT2 - TKT2442142
+Eth104/1/18   eth    10G     WDC-SPLUNK2-ESXi-20 - CARD2-PORT2 - TKT2442142
+Eth104/1/19   eth    10G     WDC-SPLUNK2-ESXi-21 - CARD1-PORT2 - TKT2442142
+Eth104/1/20   eth    10G     WDC-SPLUNK2-ESXi-21 - CARD2-PORT2 - TKT2442142
+Eth104/1/21   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth104/1/22   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth104/1/23   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth104/1/24   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth104/1/25   eth    10G     WDC-SPLUNK2-ESXi-22 - CARD1-PORT2 - TKT2442142
+Eth104/1/26   eth    10G     WDC-SPLUNK2-ESXi-22 - CARD2-PORT2 - TKT2442142
+Eth104/1/27   eth    10G     WDC-SPLUNK2-ESXi-23 - CARD1-PORT2 - TKT2442142
+Eth104/1/28   eth    10G     WDC-SPLUNK2-ESXi-23 - CARD2-PORT2 - TKT2442142
+Eth104/1/29   eth    10G     --
+Eth104/1/30   eth    10G     --
+Eth104/1/31   eth    10G     --
+Eth104/1/32   eth    10G     --
+Eth104/1/33   eth    10G     --
+Eth104/1/34   eth    10G     --
+Eth104/1/35   eth    10G     --
+Eth104/1/36   eth    10G     --
+Eth104/1/37   eth    10G     --
+Eth104/1/38   eth    10G     --
+Eth104/1/39   eth    10G     --
+Eth104/1/40   eth    10G     --
+Eth104/1/41   eth    10G     --
+Eth104/1/42   eth    10G     --
+Eth104/1/43   eth    10G     --
+Eth104/1/44   eth    10G     DCMETRO-ESX4-EAT1 - VMNIC3
+Eth104/1/45   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth104/1/46   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth104/1/47   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth104/1/48   eth    10G     DO NOT USE DUE TO BUG CONDITION!! 
+Eth105/1/1    eth    10G     --
+Eth105/1/2    eth    10G     wdc-r02-c02-bc2-Bay1-x7- TKT2568574
+Eth105/1/3    eth    10G     --
+Eth105/1/4    eth    10G     wdc-r02-c02-bc2-Bay2-X7- TKT2568574
+Eth105/1/5    eth    10G     --
+Eth105/1/6    eth    10G     wdc-r02-c03-bc1-Bay1-X7 TKT2568574
+Eth105/1/7    eth    10G     --
+Eth105/1/8    eth    10G     wdc-r02-c03-bc1-Bay2-X7 TKT2568574
+Eth105/1/9    eth    10G     --
+Eth105/1/10   eth    10G     wdc-r02-c03-bc2-Bay1-X7 TKT2568574
+Eth105/1/11   eth    10G     --
+Eth105/1/12   eth    10G     wdc-r02-c03-bc2-Bay2-X7 TKT2568574
+Eth105/1/13   eth    10G     --
+Eth105/1/14   eth    10G     --
+Eth105/1/15   eth    10G     --
+Eth105/1/16   eth    10G     --
+Eth105/1/17   eth    10G     --
+Eth105/1/18   eth    10G     wdc-r02-c07-bc1  - Bay1 -X7 TKT2568574
+Eth105/1/19   eth    10G     --
+Eth105/1/20   eth    10G     wdc-r02-c07-bc1  - Bay2 -X7 TKT2568574
+Eth105/1/21   eth    10G     --
+Eth105/1/22   eth    10G     --
+Eth105/1/23   eth    10G     --
+Eth105/1/24   eth    10G     --
+Eth105/1/25   eth    10G     --
+Eth105/1/26   eth    10G     wdc-r02-c11 - Bay1- X5 TKT2568574
+Eth105/1/27   eth    10G     --
+Eth105/1/28   eth    10G     wdc-r02-c11 - Bay2 -X5 TKT2568574
+Eth105/1/29   eth    10G     --
+Eth105/1/30   eth    10G     --
+Eth105/1/31   eth    10G     wdc-secesxi-8 Port1 OnBoard TKT3563054
+Eth105/1/32   eth    10G     wdc-secesxi-9 Port1 OnBoard TKT3563054
+Eth105/1/33   eth    10G     wdc-secesxi-10 Port1 OnBoard TKT3563054
+Eth105/1/34   eth    10G     wdc-secesxi-11 Port1 OnBoard TKT3563054
+Eth105/1/35   eth    10G     --
+Eth105/1/36   eth    10G     --
+Eth105/1/37   eth    10G     --
+Eth105/1/38   eth    10G     --
+Eth105/1/39   eth    10G     --
+Eth105/1/40   eth    10G     --
+Eth105/1/41   eth    10G     --
+Eth105/1/42   eth    10G     --
+Eth105/1/43   eth    10G     --
+Eth105/1/44   eth    10G     --
+Eth105/1/45   eth    10G     --
+Eth105/1/46   eth    10G     --
+Eth105/1/47   eth    10G     --
+Eth105/1/48   eth    10G     --
+Eth106/1/1    eth    10G     --
+Eth106/1/2    eth    10G     wdc-r02-c02-bc2-Bay1-x8- TKT2568574
+Eth106/1/3    eth    10G     --
+Eth106/1/4    eth    10G     wdc-r02-c02-bc2-Bay2-X8- TKT2568574
+Eth106/1/5    eth    10G     --
+Eth106/1/6    eth    10G     wdc-r02-c03-bc1-Bay1-X8 TKT2568574
+Eth106/1/7    eth    10G     --
+Eth106/1/8    eth    10G     wdc-r02-c03-bc2-Bay2-X8 TKT2568574
+Eth106/1/9    eth    10G     --
+Eth106/1/10   eth    10G     wdc-r02-c03-bc2-Bay1-X8 TKT2568574
+Eth106/1/11   eth    10G     --
+Eth106/1/12   eth    10G     wdc-r02-c03-bc1-Bay2-X8 TKT2568574
+Eth106/1/13   eth    10G     --
+Eth106/1/14   eth    10G     --
+Eth106/1/15   eth    10G     --
+Eth106/1/16   eth    10G     --
+Eth106/1/17   eth    10G     --
+Eth106/1/18   eth    10G     wdc-r02-c07-bc1  - Bay1 -X8 TKT2568574
+Eth106/1/19   eth    10G     --
+Eth106/1/20   eth    10G     wdc-r02-c07-bc1  - Bay2 -X8 TKT2568574
+Eth106/1/21   eth    10G     --
+Eth106/1/22   eth    10G     --
+Eth106/1/23   eth    10G     --
+Eth106/1/24   eth    10G     --
+Eth106/1/25   eth    10G     --
+Eth106/1/26   eth    10G     wdc-r02-c11 - Bay1- X6 TKT2568574
+Eth106/1/27   eth    10G     --
+Eth106/1/28   eth    10G     wdc-r02-c11 - Bay2 -X6 TKT2568574
+Eth106/1/29   eth    10G     --
+Eth106/1/30   eth    10G     --
+Eth106/1/31   eth    10G     wdc-secesxi-8 Port2 OnBoard TKT3563054
+Eth106/1/32   eth    10G     wdc-secesxi-9 Port2 OnBoard TKT3563054
+Eth106/1/33   eth    10G     wdc-secesxi-10 Port2 OnBoard TKT3563054
+Eth106/1/34   eth    10G     wdc-secesxi-11 Port2 OnBoard TKT3563054
+Eth106/1/35   eth    10G     --
+Eth106/1/36   eth    10G     --
+Eth106/1/37   eth    10G     --
+Eth106/1/38   eth    10G     --
+Eth106/1/39   eth    10G     --
+Eth106/1/40   eth    10G     --
+Eth106/1/41   eth    10G     --
+Eth106/1/42   eth    10G     --
+Eth106/1/43   eth    10G     --
+Eth106/1/44   eth    10G     --
+Eth106/1/45   eth    10G     --
+Eth106/1/46   eth    10G     --
+Eth106/1/47   eth    10G     --
+Eth106/1/48   eth    10G     --

@@ -1,0 +1,24 @@
+---
+- hosts: "n9k-SSDdisk"
+  gather_facts: false
+  tasks:
+
+  - name: Ensure bash is enabled
+    nxos_feature:
+      feature: bash-shell
+      state: enabled
+  - name: n9k-bash-output
+    nxos_command:
+      commands:
+        - "conf t"
+        - "run bash sudo su"
+        - "smartctl -a /dev/sda | egrep 'Model|Firmware|Hours'"
+        - "exit"
+    register: shellcmd
+    tags: bash
+  - name: save config to /etc/ansible/backups/bash
+    copy:
+      content: "{{shellcmd.stdout | replace(',','\n') }}"
+      dest: "/etc/ansible/backups/bash/{{inventory_hostname}}.txt"
+    tags: bash
+...

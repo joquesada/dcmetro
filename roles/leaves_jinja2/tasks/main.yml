@@ -1,0 +1,8 @@
+---
+# tasks file for leaves_jinja2
+- name: Generate Leaf Config 
+  template: src=leaves.j2 dest=roles/leaves_jinja2/files/{{inventory_hostname}}.cfg
+- name: Push Config
+  ios_config: 
+    src: roles/leaves_jinja2/files/{{inventory_hostname}}.cfg
+    force: yes

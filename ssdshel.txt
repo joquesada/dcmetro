@@ -1,0 +1,2 @@
+smartctl -a /dev/sda | egrep 'Model|Firmware|Hours'
+smartctl -a /dev/sda | egrep 'Model|Firmware|Hours'

@@ -1,0 +1,892 @@
+-------------------------------------------------------------------------------
+Port          Type   Speed   Description
+-------------------------------------------------------------------------------
+Eth1/1        eth    40G     INFRA UPLINK - 101-5K78-P2RFC01U33-DMZ1-EBIZ-STAG
+Eth1/2        eth    40G     INFRA UPLINK - 102-5K78-P2RFC01U29-DMZ2-EBIZ-STAG
+Eth1/3        eth    40G     INFRA UPLINK - 103-5K78-P2REC07U37
+Eth1/4        eth    40G     INFRA UPLINK - 104-5K78-P2REC07U35
+Eth1/5        eth    40G     INFRA UPLINK - 105-5K78-P3R03C01U45
+Eth1/6        eth    40G     INFRA UPLINK - 106-5K78-P3R03C02U45
+Eth1/7        eth    40G     INFRA UPLINK - 107-5K78-P3I01C01U26-DMZ-4507-1-EAT1
+Eth1/8        eth    40G     INFRA UPLINK - 108-5K78-P3I01C02U20-DMZ-4507-2-EAT1
+Eth1/9        eth    40G     INFRA UPLINK - 109-5K78-P3I01C01U27-DMZ-4507-1-EAT1
+Eth1/10       eth    40G     INFRA UPLINK - 110-5K78-P3I01C02U21-DMZ-4507-2-EAT1
+Eth1/11       eth    40G     INFRA UPLINK - 111-5K78-P3R02C02U40
+Eth1/12       eth    40G     INFRA UPLINK - 112-5K78-P3R02C03U40
+Eth2/1        eth    40G     INFRA UPLINK - 113-5K78-P3R04C19U34
+Eth2/2        eth    40G     INFRA UPLINK - 114-5K78-P3R04C20U34
+Eth2/3        eth    40G     INFRA UPLINK - 115-5K78-P3R02C02U38
+Eth2/4        eth    40G     INFRA UPLINK - 116-5K78-P3R02C03U38
+Eth2/5        eth    40G     --
+Eth2/6        eth    40G     --
+Eth2/7        eth    40G     --
+Eth2/8        eth    40G     INFRA UPLINK - N5K07/08-EAT1 - VPC PEER LINK
+Eth2/9        eth    40G     --
+Eth2/10       eth    40G     --
+Eth2/11       eth    40G     INFRA UPLINK - N9K01-AGGREGATION-EAT1 - ETH 1/13
+Eth2/12       eth    40G     INFRA UPLINK - N9K02-AGGREGATION-EAT1 - ETH 1/13
+Eth3/1        eth    40G     --
+Eth3/2        eth    40G     --
+Eth3/3        eth    40G     --
+Eth3/4        eth    40G     --
+Eth3/5        eth    40G     --
+Eth3/6        eth    40G     --
+Eth3/7        eth    40G     --
+Eth3/8        eth    40G     INFRA UPLINK - N5K07/08-EAT1 - VPC PEER LINK
+Eth3/9        eth    40G     --
+Eth3/10       eth    40G     --
+Eth3/11       eth    40G     INFRA UPLINK - N9K01-AGGREGATION-EAT1 - ETH 1/14
+Eth3/12       eth    40G     INFRA UPLINK - N9K02-AGGREGATION-EAT1 - ETH 1/14
+Eth4/1        eth    40G     --
+Eth4/2        eth    40G     --
+Eth4/3        eth    40G     --
+Eth4/4        eth    40G     --
+Eth4/5        eth    40G     --
+Eth4/6        eth    40G     --
+Eth4/7        eth    40G     --
+Eth4/8        eth    40G     --
+Eth4/9        eth    40G     --
+Eth4/10       eth    40G     --
+Eth4/11       eth    40G     --
+Eth4/12       eth    40G     --
+
+-------------------------------------------------------------------------------
+Interface                Description                                            
+-------------------------------------------------------------------------------
+Po3                      fg2-ebiz-eat1 AE TRUST
+Po4                      fg2-ebiz-eat1 AE DMZ
+Po5                      fg1-ebiz-eat1 AE TRUST
+Po6                      fg1-ebiz-eat1 AE DMZ
+Po10                     N5K07/08-EAT1 VPC PEER LINK
+Po27                     WDC-VNX7500-0046 - Data Mover Server 2DM - Port FXG-1-0 & FXG-1-1
+Po28                     WDC-VNX7500-0046 - Data Mover Server 3DM - Port FXG-1-0 & FXG-1-1
+Po29                     WDC-VNX7500-0046 - Data Mover Server 2DM - Port FXG-2-0 & FXG-2-1
+Po30                     WDC-VNX7500-0046 - Data Mover Server 3DM - Port FXG-2-0 & FXG-2-1
+Po33                     wdc-r02-c02-bc1
+Po34                     wdc-r02-c02-bc1
+Po35                     w3-nsxt-bitw-esxi1 (SWAPNIL HENDRE - BITW Proyect)
+Po36                     w3-nsxt-bitw-esxi2 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Po37                     w3-nsxt-bitw-esxi2 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Po43                     fg1-gss-eat1 - AE1 (TKT2254872)
+Po44                     fg2-gss-eat1 - AE1 (TKT2254872)
+Po45                     WCLI001-EAT1 - ETH4,ETH5
+Po46                     WCLI001-EAT1 - ETH0,ETH1
+Po47                     WCLI002-EAT1 - ETH4,ETH5
+Po48                     WCLI002-EAT1 - ETH0,ETH1
+Po49                     wdc-dd9800-data1.vmware.com Slot 1 Port 0 & Slot 4 Port 0
+Po50                     wdc-dd9800-data2.vmware.com Slot 1 Port 3 & Slot 4 Port 3
+Po51                     wdc-dd9800-data3.vmware.com Slot 5 Port 0 & Slot 7 Port 0
+Po52                     wdc-dd9800-data2.vmware.com Slot 5 Port 3 & Slot 7 Port 3
+Po54                     FG1-NIM-EAT1 TRUST
+Po55                     FG2-NIM-EAT1 TRUST
+Po56                     FG1-NIM-EAT1 DMZ
+Po57                     FG2-NIM-EAT1 DMZ
+Po66                     LB1-NIM-DMZ-EAT1
+Po70                     gtm-int-eat1.vmware.com TKT2335962
+Po71                     TEST-PA-500-GW-1-EAT1
+Po72                     PA-500-Portal-1-1EAT1
+Po73                     TEST-PA-500-GW-2-EAT1
+Po74                     PA-500-Portal-2-1EAT1
+Po75                     wdc-r02-c02-bc1 TKT2799533 
+Po76                     wdc-r02-c02-bc2 TKT2799533
+Po77                     LB1-EXT-EAT1 - TKT2642912
+Po78                     LB2-EXT-EAT1 - TKT2642912
+Po79                     LB1-DEVTEST-4000-EAT1 - TKT2835829
+Po80                     LB2-DEVTEST-4000-EAT1 - TKT2835829
+Po81                     LB1-NIM-PROD-4000-EAT1 - TKT2835829
+Po82                     LB2-NIM-PROD-4000-EAT1 - TKT2835829
+Po83                     LB1-DR-INT-EAT1 - TKT2905086
+Po84                     LB2-DR-INT-EAT1 - TKT2905086
+Po85                     LB1-DR-DMZ-EAT1 - TKT2905086
+Po86                     LB2-DR-DMZ-EAT1 - TKT2905086
+Po101                    101-5K78-P2RFC01U33-dmz1-ebiz-stag
+Po102                    102-5K78-P2RFC01U29-dmz2-ebiz-stag
+Po103                    103-5K78-P2REC07U37
+Po104                    104-5K78-P2REC07U35
+Po105                    105-5K78-P3R03C01U45
+Po106                    106-5K78-P3R03C02U45
+Po107                    107-5K78-P3I01C01U26-DMZ-4507-1-EAT1
+Po108                    108-5K78-P3I01C02U20-DMZ-4507-2-EAT1
+Po109                    109-5K78-P3I01C01U27-DMZ-4507-1-EAT1
+Po110                    110-5K78-P3I01C02U21-DMZ-4507-2-EAT1
+Po111                    111-5k78-P3R02C02U40
+Po112                    112-5k78-P3R02C03U40
+Po113                    113-5k78-P3R04C19U34
+Po114                    114-5k78-P3R04C20U34
+Po115                    115-5k78-P3R02C02U38 
+Po116                    116-5k78-P3R02C03U38 
+Po117                    wdc-r02-c02-bc1 - Bay 1 TKT3134947
+Po118                    wdc-r02-c02-bc1 - Bay 2 TKT3134947
+Po235                    N9K01/02-AGGREGATION-EAT1 PO235
+
+-------------------------------------------------------------------------------
+Port          Type   Speed   Description
+-------------------------------------------------------------------------------
+Eth101/1/1    eth    10G     --
+Eth101/1/2    eth    10G     --
+Eth101/1/3    eth    10G     --
+Eth101/1/4    eth    10G     --
+Eth101/1/5    eth    10G     --
+Eth101/1/6    eth    10G     --
+Eth101/1/7    eth    10G     --
+Eth101/1/8    eth    10G     --
+Eth101/1/9    eth    10G     --
+Eth101/1/10   eth    10G     --
+Eth101/1/11   eth    10G     --
+Eth101/1/12   eth    10G     --
+Eth101/1/13   eth    10G     INFRA UPLINK - FG1-GSS-EAT1 - PORT 9 (TKT2254872)
+Eth101/1/14   eth    10G     INFRA UPLINK - FG2-GSS-EAT1 - PORT 9 (TKT2254872)
+Eth101/1/15   eth    10G     --
+Eth101/1/16   eth    10G     --
+Eth101/1/17   eth    10G     --
+Eth101/1/18   eth    10G     --
+Eth101/1/19   eth    10G     --
+Eth101/1/20   eth    10G     --
+Eth101/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth101/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth101/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth101/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth101/1/25   eth    10G     TEST-PA-500-GW-1-EAT1
+Eth101/1/26   eth    10G     TEST-PA-500-GW-1-EAT1
+Eth101/1/27   eth    10G     --
+Eth101/1/28   eth    10G     --
+Eth101/1/29   eth    10G     --
+Eth101/1/30   eth    10G     --
+Eth101/1/31   eth    10G     --
+Eth101/1/32   eth    10G     INFRA UPLINK - PA-500-PORTAL-1-1EAT1
+Eth101/1/33   eth    10G     INFRA UPLINK - PA-500-PORTAL-1-1EAT1
+Eth101/1/34   eth    10G     --
+Eth101/1/35   eth    10G     --
+Eth101/1/36   eth    10G     --
+Eth101/1/37   eth    10G     --
+Eth101/1/38   eth    10G     --
+Eth101/1/39   eth    10G     --
+Eth101/1/40   eth    10G     --
+Eth101/1/41   eth    10G     --
+Eth101/1/42   eth    10G     --
+Eth101/1/43   eth    10G     --
+Eth101/1/44   eth    10G     --
+Eth101/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth101/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth101/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth101/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/1    eth    10G     --
+Eth102/1/2    eth    10G     --
+Eth102/1/3    eth    10G     --
+Eth102/1/4    eth    10G     --
+Eth102/1/5    eth    10G     --
+Eth102/1/6    eth    10G     --
+Eth102/1/7    eth    10G     --
+Eth102/1/8    eth    10G     --
+Eth102/1/9    eth    10G     --
+Eth102/1/10   eth    10G     --
+Eth102/1/11   eth    10G     --
+Eth102/1/12   eth    10G     --
+Eth102/1/13   eth    10G     INFRA UPLINK - FG1-GSS-EAT1 - PORT 10 (TKT2254872)
+Eth102/1/14   eth    10G     INFRA UPLINK - FG2-GSS-EAT1 - PORT 10 (TKT2254872)
+Eth102/1/15   eth    10G     --
+Eth102/1/16   eth    10G     --
+Eth102/1/17   eth    10G     --
+Eth102/1/18   eth    10G     --
+Eth102/1/19   eth    10G     --
+Eth102/1/20   eth    10G     --
+Eth102/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/25   eth    10G     TEST-PA-500-GW-2-EAT1
+Eth102/1/26   eth    10G     TEST-PA-500-GW-2-EAT1
+Eth102/1/27   eth    10G     --
+Eth102/1/28   eth    10G     --
+Eth102/1/29   eth    10G     --
+Eth102/1/30   eth    10G     --
+Eth102/1/31   eth    10G     --
+Eth102/1/32   eth    10G     INFRA UPLINK - PA-500-PORTAL-2-1EAT1
+Eth102/1/33   eth    10G     INFRA UPLINK - PA-500-PORTAL-2-1EAT1
+Eth102/1/34   eth    10G     --
+Eth102/1/35   eth    10G     --
+Eth102/1/36   eth    10G     --
+Eth102/1/37   eth    10G     --
+Eth102/1/38   eth    10G     --
+Eth102/1/39   eth    10G     --
+Eth102/1/40   eth    10G     --
+Eth102/1/41   eth    10G     --
+Eth102/1/42   eth    10G     --
+Eth102/1/43   eth    10G     --
+Eth102/1/44   eth    10G     --
+Eth102/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth102/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth103/1/1    eth    10G     --
+Eth103/1/2    eth    10G     --
+Eth103/1/3    eth    10G     --
+Eth103/1/4    eth    10G     --
+Eth103/1/5    eth    10G     --
+Eth103/1/6    eth    10G     --
+Eth103/1/7    eth    10G     NSS UPLINK - LB1-NIM-DMZ-EAT1 - PORT 1:02
+Eth103/1/8    eth    10G     --
+Eth103/1/9    eth    10G     INFRA UPLINK - GTM-UAT-WDC
+Eth103/1/10   eth    10G     --
+Eth103/1/11   eth    10G     --
+Eth103/1/12   eth    10G     --
+Eth103/1/13   eth    10G     --
+Eth103/1/14   eth    10G     --
+Eth103/1/15   eth    10G     --
+Eth103/1/16   eth    10G     --
+Eth103/1/17   eth    10G     --
+Eth103/1/18   eth    10G     --
+Eth103/1/19   eth    10G     --
+Eth103/1/20   eth    10G     --
+Eth103/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth103/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth103/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth103/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth103/1/25   eth    10G     --
+Eth103/1/26   eth    10G     --
+Eth103/1/27   eth    10G     --
+Eth103/1/28   eth    10G     --
+Eth103/1/29   eth    10G     --
+Eth103/1/30   eth    10G     --
+Eth103/1/31   eth    10G     --
+Eth103/1/32   eth    10G     --
+Eth103/1/33   eth    10G     --
+Eth103/1/34   eth    10G     --
+Eth103/1/35   eth    10G     --
+Eth103/1/36   eth    10G     --
+Eth103/1/37   eth    10G     --
+Eth103/1/38   eth    10G     --
+Eth103/1/39   eth    10G     --
+Eth103/1/40   eth    10G     --
+Eth103/1/41   eth    10G     --
+Eth103/1/42   eth    10G     --
+Eth103/1/43   eth    10G     --
+Eth103/1/44   eth    10G     --
+Eth103/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth103/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth103/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth103/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth104/1/1    eth    10G     --
+Eth104/1/2    eth    10G     --
+Eth104/1/3    eth    10G     --
+Eth104/1/4    eth    10G     --
+Eth104/1/5    eth    10G     --
+Eth104/1/6    eth    10G     --
+Eth104/1/7    eth    10G     NSS UPLINK - LB1-NIM-DMZ-EAT1 PORT - 1:01
+Eth104/1/8    eth    10G     INFRA UPLINK - W1-EUC-002 - RITM0037356
+Eth104/1/9    eth    10G     --
+Eth104/1/10   eth    10G     --
+Eth104/1/11   eth    10G     --
+Eth104/1/12   eth    10G     --
+Eth104/1/13   eth    10G     --
+Eth104/1/14   eth    10G     --
+Eth104/1/15   eth    10G     --
+Eth104/1/16   eth    10G     --
+Eth104/1/17   eth    10G     --
+Eth104/1/18   eth    10G     --
+Eth104/1/19   eth    10G     --
+Eth104/1/20   eth    10G     --
+Eth104/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth104/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth104/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth104/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth104/1/25   eth    10G     --
+Eth104/1/26   eth    10G     --
+Eth104/1/27   eth    10G     --
+Eth104/1/28   eth    10G     --
+Eth104/1/29   eth    10G     --
+Eth104/1/30   eth    10G     --
+Eth104/1/31   eth    10G     --
+Eth104/1/32   eth    10G     --
+Eth104/1/33   eth    10G     --
+Eth104/1/34   eth    10G     --
+Eth104/1/35   eth    10G     --
+Eth104/1/36   eth    10G     --
+Eth104/1/37   eth    10G     --
+Eth104/1/38   eth    10G     --
+Eth104/1/39   eth    10G     --
+Eth104/1/40   eth    10G     --
+Eth104/1/41   eth    10G     --
+Eth104/1/42   eth    10G     --
+Eth104/1/43   eth    10G     --
+Eth104/1/44   eth    10G     --
+Eth104/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth104/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth104/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth104/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth105/1/1    eth    10G     w3-nsxt-bitw-esxi1 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/2    eth    10G     w3-nsxt-bitw-esxi2 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/3    eth    10G     w3-nsxt-bitw-esxi3 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/4    eth    10G     w3-nsxt-bitw-legacy-low1 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/5    eth    10G     w3-nsxt-bitw-legacy-low2 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/6    eth    10G     w3-nsxt-bitw-legacy-high1 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/7    eth    10G     w3-nsxt-bitw-legacy-high2 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/8    eth    10G     w3-nsxt-bitw-fp-1 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/9    eth    10G     w3-nsxt-bitw-fp-2 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/10   eth    10G     w3-nsxt-bitw-fp-3 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/11   eth    10G     w3-nsxt-bitw-fp-4 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/12   eth    10G     w3-nsxt-bitw-fp-5 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/13   eth    10G     w3-nsxt-bitw-fp-6 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/14   eth    10G     w3-nsxt-bitw-haas-1 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/15   eth    10G     w3-nsxt-bitw-haas-2 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/16   eth    10G     w3-nsxt-bitw-dr-1 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/17   eth    10G     w3-nsxt-bitw-dr-2 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/18   eth    10G     w3-nsxt-bitw-euc-1 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/19   eth    10G     w3-nsxt-bitw-euc-2 - Port 1 (SWAPNIL HENDRE - BITW Proyect)
+Eth105/1/20   eth    10G     --
+Eth105/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth105/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth105/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth105/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth105/1/25   eth    10G     --
+Eth105/1/26   eth    10G     --
+Eth105/1/27   eth    10G     --
+Eth105/1/28   eth    10G     --
+Eth105/1/29   eth    10G     --
+Eth105/1/30   eth    10G     --
+Eth105/1/31   eth    10G     --
+Eth105/1/32   eth    10G     --
+Eth105/1/33   eth    10G     --
+Eth105/1/34   eth    10G     --
+Eth105/1/35   eth    10G     --
+Eth105/1/36   eth    10G     --
+Eth105/1/37   eth    10G     --
+Eth105/1/38   eth    10G     --
+Eth105/1/39   eth    10G     --
+Eth105/1/40   eth    10G     --
+Eth105/1/41   eth    10G     --
+Eth105/1/42   eth    10G     --
+Eth105/1/43   eth    10G     --
+Eth105/1/44   eth    10G     --
+Eth105/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth105/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth105/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth105/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth106/1/1    eth    10G     w3-nsxt-bitw-esxi1 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/2    eth    10G     w3-nsxt-bitw-esxi2 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/3    eth    10G     w3-nsxt-bitw-esxi3 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/4    eth    10G     w3-nsxt-bitw-legacy-low1 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/5    eth    10G     w3-nsxt-bitw-legacy-low2 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/6    eth    10G     w3-nsxt-bitw-legacy-high1 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/7    eth    10G     w3-nsxt-bitw-legacy-high2 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/8    eth    10G     w3-nsxt-bitw-fp-1 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/9    eth    10G     w3-nsxt-bitw-fp-2 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/10   eth    10G     w3-nsxt-bitw-fp-3 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/11   eth    10G     w3-nsxt-bitw-fp-4 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/12   eth    10G     w3-nsxt-bitw-fp-5 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/13   eth    10G     w3-nsxt-bitw-fp-6 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/14   eth    10G     w3-nsxt-bitw-haas-1 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/15   eth    10G     w3-nsxt-bitw-haas-2 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/16   eth    10G     w3-nsxt-bitw-dr-1 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/17   eth    10G     w3-nsxt-bitw-dr-2 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/18   eth    10G     w3-nsxt-bitw-euc-1 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/19   eth    10G     w3-nsxt-bitw-euc-2 - Port 2 (SWAPNIL HENDRE - BITW Proyect)
+Eth106/1/20   eth    10G     --
+Eth106/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth106/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth106/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth106/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth106/1/25   eth    10G     --
+Eth106/1/26   eth    10G     --
+Eth106/1/27   eth    10G     --
+Eth106/1/28   eth    10G     --
+Eth106/1/29   eth    10G     --
+Eth106/1/30   eth    10G     --
+Eth106/1/31   eth    10G     --
+Eth106/1/32   eth    10G     --
+Eth106/1/33   eth    10G     --
+Eth106/1/34   eth    10G     --
+Eth106/1/35   eth    10G     --
+Eth106/1/36   eth    10G     --
+Eth106/1/37   eth    10G     --
+Eth106/1/38   eth    10G     --
+Eth106/1/39   eth    10G     --
+Eth106/1/40   eth    10G     --
+Eth106/1/41   eth    10G     --
+Eth106/1/42   eth    10G     --
+Eth106/1/43   eth    10G     --
+Eth106/1/44   eth    10G     --
+Eth106/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth106/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth106/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth106/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth107/1/1    eth    10G     INFRA UPLINK - TIME1-EAT1 - ETH1 (TKT2253593)
+Eth107/1/2    eth    10G     --
+Eth107/1/3    eth    10G     --
+Eth107/1/4    eth    10G     --
+Eth107/1/5    eth    10G     --
+Eth107/1/6    eth    10G     --
+Eth107/1/7    eth    10G     --
+Eth107/1/8    eth    10G     --
+Eth107/1/9    eth    10G     --
+Eth107/1/10   eth    10G     --
+Eth107/1/11   eth    10G     --
+Eth107/1/12   eth    10G     --
+Eth107/1/13   eth    10G     --
+Eth107/1/14   eth    10G     WDC-DR-Prod1-ESX-05 Port 2:01
+Eth107/1/15   eth    10G     WDC-DR-Prod1-ESX-06 Port 2:01
+Eth107/1/16   eth    10G     WDC-DR-Prod1-ESX-07 Port 2:01
+Eth107/1/17   eth    10G     WDC-DR-Prod1-ESX-01 Port 2:01
+Eth107/1/18   eth    10G     WDC-DR-Prod1-ESX-02 Port 2:01
+Eth107/1/19   eth    10G     WDC-DR-Prod1-ESX-03 Port 2:01
+Eth107/1/20   eth    10G     WDC-DR-Prod1-ESX-04 Port 2:01
+Eth107/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth107/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth107/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth107/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth107/1/25   eth    10G     --
+Eth107/1/26   eth    10G     --
+Eth107/1/27   eth    10G     --
+Eth107/1/28   eth    10G     --
+Eth107/1/29   eth    10G     INFRA UPLINK - WCLI001-EAT1 - ETH0
+Eth107/1/30   eth    10G     INFRA UPLINK - WCLI002-EAT1 - ETH4
+Eth107/1/31   eth    10G     --
+Eth107/1/32   eth    10G     --
+Eth107/1/33   eth    10G     --
+Eth107/1/34   eth    10G     --
+Eth107/1/35   eth    10G     --
+Eth107/1/36   eth    10G     --
+Eth107/1/37   eth    10G     --
+Eth107/1/38   eth    10G     --
+Eth107/1/39   eth    10G     --
+Eth107/1/40   eth    10G     --
+Eth107/1/41   eth    10G     --
+Eth107/1/42   eth    10G     --
+Eth107/1/43   eth    10G     --
+Eth107/1/44   eth    10G     --
+Eth107/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth107/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth107/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth107/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth108/1/1    eth    10G     INFRA UPLINK - TIME1-EAT1 - ETH2 (TKT2253593)
+Eth108/1/2    eth    10G     --
+Eth108/1/3    eth    10G     --
+Eth108/1/4    eth    10G     --
+Eth108/1/5    eth    10G     --
+Eth108/1/6    eth    10G     --
+Eth108/1/7    eth    10G     --
+Eth108/1/8    eth    10G     --
+Eth108/1/9    eth    10G     --
+Eth108/1/10   eth    10G     --
+Eth108/1/11   eth    10G     --
+Eth108/1/12   eth    10G     --
+Eth108/1/13   eth    10G     --
+Eth108/1/14   eth    10G     WDC-DR-Prod1-ESX-05 Port 4:01
+Eth108/1/15   eth    10G     WDC-DR-Prod1-ESX-06 Port 4:01
+Eth108/1/16   eth    10G     WDC-DR-Prod1-ESX-07 Port 4:01
+Eth108/1/17   eth    10G     WDC-DR-Prod1-ESX-01 Port 4:01
+Eth108/1/18   eth    10G     WDC-DR-Prod1-ESX-02 Port 4:01
+Eth108/1/19   eth    10G     WDC-DR-Prod1-ESX-03 port 4:01
+Eth108/1/20   eth    10G     WDC-DR-Prod1-ESX-04 Port 4:01
+Eth108/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth108/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth108/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth108/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth108/1/25   eth    10G     --
+Eth108/1/26   eth    10G     --
+Eth108/1/27   eth    10G     --
+Eth108/1/28   eth    10G     --
+Eth108/1/29   eth    10G     INFRA UPLINK - WCLI001-EAT1 - ETH1
+Eth108/1/30   eth    10G     INFRA UPLINK - WCLI002-EAT1 - ETH5
+Eth108/1/31   eth    10G     --
+Eth108/1/32   eth    10G     --
+Eth108/1/33   eth    10G     --
+Eth108/1/34   eth    10G     --
+Eth108/1/35   eth    10G     --
+Eth108/1/36   eth    10G     --
+Eth108/1/37   eth    10G     --
+Eth108/1/38   eth    10G     --
+Eth108/1/39   eth    10G     --
+Eth108/1/40   eth    10G     --
+Eth108/1/41   eth    10G     --
+Eth108/1/42   eth    10G     --
+Eth108/1/43   eth    10G     --
+Eth108/1/44   eth    10G     --
+Eth108/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth108/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth108/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth108/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth109/1/1    eth    10G     NSS UPLINK - LB1-DR-INT-EAT1 - 2.1  (TKT2905086)
+Eth109/1/2    eth    10G     NSS UPLINK - LB2-DR-INT-EAT1 - 2.1  (TKT2905086)
+Eth109/1/3    eth    10G     WDC-VNX7500-0046 - Data Mover (DM) SERVER 2 - FXG-1-0 (dm2:a:1:0)
+Eth109/1/4    eth    10G     WDC-VNX7500-0046 - Data Mover (DM) SERVER 3 - FXG-1-0 (dm3:b:1:0)
+Eth109/1/5    eth    10G     WDC-VNX7500-0046 - Data Mover (DM) SERVER 2 - FXG-2-0 (dm2:a:2:0)
+Eth109/1/6    eth    10G     WDC-VNX7500-0046 - Data Mover (DM) SERVER 3 - FXG-2-1 (dm3:b:2:1)
+Eth109/1/7    eth    10G     --
+Eth109/1/8    eth    10G     --
+Eth109/1/9    eth    10G     --
+Eth109/1/10   eth    10G     --
+Eth109/1/11   eth    10G     NSS UPLINK - LB1-DR-DMZ-EAT1 - 2.1 (TKT2905086)
+Eth109/1/12   eth    10G     NSS UPLINK - LB2-DR-DMZ-EAT1 - 2.1 (TKT2905086)
+Eth109/1/13   eth    10G     --
+Eth109/1/14   eth    10G     --
+Eth109/1/15   eth    10G     --
+Eth109/1/16   eth    10G     INFRA UPLINK - FG1-EAT1 - GIG 1/0
+Eth109/1/17   eth    10G     --
+Eth109/1/18   eth    10G     --
+Eth109/1/19   eth    10G     --
+Eth109/1/20   eth    10G     --
+Eth109/1/21   eth    10G     RESERVED FOR NIM
+Eth109/1/22   eth    10G     RESERVED FOR NIM
+Eth109/1/23   eth    10G     RESERVED FOR NIM 
+Eth109/1/24   eth    10G     RESERVED FOR NIM 
+Eth109/1/25   eth    10G     INFRA UPLINK - FG1-EBIZ-EAT1 - PORT 13
+Eth109/1/26   eth    10G     INFRA UPLINK - FG2-EBIZ-EAT1 - PORT 13
+Eth109/1/27   eth    10G     INFRA UPLINK - FG1-EBIZ-EAT1 - PORT 17
+Eth109/1/28   eth    10G     INFRA UPLINK - FG2-EBIZ-EAT1 - PORT 17
+Eth109/1/29   eth    10G     INFRA UPLINK - WCLI001-EAT1 - ETH4
+Eth109/1/30   eth    10G     INFRA UPLINK - WCLI002-EAT1 - ETH4
+Eth109/1/31   eth    10G     INFRA UPLINK - FG1-NIM-EAT1 - PORT 13
+Eth109/1/32   eth    10G     INFRA UPLINK - FG2-NIM-EAT1 - PORT 13
+Eth109/1/33   eth    10G     INFRA UPLINK - FG1-NIM-EAT1 - PORT 17
+Eth109/1/34   eth    10G     INFRA UPLINK - FG2-NIM-EAT1 - PORT 17
+Eth109/1/35   eth    10G     --
+Eth109/1/36   eth    10G     --
+Eth109/1/37   eth    10G     --
+Eth109/1/38   eth    10G     --
+Eth109/1/39   eth    10G     --
+Eth109/1/40   eth    10G     --
+Eth109/1/41   eth    10G     --
+Eth109/1/42   eth    10G     --
+Eth109/1/43   eth    10G     NSS UPLINK - LB1-EXT-EAT1 - 1:01  (TKT26422912)
+Eth109/1/44   eth    10G     NSS UPLINK - LB2-EXT-EAT1 - 1:01 (TKT26422912)
+Eth109/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth109/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth109/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth109/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth110/1/1    eth    10G     NSS UPLINK - LB1-DR-INT-EAT1 - 2.2 (TKT2905086)
+Eth110/1/2    eth    10G     NSS UPLINK - LB2-DR-INT-EAT1 - 2.2  (TKT2905086)
+Eth110/1/3    eth    10G     WDC-VNX7500-0046 - Data Mover (DM) SERVER 2 - FXG-1-1 (dm2:a:1:1)
+Eth110/1/4    eth    10G     WDC-VNX7500-0046 - Data Mover (DM) SERVER 3 - FXG-1-1 (dm3:b:1:1)
+Eth110/1/5    eth    10G     WDC-VNX7500-0046 - Data Mover (DM) SERVER 2 - FXG-2-1 (dm2:a:2:1)
+Eth110/1/6    eth    10G     WDC-VNX7500-0046 - Data Mover (DM) SERVER 3 - FXG-2-0 (dm3:b:2:0)
+Eth110/1/7    eth    10G     --
+Eth110/1/8    eth    10G     --
+Eth110/1/9    eth    10G     --
+Eth110/1/10   eth    10G     --
+Eth110/1/11   eth    10G     NSS UPLINK - LB1-DR-DMZ-EAT1 - 2.2  (TKT2905086)
+Eth110/1/12   eth    10G     NSS UPLINK - LB2-DR-DMZ-EAT1 - 2.2 (TKT2905086)
+Eth110/1/13   eth    10G     --
+Eth110/1/14   eth    10G     --
+Eth110/1/15   eth    10G     --
+Eth110/1/16   eth    10G     INFRA UPLINK - FG2-EAT1 - GIG 1/0
+Eth110/1/17   eth    10G     --
+Eth110/1/18   eth    10G     --
+Eth110/1/19   eth    10G     --
+Eth110/1/20   eth    10G     --
+Eth110/1/21   eth    10G     RESERVED FOR NIM
+Eth110/1/22   eth    10G     RESERVED FOR NIM
+Eth110/1/23   eth    10G     RESERVED FOR NIM 
+Eth110/1/24   eth    10G     RESERVED FOR NIM 
+Eth110/1/25   eth    10G     INFRA UPLINK - FG1-EBIZ-EAT1 - PORT 14
+Eth110/1/26   eth    10G     INFRA UPLINK - FG2-EBIZ-EAT1 - PORT 14
+Eth110/1/27   eth    10G     INFRA UPLINK - FG1-EBIZ-EAT1 - PORT 18
+Eth110/1/28   eth    10G     INFRA UPLINK - FG2-EBIZ-EAT1 - PORT 18
+Eth110/1/29   eth    10G     INFRA UPLINK - WCLI001-EAT1 - ETH5
+Eth110/1/30   eth    10G     INFRA UPLINK - WCLI002-EAT1 - ETH5
+Eth110/1/31   eth    10G     INFR
+Eth110/1/32   eth    10G     INFRA UPLINK - FG2-NIM-EAT1 - PORT 14
+Eth110/1/33   eth    10G     INFRA UPLINK - FG1-NIM-EAT1 - PORT 18
+Eth110/1/34   eth    10G     INFRA UPLINK - FG2-NIM-EAT1 - PORT 18
+Eth110/1/35   eth    10G     --
+Eth110/1/36   eth    10G     --
+Eth110/1/37   eth    10G     --
+Eth110/1/38   eth    10G     --
+Eth110/1/39   eth    10G     --
+Eth110/1/40   eth    10G     --
+Eth110/1/41   eth    10G     --
+Eth110/1/42   eth    10G     --
+Eth110/1/43   eth    10G     INFRA UPLINK - LB1-EXT-EAT1 - 1:02 (TKT2642912) 
+Eth110/1/44   eth    10G     INFRA UPLINK - LB2-EXT-EAT1 - 1:02 (TKT2642912)  
+Eth110/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth110/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth110/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth110/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/1    eth    10G     wdc-r02-c02-bc1
+Eth111/1/2    eth    10G     wdc-r02-c02-bc1
+Eth111/1/3    eth    10G     wdc-prod-esxi-01 card 1 port 1_TKT2185255
+Eth111/1/4    eth    10G     wdc-prod-esxi-01 card 2 port 1_TKT2185255
+Eth111/1/5    eth    10G     wdc-prod-esxi-02 card 1 port 1_TKT2185255 
+Eth111/1/6    eth    10G     wdc-prod-esxi-02 card 2 port 1_TKT2185255
+Eth111/1/7    eth    10G     wdc-prod-esxi-03 card 1 port 1_TKT2185255 
+Eth111/1/8    eth    10G     wdc-prod-esxi-03 card 2 port 1_TKT2185255
+Eth111/1/9    eth    10G     wdc-dd9800-data1.vmware.com slot1 port 0 TKT2223671
+Eth111/1/10   eth    10G     wdc-dd9800-data2.vmware.com slot1 port3 TKT2223671
+Eth111/1/11   eth    10G     wdc-prod-esxi-04 card 1 port 1_TKT2185255
+Eth111/1/12   eth    10G     wdc-prod-esxi-04 card 2 port 1_TKT2185255
+Eth111/1/13   eth    10G     wdc-dd9800-data3.vmware.com slot5 port 0 TKT2223671
+Eth111/1/14   eth    10G     wdc-dd9800-data4.vmware.com slot5 port3 TKT2223671
+Eth111/1/15   eth    10G     WDC-TEST-PKS-01-PORT1 - TKT2292489
+Eth111/1/16   eth    10G     WDC-TEST-PKS-01-PORT3 - TKT2292489
+Eth111/1/17   eth    10G     WDC-TEST-PKS-02-PORT1 - TKT2292489
+Eth111/1/18   eth    10G     WDC-TEST-PKS-02-PORT3 - TKT2292489
+Eth111/1/19   eth    10G     WDC-TEST-PKS-03-PORT1 - TKT2292489
+Eth111/1/20   eth    10G     WDC-TEST-PKS-03-PORT3 - TKT2292489
+Eth111/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/25   eth    10G     WDC-TEST-PKS-04-PORT1 - TKT2292489
+Eth111/1/26   eth    10G     WDC-TEST-PKS-04-PORT3 - TKT2292489
+Eth111/1/27   eth    10G     RESERVED for Dandrea
+Eth111/1/28   eth    10G     RESERVED for Dandrea
+Eth111/1/29   eth    10G     wdc-r02-c02-bc1 - Bay 1 : port 5 TKT3134947
+Eth111/1/30   eth    10G     wdc-r02-c02-bc1 - Bay 2 : port 5 TKT3134947
+Eth111/1/31   eth    10G     --
+Eth111/1/32   eth    10G     --
+Eth111/1/33   eth    10G     wdc-dr-isilon-01 port 1 TKT2509644
+Eth111/1/34   eth    10G     wdc-dr-isilon-02 port 1 TKT2509644
+Eth111/1/35   eth    10G     wdc-dr-isilon-03 port 1 TKT2509644
+Eth111/1/36   eth    10G     wdc-dr-isilon-04 port 1 TKT2509644
+Eth111/1/37   eth    10G     wdc-dr-isilon-05 port 1 TKT2509644
+Eth111/1/38   eth    10G     wdc-dr-isilon-06 port 1 TKT2509644
+Eth111/1/39   eth    10G     wdc-dr-isilon-07 port 1 TKT2509644
+Eth111/1/40   eth    10G     wdc-dr-isilon-08 port 1 TKT2509644
+Eth111/1/41   eth    10G     --
+Eth111/1/42   eth    10G     --
+Eth111/1/43   eth    10G     --
+Eth111/1/44   eth    10G     --
+Eth111/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/1    eth    10G     wdc-r02-c02-bc1
+Eth112/1/2    eth    10G     wdc-r02-c02-bc1
+Eth112/1/3    eth    10G     wdc-prod-esxi-01 card 1 port 2_TKT2185255
+Eth112/1/4    eth    10G     wdc-prod-esxi-01 card 2 port 2_TKT2185255
+Eth112/1/5    eth    10G     wdc-prod-esxi-02 card 1 port 2_TKT2185255
+Eth112/1/6    eth    10G     wdc-prod-esxi-02 card 2 port 2_TKT2185255  
+Eth112/1/7    eth    10G     wdc-prod-esxi-03 card 1 port 2_TKT2185255
+Eth112/1/8    eth    10G     wdc-prod-esxi-03 card 2 port 2_TKT2185255
+Eth112/1/9    eth    10G     wdc-dd9800-data1.vmware.com slot4 port 0 TKT2223671
+Eth112/1/10   eth    10G     wdc-dd9800-data2.vmware.com slot4 port3 TKT2223671
+Eth112/1/11   eth    10G     wdc-prod-esxi-04 card 1 port 2_TKT2185255
+Eth112/1/12   eth    10G     wdc-prod-esxi-04 card 2 port 2_TKT2185255
+Eth112/1/13   eth    10G     wdc-dd9800-data3.vmware.com slot7 port 0 TKT2223671
+Eth112/1/14   eth    10G     wdc-dd9800-data4.vmware.com slot7 port3 TKT2223671
+Eth112/1/15   eth    10G     WDC-TEST-PKS-01-PORT2 - TKT2292489
+Eth112/1/16   eth    10G     WDC-TEST-PKS-01-PORT4 - TKT2292489
+Eth112/1/17   eth    10G     WDC-TEST-PKS-02-PORT2 - TKT2292489
+Eth112/1/18   eth    10G     WDC-TEST-PKS-02-PORT4 - TKT2292489
+Eth112/1/19   eth    10G     WDC-TEST-PKS-03-PORT2 - TKT2292489
+Eth112/1/20   eth    10G     WDC-TEST-PKS-03-PORT4 - TKT2292489
+Eth112/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/25   eth    10G     WDC-TEST-PKS-04-PORT2 - TKT2292489
+Eth112/1/26   eth    10G     WDC-TEST-PKS-04-PORT4 - TKT2292489
+Eth112/1/27   eth    10G     RESERVED for Dandrea
+Eth112/1/28   eth    10G     --
+Eth112/1/29   eth    10G     wdc-r02-c02-bc1 - Bay 1 : port 6 TKT3134947
+Eth112/1/30   eth    10G     wdc-r02-c02-bc1 - Bay 2 : port 6 TKT3134947
+Eth112/1/31   eth    10G     --
+Eth112/1/32   eth    10G     --
+Eth112/1/33   eth    10G     wdc-dr-isilon-01 port 2 TKT2509644
+Eth112/1/34   eth    10G     wdc-dr-isilon-02 port 2 TKT2509644
+Eth112/1/35   eth    10G     wdc-dr-isilon-03 port 2 TKT2509644
+Eth112/1/36   eth    10G     wdc-dr-isilon-04 port 2 TKT2509644
+Eth112/1/37   eth    10G     wdc-dr-isilon-05 port 2 TKT2509644
+Eth112/1/38   eth    10G     wdc-dr-isilon-06 port 2 TKT2509644
+Eth112/1/39   eth    10G     wdc-dr-isilon-07 port 2 TKT2509644
+Eth112/1/40   eth    10G     wdc-dr-isilon-08 port 2 TKT2509644
+Eth112/1/41   eth    10G     wdc-dr-vsan-prod1-01 Nic 1 Port 2_RITM0150404
+Eth112/1/42   eth    10G     wdc-dr-vsan-prod1-02 Nic 1 Port 2_RITM0150404
+Eth112/1/43   eth    10G     wdc-dr-vsan-prod1-03 Nic 1 Port 2_RITM0150404
+Eth112/1/44   eth    10G     wdc-dr-vsan-prod1-04 Nic 1 Port 2_RITM0150404
+Eth112/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/1    eth    10G     --
+Eth113/1/2    eth    10G     --
+Eth113/1/3    eth    10G     --
+Eth113/1/4    eth    10G     wdc-xio-04-x1-sc1-wan-TKT2083191
+Eth113/1/5    eth    10G     wdc-xio-04-x2-sc1-wan-TKT2083191
+Eth113/1/6    eth    10G     wdc-xio-04-x3-sc1-wan-TKT2083191
+Eth113/1/7    eth    10G     wdc-xio-04-x4-sc1-wan-TKT2083191
+Eth113/1/8    eth    10G     wdc-isilon-01:1
+Eth113/1/9    eth    10G     wdc-isilon-02:1 
+Eth113/1/10   eth    10G     wdc-isilon-03:1 
+Eth113/1/11   eth    10G     wdc-isilon-04:1 
+Eth113/1/12   eth    10G     wdc-xio-2096-x1-sc1-wan TKT2431402
+Eth113/1/13   eth    10G     wdc-xio-2096-x2-sc1-wan TKT2431402
+Eth113/1/14   eth    10G     wdc-xio-2096-x3-sc1-wan TKT2431402
+Eth113/1/15   eth    10G     wdc-xio-2096-x4-sc1-wan TKT2431402
+Eth113/1/16   eth    10G     wdc-isilon-05:1
+Eth113/1/17   eth    10G     wdc-isilon-06:1
+Eth113/1/18   eth    10G     wdc-isilon-07:1
+Eth113/1/19   eth    10G     wdc-isilon-08:1
+Eth113/1/20   eth    10G     wdc-isilon-09:1
+Eth113/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/25   eth    10G     wdc-isilon-10:1
+Eth113/1/26   eth    10G     wdc-isilon-11:1
+Eth113/1/27   eth    10G     wdc-isilon-12:1
+Eth113/1/28   eth    10G     wdc-isilon-13:1
+Eth113/1/29   eth    10G     wdc-isilon-14:1
+Eth113/1/30   eth    10G     wdc-isilon-15:1
+Eth113/1/31   eth    10G     wdc-isilon-16:1
+Eth113/1/32   eth    10G     wdc-isilon-17:1
+Eth113/1/33   eth    10G     wdc-isilon-18:1
+Eth113/1/34   eth    10G     WDC-DD990-1 Port 11A
+Eth113/1/35   eth    10G     WDC-DR-PROD4-ESX01 - CARD1-PORT2 - INC0558903
+Eth113/1/36   eth    10G     WDC-DR-PROD4-ESX02 - CARD1-PORT2 - INC0558903
+Eth113/1/37   eth    10G     WDC-DR-PROD4-ESX03 - CARD1-PORT2 - INC0558903
+Eth113/1/38   eth    10G     WDC-DR-PROD4-ESX04 - CARD1-PORT2 - INC0558903
+Eth113/1/39   eth    10G     WDC-DR-PROD4-ESX05 - CARD1-PORT2 - INC0558903
+Eth113/1/40   eth    10G     WDC-DR-PROD4-ESX06 - CARD1-PORT2 - INC0558903
+Eth113/1/41   eth    10G     WDC-DR-PROD4-ESX07 - CARD1-PORT2 - INC0558903
+Eth113/1/42   eth    10G     WDC-DR-PROD4-ESX08 - CARD1-PORT2 - INC0558903
+Eth113/1/43   eth    10G     WDC-DD990-1 Port 10A
+Eth113/1/44   eth    10G     --
+Eth113/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/1    eth    10G     --
+Eth114/1/2    eth    10G     --
+Eth114/1/3    eth    10G     --
+Eth114/1/4    eth    10G     wdc-xio-04-x1-sc2-wan-TKT2083191
+Eth114/1/5    eth    10G     wdc-xio-04-x2-sc2-wan-TKT2083191
+Eth114/1/6    eth    10G     wdc-xio-04-x3-sc2-wan-TKT2083191
+Eth114/1/7    eth    10G     wdc-xio-04-x4-sc2-wan-TKT2083191
+Eth114/1/8    eth    10G     wdc-isilon-01:2 
+Eth114/1/9    eth    10G     wdc-isilon-02:2 
+Eth114/1/10   eth    10G     wdc-isilon-03:2 
+Eth114/1/11   eth    10G     wdc-isilon-04:2 
+Eth114/1/12   eth    10G     wdc-xio-2096-x1-sc2-wan TKT2431402
+Eth114/1/13   eth    10G     wdc-xio-2096-x2-sc2-wan TKT2431402
+Eth114/1/14   eth    10G     wdc-xio-2096-x3-sc2-wan TKT2431402
+Eth114/1/15   eth    10G     wdc-xio-2096-x4-sc2-wan TKT2431402
+Eth114/1/16   eth    10G     wdc-isilon-05:2
+Eth114/1/17   eth    10G     wdc-isilon-06:2
+Eth114/1/18   eth    10G     wdc-isilon-07:2
+Eth114/1/19   eth    10G     wdc-isilon-08:2
+Eth114/1/20   eth    10G     wdc-isilon-09:2
+Eth114/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/25   eth    10G     wdc-isilon-10:2
+Eth114/1/26   eth    10G     wdc-isilon-11:2
+Eth114/1/27   eth    10G     wdc-isilon-12:2
+Eth114/1/28   eth    10G     wdc-isilon-13:2
+Eth114/1/29   eth    10G     wdc-isilon-14:2
+Eth114/1/30   eth    10G     wdc-isilon-15:2
+Eth114/1/31   eth    10G     wdc-isilon-16:2
+Eth114/1/32   eth    10G     wdc-isilon-17:2
+Eth114/1/33   eth    10G     wdc-isilon-18:2
+Eth114/1/34   eth    10G     WDC-DD990-1 Port 11B
+Eth114/1/35   eth    10G     WDC-DR-PROD4-ESX01 - CARD2-PORT2 - INC0558903
+Eth114/1/36   eth    10G     WDC-DR-PROD4-ESX02 - CARD2-PORT2 - INC0558903
+Eth114/1/37   eth    10G     WDC-DR-PROD4-ESX03 - CARD2-PORT2 - INC0558903
+Eth114/1/38   eth    10G     WDC-DR-PROD4-ESX04 - CARD2-PORT2 - INC0558903
+Eth114/1/39   eth    10G     WDC-DR-PROD4-ESX05 - CARD2-PORT2 - INC0558903
+Eth114/1/40   eth    10G     WDC-DR-PROD4-ESX06 - CARD2-PORT2 - INC0558903
+Eth114/1/41   eth    10G     WDC-DR-PROD4-ESX07 - CARD2-PORT2 - INC0558903
+Eth114/1/42   eth    10G     WDC-DR-PROD4-ESX08 - CARD2-PORT2 - INC0558903
+Eth114/1/43   eth    10G     WDC-DD990-1 Port 10B
+Eth114/1/44   eth    10G     --
+Eth114/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/1    eth    10G     NSS UPLINK - LB1-DEVTEST-4000
+Eth115/1/2    eth    10G     --
+Eth115/1/3    eth    10G     NSS UPLINK - LB1-NIM-PROD-400
+Eth115/1/4    eth    10G     --
+Eth115/1/5    eth    10G     wdc-r02-c03-bc2 oa2:mgmt
+Eth115/1/6    eth    10G     --
+Eth115/1/7    eth    10G     --
+Eth115/1/8    eth    10G     --
+Eth115/1/9    eth    10G     NSS UPLINK - LB1-DEVTEST-4000-EAT1 - 1:
+Eth115/1/10   eth    10G     NSS UPLINK - LB1-DEVTEST-4000-EAT1 - 1:2 (TKT2835829)
+Eth115/1/11   eth    10G     NSS UPLINK - LB1-DEVTEST-4000-EAT1 - 1:3 (TKT2835829)
+Eth115/1/12   eth    10G     NSS UPLINK - LB1-DEVTEST-4000-EAT1 - 1:4  (TKT2835829)
+Eth115/1/13   eth    10G     --
+Eth115/1/14   eth    10G     --
+Eth115/1/15   eth    10G     --
+Eth115/1/16   eth    10G     --
+Eth115/1/17   eth    10G     INFRA UPLINK - W3-SECURITY-KRAKEN-1 - PORT 3 (TKT
+Eth115/1/18   eth    10G     wdc-xio-0007-x1-sc1 TKT2083191
+Eth115/1/19   eth    10G     INFRA UPLINK - GTM-INT-EAT1.VMWARE.COM PORT 1 (TK
+Eth115/1/20   eth    10G     wdc-secesx-1:01
+Eth115/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/25   eth    10G     wdc-xio-2096-x1-sc1 TKT2310565
+Eth115/1/26   eth    10G     --
+Eth115/1/27   eth    10G     --
+Eth115/1/28   eth    10G     NSS UPLINK - LB2-DEVTEST-4000-EAT1 -
+Eth115/1/29   eth    10G     NSS UPLINK - LB2-DEVTEST-4000-EAT1 -
+Eth115/1/30   eth    10G     NSS UPLINK - LB2-DEVTEST-4000-EAT1 - 1:3 (TKT2835829)
+Eth115/1/31   eth    10G     NSS UPLINK - LB2-DEVTEST-4000-EAT1 1:4 (TKT2835829)
+Eth115/1/32   eth    10G     NSS UPLINK - LB1-NIM-PROD-4000-EAT1 1:1 (TKT2835829)
+Eth115/1/33   eth    10G     NSS UPLINK - LB1-NIM-PROD-4000-EAT1 - 1:02 (TKT2835829)  
+Eth115/1/34   eth    10G     NSS UPLINK - LB1-NIM-PROD-4000-EAT1 - 1:03 (TKT2835829) 
+Eth115/1/35   eth    10G     NSS UPLINK - LB1-NIM-PROD-4000-EAT1 - 1
+Eth115/1/36   eth    10G     NSS UPLINK - LB2-NIM-PROD-4000-EAT1
+Eth115/1/37   eth    10G     NSS UPLINK - LB2-NIM-PROD-4000-EAT1 - 1:02
+Eth115/1/38   eth    10G     NSS UPLINK - LB2-NIM-PROD-4000-EAT1 - 1:03 (TKT2835829) 
+Eth115/1/39   eth    10G     NSS UPLINK
+Eth115/1/40   eth    10G     wdc-secesx-02:02
+Eth115/1/41   eth    10G     wdc-secesx-03:02
+Eth115/1/42   eth    10G     wdc-secesxi-5:onboardnic3 TKT2116204
+Eth115/1/43   eth    10G     wdc-secesxi-6:onboardnic3 TKT2116204
+Eth115/1/44   eth    10G     wdc-secesxi-7:onboardnic3 TKT2116204
+Eth115/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/1    eth    10G     --
+Eth116/1/2    eth    10G     --
+Eth116/1/3    eth    10G     --
+Eth116/1/4    eth    10G     --
+Eth116/1/5    eth    10G     --
+Eth116/1/6    eth    10G     --
+Eth116/1/7    eth    10G     --
+Eth116/1/8    eth    10G     --
+Eth116/1/9    eth    10G     NSS UPLINK - LB1-DEVTEST-4000-EAT1 - 1:05
+Eth116/1/10   eth    10G     NSS UPLINK - LB1-DEVTEST-4000-EAT1 - 1:
+Eth116/1/11   eth    10G     NSS UPLINK - LB1-DEVTEST-4000-EAT1 - 1:0
+Eth116/1/12   eth    10G     NSS UPLINK - LB1-DEVTEST-4000-EAT1 - 1:08 (TKT2835829) 
+Eth116/1/13   eth    10G     --
+Eth116/1/14   eth    10G     --
+Eth116/1/15   eth    10G     --
+Eth116/1/16   eth    10G     --
+Eth116/1/17   eth    10G     INFRA UPLINK - W3-SECURI
+Eth116/1/18   eth    10G     wdc-xio-0007-x1-sc2 TKT2083191
+Eth116/1/19   eth    10G     INFRA UPLINK - GTM-INT-EAT1.VMWAR
+Eth116/1/20   eth    10G     wdc-secesx-01:02
+Eth116/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/25   eth    10G     wdc-xio-2096-x1-sc2 TKT2310565
+Eth116/1/26   eth    10G     --
+Eth116/1/27   eth    10G     wdc-secesx-2:01
+Eth116/1/28   eth    10G     NSS UPLINK - LB2-DEVTEST-4000-EAT1 - 1:05 (TK
+Eth116/1/29   eth    10G     NSS UPLINK - LB2-DEVTEST-4000-EAT1
+Eth116/1/30   eth    10G     NSS UPLINK - LB2-DEVTEST-4000-EAT
+Eth116/1/31   eth    10G     NSS UPLINK - LB2-DEVTEST-4000-EAT1 - 1:08 (TKT2
+Eth116/1/32   eth    10G     NSS UPLINK - LB1-NIM-PROD-4000-EAT1 - 1:05 (TKT2
+Eth116/1/33   eth    10G     NSS UPLINK - LB1-NIM-PROD-4000-EAT1 - 1:06 (TKT
+Eth116/1/34   eth    10G     NSS UPLINK - LB1-NIM-PROD-4000-EAT1 - 1:07 (TKT
+Eth116/1/35   eth    10G     NSS UPLINK - LB1-NIM-PROD-4000-EA
+Eth116/1/36   eth    10G     NSS UPLINK - LB2-NIM-PROD-4000-EAT1 - 
+Eth116/1/37   eth    10G     NSS UPLINK - LB2-NIM-PROD-4000-EAT1 - 
+Eth116/1/38   eth    10G     NSS UPLINK - LB2-NIM-PROD-4000-EAT1 - 
+Eth116/1/39   eth    10G     NSS UPLINK - LB2-NIM-PROD-4000-EAT1 - 
+Eth116/1/40   eth    10G     wdc-secesx-2:01
+Eth116/1/41   eth    10G     wdc-secesx-3:01
+Eth116/1/42   eth    10G     wdc-secesxi-5:onboardnic4 TKT2116204
+Eth116/1/43   eth    10G     wdc-secesxi-6:onboardnic4 TKT2116204
+Eth116/1/44   eth    10G     wdc-secesxi-7:onboardnic4 TKT2116204
+Eth116/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!

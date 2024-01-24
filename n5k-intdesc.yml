@@ -1,0 +1,15 @@
+---
+- hosts: "n5k-intdesc"
+  gather_facts: false
+
+  tasks:
+  - name: n5k-intdesc for WDC
+    nxos_command:
+      commands:
+        - "sh int desc"
+    register: config
+  - name: save config to /etc/ansible/backups/n5ksintdesc
+    copy:
+      content: "{{config.stdout[0]}}"
+      dest: "/etc/ansible/backups/n5ksintdesc/{{inventory_hostname}}.txt"
+...

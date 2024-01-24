@@ -1,0 +1,122 @@
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+mgmt0         --                 connected routed    full    1000    --         
+
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+Eth1/1        --                 xcvrAbsen routed    auto    auto    --         
+Eth1/2        --                 disabled  routed    auto    auto    10Gbase-SR 
+Eth1/3        wdc-asbr02-dmz eth connected 3866      full    10G     10Gbase-SR 
+Eth1/4        reserved_parth     xcvrAbsen routed    auto    auto    --         
+Eth1/5        TAP3 / Port16 Giga connected trunk     full    10G     10Gbase-SR 
+Eth1/6        TAP4 / Port10 Giga connected trunk     full    10G     10Gbase-SR 
+Eth1/7        SECONDARY LINK TO  connected routed    full    10G     10Gbase-LR 
+Eth1/8        --                 xcvrAbsen routed    auto    auto    --         
+Eth1/9        --                 xcvrAbsen routed    auto    auto    --         
+Eth1/10       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/11       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/12       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/13       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/14       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/15       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/16       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/17       --                 disabled  routed    auto    auto    10Gbase-SR 
+Eth1/18       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/19       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/20       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/21       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/22       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/23       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/24       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/25       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/26       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/27       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/28       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/29       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/30       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/31       --                 disabled  routed    auto    auto    10Gbase-SR 
+Eth1/32       --                 disabled  routed    auto    auto    10Gbase-SR 
+Eth1/33       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/34       --                 disabled  routed    auto    auto    10Gbase-SR 
+Eth1/35       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/36       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/37       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/38       TAP3 / Port10 Giga connected trunk     full    10G     10Gbase-SR 
+Eth1/39       TAP4 / Port4 Gigam connected trunk     full    10G     10Gbase-SR 
+Eth1/40       #Decommissioned# M disabled  trunk     auto    auto    10Gbase-SR 
+Eth1/41       #Decommissioned# M channelDo trunk     auto    auto    10Gbase-SR 
+Eth1/42       #Decommissioned# M channelDo trunk     auto    auto    10Gbase-SR 
+Eth1/43       MOD 2/10 Gigamon H connected trunk     full    1000    1000base-SX
+Eth1/44       MOD 2/4 Gigamon HC connected trunk     full    1000    1000base-SX
+Eth1/45       --                 disabled  routed    auto    auto    10Gbase-SR 
+Eth1/46       --                 disabled  routed    auto    auto    10Gbase-SR 
+Eth1/47       TO WDC-POD2-PSO-CN connected routed    full    10G     10Gbase-SR 
+Eth1/48       --                 disabled  routed    auto    auto    10Gbase-SR 
+Eth1/49       n9k01-spine-eat1 e connected routed    full    100G    QSFP-100G40G-BIDI
+Eth1/50       n9k02-spine-eat1 e connected routed    full    100G    QSFP-100G40G-BIDI
+Eth1/51       n9k01-aggr-eat1 Et connected trunk     full    100G    QSFP-100G40G-BIDI
+Eth1/52       n9k02-aggr-eat1 Et connected trunk     full    100G    QSFP-100G40G-BIDI
+Eth1/53       rpe03-eat1 Fo0/3/1 connected routed    full    40G     QSFP-40G-SR-BD
+Eth1/53.3     rpe03-eat1 Fo0/3/1 connected routed    full    40G     QSFP-40G-SR-BD
+Eth1/53.4     rpe03-eat1 Fo0/3/1 connected routed    full    40G     QSFP-40G-SR-BD
+Eth1/53.6     rpe03-eat1 Fo0/3/1 connected routed    full    40G     QSFP-40G-SR-BD
+Eth1/53.7     rpe03-eat1 Fo0/3/1 connected routed    full    40G     QSFP-40G-SR-BD
+Eth1/54       rpe04-eat1 Fo0/3/0 connected routed    full    40G     QSFP-40G-SR-BD
+Eth1/54.3     rpe04-eat1 Fo0/3/0 connected routed    full    40G     QSFP-40G-SR-BD
+Eth1/54.4     rpe04-eat1 Fo0/3/0 connected routed    full    40G     QSFP-40G-SR-BD
+Eth1/54.6     rpe04-eat1 Fo0/3/0 connected routed    full    40G     QSFP-40G-SR-BD
+Eth1/54.7     rpe04-eat1 Fo0/3/0 connected routed    full    40G     QSFP-40G-SR-BD
+Eth1/55       n9k01-spine-eat1 e connected routed    full    100G    QSFP-100G40G-BIDI
+Eth1/56       n9k02-spine-eat1 e connected routed    full    100G    QSFP-100G40G-BIDI
+Eth1/57       n9k01-borderleaf-e connected trunk     full    40G     QSFP-40G-SR-BD
+Eth1/58       n9k01-borderleaf-e connected trunk     full    40G     QSFP-40G-SR-BD
+Eth1/59       --                 xcvrAbsen routed    auto    auto    --         
+Eth1/60       --                 xcvrAbsen routed    auto    auto    --         
+Po1           n9k01-borderleaf-e connected trunk     full    40G     --         
+Po10          n9k01/02-aggr-eat1 connected trunk     full    100G    --         
+Po11          #Decommissioned# F disabled  trunk     auto    auto    --         
+Po12          #Decommissioned# F disabled  trunk     auto    auto    --         
+Po15          FGP1-5260-EAT1     connected trunk     full    10G     --         
+Po16          FGP2-5260-EAT1     connected trunk     full    10G     --         
+Po17          FGP1-5260-EAT1     connected trunk     full    10G     --         
+Po18          FGP2-5260-EAT1     connected trunk     full    10G     --         
+Po191         FGP3-EAT1 - Port 1 connected trunk     full    1000    --         
+Po192         FGP4-EAT1 - Port 1 connected trunk     full    1000    --         
+Po220         --                 noOperMem routed    auto    auto    --         
+Po225         --                 noOperMem routed    auto    auto    --         
+Po230         --                 noOperMem routed    auto    auto    --         
+Po235         --                 noOperMem routed    auto    auto    --         
+Po240         --                 noOperMem routed    auto    auto    --         
+Po260         --                 noOperMem routed    auto    auto    --         
+Lo0           BGP/OSPF Router-ID connected routed    auto    auto    --         
+Lo1           Anycast VTEP addre connected routed    auto    auto    --         
+Lo6           IPv6-RouterID      connected routed    auto    auto    --         
+Vlan1         --                 down      routed    auto    auto    --
+Vlan96        L3VNI-96           connected routed    auto    auto    --
+Vlan97        L3VNI-97           connected routed    auto    auto    --
+Vlan98        L3VNI-98           connected routed    auto    auto    --
+Vlan99        L3VNI              connected routed    auto    auto    --
+Vlan1023      eat1-monitoring-to down      routed    auto    auto    --
+Vlan1026      sjc05-wlan-mgmt    down      routed    auto    auto    --
+Vlan1046      sjc05-vgrid-rackhe down      routed    auto    auto    --
+Vlan1604      --                 connected routed    auto    auto    --
+Vlan3087      eat1-tkg-avi-ingre connected routed    auto    auto    --
+Vlan3101      sjc05-mgmt         down      routed    auto    auto    --
+Vlan3413      sjc05-tier2-stagin down      routed    auto    auto    --
+Vlan3800      eat1-pan-gp2       connected routed    auto    auto    --
+Vlan3801      eat1_av_floor_1    connected routed    auto    auto    --
+Vlan3904      eat1-pks-nonprod01 connected routed    auto    auto    --
+Vlan3922      eat1-Host-A-POC    connected routed    auto    auto    --
+Vlan3923      eat1-Host-B-POC    connected routed    auto    auto    --
+Vlan3925      eat1-dcmetro-esxi- connected routed    auto    auto    --
+Vlan3926      eat1-dcmetro-vms   connected routed    auto    auto    --
+Vlan3927      eat1-dcmetro-vmoti connected routed    auto    auto    --
+Vlan3933      eat1-vc-dev1       connected routed    auto    auto    --
+Vlan3934      eat1-wcp           connected routed    auto    auto    --
+nve1          --                 connected --        auto    auto    --         
+
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------

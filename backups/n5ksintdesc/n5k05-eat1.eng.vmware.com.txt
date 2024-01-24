@@ -1,0 +1,448 @@
+-------------------------------------------------------------------------------
+Port          Type   Speed   Description
+-------------------------------------------------------------------------------
+Eth1/1        eth    40G     --
+Eth1/2        eth    40G     --
+Eth1/3        eth    40G     --
+Eth1/4        eth    40G     --
+Eth1/5        eth    40G     --
+Eth1/6        eth    40G     --
+Eth1/7        eth    40G     --
+Eth1/8        eth    40G     --
+Eth1/9        eth    40G     INFRA UPLINK - 109-5K56-P3R04C01U45
+Eth1/10       eth    40G     INFRA UPLINK - 110-5K56-P3R04C02U45
+Eth1/11       eth    40G     INFRA UPLINK - 111-5K56-P3R02C10U37
+Eth1/12       eth    40G     INFRA UPLINK - 112-5K56-P3R02C11U37
+Eth2/1        eth    40G     INFRA UPLINK - 113-5K56-P3R04C09U34
+Eth2/2        eth    40G     INFRA UPLINK - 114-5K56-P3R04C10U34
+Eth2/3        eth    40G     INFRA UPLINK - 115-5K56-P3R02C19U38
+Eth2/4        eth    40G     INFRA UPLINK - 116-5K56-P3R02C19U40
+Eth2/5        eth    40G     --
+Eth2/6        eth    40G     --
+Eth2/7        eth    40G     --
+Eth2/8        eth    40G     INFRA UPLINK - N5K05/06-EAT1 VPC PEER LINK
+Eth2/9        eth    40G     --
+Eth2/10       eth    40G     --
+Eth2/11       eth    40G     INFRA UPLINK - N9K01-AGGREGATION-EAT1 - ETH 1/9
+Eth2/12       eth    40G     INFRA UPLINK - N9K02-AGGREGATION-EAT1 - ETH 1/9
+Eth3/1        eth    40G     --
+Eth3/2        eth    40G     --
+Eth3/3        eth    40G     --
+Eth3/4        eth    40G     --
+Eth3/5        eth    40G     --
+Eth3/6        eth    40G     --
+Eth3/7        eth    40G     --
+Eth3/8        eth    40G     INFRA UPLINK - N5K05/06-EAT1 - VPC PEER LINK
+Eth3/9        eth    40G     --
+Eth3/10       eth    40G     --
+Eth3/11       eth    40G     INFRA UPLINK - N9K01-AGGREGATION-EAT1 - ETH 1/10
+Eth3/12       eth    40G     INFRA UPLINK - N9K02-AGGREGATION-EAT1 - ETH 1/10
+
+-------------------------------------------------------------------------------
+Interface                Description                                            
+-------------------------------------------------------------------------------
+Po10                     N5K05/06-EAT1 VPC PEER LINK
+Po28                     wdc-aw-dr-dd A3 port 1 and A4 port 1
+Po29                     wdc-dd9500-data1_RITM0161896
+Po30                     wdc-dd9500-data2_RITM0161896
+Po109                    109-5k56-P3R04C01U45
+Po110                    110-5k56-P3R04C02U45
+Po111                    111-5k56-P3R02C10U37
+Po112                    112-5k56-P3R02C11U37
+Po113                    113-5k56-P3R04C09U34
+Po114                    114-5k56-P3R04C10U34
+Po115                    115-5K56-P3R02C19U38 
+Po116                    116-5K56-P3R02C19U40
+Po117                    wdc-vnx2-7781(Tag=160586) blade2 ports fxg0 and fxg1 - TKT3102417
+Po118                    wdc-vnx2-7781(Tag=160586) blade3 ports fxg0 and fxg1 - TKT3102417
+Po119                    wdc-vnx2-7781(Tag=160587) blade4 ports fxg0 and fxg1 - TKT3102417
+Po120                    wdc-vnx2-7781 blade5 ports fxg0 and fxg1 - TKT3102417
+Po230                    N9K01/02-AGGREGATION-EAT1 PO230
+
+-------------------------------------------------------------------------------
+Port          Type   Speed   Description
+-------------------------------------------------------------------------------
+Eth109/1/1    eth    10G     wdc-rpa8-n1-wan port0 TKT2196936 
+Eth109/1/2    eth    10G     wdc-rpa8-n3-wan port0 TKT2196936 
+Eth109/1/3    eth    10G     wdc-rpa8-n5-wan port0 TKT2196936 
+Eth109/1/4    eth    10G     wdc-rpa8-n7-wan port0 TKT2196936 
+Eth109/1/5    eth    10G     wdc-secesxi-5:10gnic2 TKT2116204
+Eth109/1/6    eth    10G     wdc-secesxi-6:10gnic2 TKT2116204
+Eth109/1/7    eth    10G     wdc-secesxi-7:10gnic2 TKT2116204
+Eth109/1/8    eth    10G     wdc-vnx2-7781(Tag=160586) portA1:1 blade2:fxg0 - TKT3102417
+Eth109/1/9    eth    10G     wdc-vnx2-7781(Tag=160586) portB1:1 blade3:fxg0 - TKT3102417
+Eth109/1/10   eth    10G     wdc-vnx2-7781(Tag=160587) portA1:1 blade4:fxg0 - TKT3102417
+Eth109/1/11   eth    10G     wdc-vnx2-7781 blade5 ports fxg0 - TKT3102417
+Eth109/1/12   eth    10G     w3-dd9900-01 pci-5:nic:1 TKT3748724
+Eth109/1/13   eth    10G     w3-dd9900-01 pci-8:nic:1 TKT3748724
+Eth109/1/14   eth    10G     w3-dd9900-01 pci-10:nic:1 TKT3748724 
+Eth109/1/15   eth    10G     w3-dd9900-01 pci-n:nic:2 TKT3748724
+Eth109/1/16   eth    10G     --
+Eth109/1/17   eth    10G     --
+Eth109/1/18   eth    10G     --
+Eth109/1/19   eth    10G     --
+Eth109/1/20   eth    10G     --
+Eth109/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth109/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth109/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth109/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth109/1/25   eth    10G     --
+Eth109/1/26   eth    10G     --
+Eth109/1/27   eth    10G     --
+Eth109/1/28   eth    10G     --
+Eth109/1/29   eth    10G     --
+Eth109/1/30   eth    10G     --
+Eth109/1/31   eth    10G     --
+Eth109/1/32   eth    10G     --
+Eth109/1/33   eth    10G     --
+Eth109/1/34   eth    10G     --
+Eth109/1/35   eth    10G     --
+Eth109/1/36   eth    10G     --
+Eth109/1/37   eth    10G     --
+Eth109/1/38   eth    10G     --
+Eth109/1/39   eth    10G     --
+Eth109/1/40   eth    10G     --
+Eth109/1/41   eth    10G     --
+Eth109/1/42   eth    10G     --
+Eth109/1/43   eth    10G     --
+Eth109/1/44   eth    10G     --
+Eth109/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth109/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth109/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth109/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth110/1/1    eth    10G     wdc-rpa8-n2-wan port0 TKT2196936 
+Eth110/1/2    eth    10G     wdc-rpa8-n4-wan port0 TKT2196936 
+Eth110/1/3    eth    10G     wdc-rpa8-n6-wan port0 TKT2196936 
+Eth110/1/4    eth    10G     wdc-rpa8-n8-wan port0 TKT2196936 
+Eth110/1/5    eth    10G     --
+Eth110/1/6    eth    10G     --
+Eth110/1/7    eth    10G     --
+Eth110/1/8    eth    10G     wdc-vnx2-7781(Tag=160586) portA1:1 blade2:fxg1 - TKT3102417
+Eth110/1/9    eth    10G     wdc-vnx2-7781(Tag=160586) portB1:2 blade3:fxg1 - TKT3102417
+Eth110/1/10   eth    10G     wdc-vnx2-7781(Tag=160587) portA1:2 blade4:fxg1 - TKT3102417
+Eth110/1/11   eth    10G     wdc-vnx2-7781 blade5 ports fxg1 - TKT3102417
+Eth110/1/12   eth    10G     w3-dd9900-01 pci-5:nic:2 TKT3748724
+Eth110/1/13   eth    10G     w3-dd9900-01 pci-8:nic:2 TKT3748724
+Eth110/1/14   eth    10G     w3-dd9900-01 pci-10:nic:2 TKT3748724
+Eth110/1/15   eth    10G     w3-dd9900-01 pci-n:nic:3 TKT3748724
+Eth110/1/16   eth    10G     --
+Eth110/1/17   eth    10G     --
+Eth110/1/18   eth    10G     --
+Eth110/1/19   eth    10G     --
+Eth110/1/20   eth    10G     --
+Eth110/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth110/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth110/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth110/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth110/1/25   eth    10G     --
+Eth110/1/26   eth    10G     --
+Eth110/1/27   eth    10G     --
+Eth110/1/28   eth    10G     --
+Eth110/1/29   eth    10G     --
+Eth110/1/30   eth    10G     --
+Eth110/1/31   eth    10G     --
+Eth110/1/32   eth    10G     --
+Eth110/1/33   eth    10G     --
+Eth110/1/34   eth    10G     --
+Eth110/1/35   eth    10G     --
+Eth110/1/36   eth    10G     --
+Eth110/1/37   eth    10G     --
+Eth110/1/38   eth    10G     --
+Eth110/1/39   eth    10G     --
+Eth110/1/40   eth    10G     --
+Eth110/1/41   eth    10G     --
+Eth110/1/42   eth    10G     --
+Eth110/1/43   eth    10G     --
+Eth110/1/44   eth    10G     --
+Eth110/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth110/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth110/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth110/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/1    eth    10G     wdc-isi-phd-35-p1_TKT2417848 
+Eth111/1/2    eth    10G     wdc-isi-phd-36-p1_TKT2417848 
+Eth111/1/3    eth    10G     --
+Eth111/1/4    eth    10G     --
+Eth111/1/5    eth    10G     --
+Eth111/1/6    eth    10G     --
+Eth111/1/7    eth    10G     --
+Eth111/1/8    eth    10G     WDC-ISI-PHD-25-P1_TASK0184794
+Eth111/1/9    eth    10G     WDC-ISI-PHD-26-P1_TASK0184794
+Eth111/1/10   eth    10G     WDC-ISI-PHD-27-P1_TASK0184794
+Eth111/1/11   eth    10G     WDC-ISI-PHD-28-P1_TASK0184794
+Eth111/1/12   eth    10G     WDC-ISI-PHD-29-P1_TASK0184794
+Eth111/1/13   eth    10G     WDC-ISI-PHD-30-P1_TASK0184794
+Eth111/1/14   eth    10G     WDC-ISI-PHD-31-P1_TASK0184794
+Eth111/1/15   eth    10G     WDC-ISI-PHD-32-P1_TASK0184794
+Eth111/1/16   eth    10G     WDC-ISI-PHD-33-P1_TASK0184794
+Eth111/1/17   eth    10G     WDC-ISI-PHD-34-P1_TASK0184794
+Eth111/1/18   eth    10G     --
+Eth111/1/19   eth    10G     --
+Eth111/1/20   eth    10G     --
+Eth111/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/25   eth    10G     wdc-dr-vsan-prod1-05 Nic 1 Port 1_RITM0150404
+Eth111/1/26   eth    10G     wdc-dr-vsan-prod1-06 Nic 1 Port 1_RITM0150404
+Eth111/1/27   eth    10G     wdc-dr-vsan-prod1-07 Nic 1 Port 1_RITM0150404
+Eth111/1/28   eth    10G     wdc-dr-vsan-prod1-08 Nic 1 Port 1_RITM0150404
+Eth111/1/29   eth    10G     wdc-dr-vsan-prod1-09 Nic 1 Port 1_RITM0150404
+Eth111/1/30   eth    10G     wdc-dr-vsan-prod1-10 Nic 1 Port 1_RITM0150404
+Eth111/1/31   eth    10G     wdc-dr-vsan-prod1-11  Nic 1 Port 1_RITM0150404
+Eth111/1/32   eth    10G     wdc-dr-vsan-prod1-12  Nic 1 Port 1_RITM0150404
+Eth111/1/33   eth    10G     wdc-dr-vsan-prod1-01 Nic 1 Port 1_RITM0150404
+Eth111/1/34   eth    10G     wdc-dr-vsan-prod1-02 Nic 1 Port 1_RITM0150404
+Eth111/1/35   eth    10G     wdc-dr-vsan-prod1-03 Nic 1 Port 1_RITM0150404
+Eth111/1/36   eth    10G     wdc-dr-vsan-prod1-04 Nic 1 Port 1_RITM0150404
+Eth111/1/37   eth    10G     wdc-dr-vsan-prod1-01 Nic 2 Port 1_RITM0150404
+Eth111/1/38   eth    10G     wdc-dr-vsan-prod1-02 Nic 2 Port 1_RITM0150404
+Eth111/1/39   eth    10G     wdc-dr-vsan-prod1-03 Nic 2 Port 1_RITM0150404
+Eth111/1/40   eth    10G     wdc-dr-vsan-prod1-04 Nic 2 Port 1_RITM0150404
+Eth111/1/41   eth    10G     wdc-isi-gssftp-01 PORT 1_TKT2198866
+Eth111/1/42   eth    10G     wdc-isi-gssftp-02 PORT 1_TKT2198866
+Eth111/1/43   eth    10G     wdc-isi-gssftp-03 PORT 1_TKT2198866
+Eth111/1/44   eth    10G     wdc-isi-gssftp-04 PORT 1_TKT2198866
+Eth111/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth111/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/1    eth    10G     wdc-isi-phd-35-p2_TKT2417848 
+Eth112/1/2    eth    10G     wdc-isi-phd-36-p2_TKT2417848 
+Eth112/1/3    eth    10G     --
+Eth112/1/4    eth    10G     --
+Eth112/1/5    eth    10G     --
+Eth112/1/6    eth    10G     --
+Eth112/1/7    eth    10G     --
+Eth112/1/8    eth    10G     WDC-ISI-PHD-25-P2_TASK0184794
+Eth112/1/9    eth    10G     WDC-ISI-PHD-26-P2_TASK0184794
+Eth112/1/10   eth    10G     WDC-ISI-PHD-27-P2_TASK0184794
+Eth112/1/11   eth    10G     WDC-ISI-PHD-28-P2_TASK0184794
+Eth112/1/12   eth    10G     WDC-ISI-PHD-29-P2_TASK0184794
+Eth112/1/13   eth    10G     WDC-ISI-PHD-30-P2_TASK0184794
+Eth112/1/14   eth    10G     WDC-ISI-PHD-31-P2_TASK0184794
+Eth112/1/15   eth    10G     WDC-ISI-PHD-32-P2_TASK0184794
+Eth112/1/16   eth    10G     WDC-ISI-PHD-33-P2_TASK0184794
+Eth112/1/17   eth    10G     WDC-ISI-PHD-34-P2_TASK0184794
+Eth112/1/18   eth    10G     --
+Eth112/1/19   eth    10G     --
+Eth112/1/20   eth    10G     --
+Eth112/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/25   eth    10G     wdc-dr-vsan-prod1-05 Nic 1 Port 2_RITM0150404
+Eth112/1/26   eth    10G     wdc-dr-vsan-prod1-06 Nic 1 Port 2_RITM0150404
+Eth112/1/27   eth    10G     wdc-dr-vsan-prod1-07 Nic 1 Port 2_RITM0150404
+Eth112/1/28   eth    10G     wdc-dr-vsan-prod1-08 Nic 1 Port 2_RITM0150404
+Eth112/1/29   eth    10G     wdc-dr-vsan-prod1-09 Nic 1 Port 2_RITM0150404
+Eth112/1/30   eth    10G     wdc-dr-vsan-prod1-10 Nic 1 Port 2_RITM0150404
+Eth112/1/31   eth    10G     wdc-dr-vsan-prod1-11  Nic 1 Port 2_RITM0150404
+Eth112/1/32   eth    10G     wdc-dr-vsan-prod1-12  Nic 1 Port 2_RITM0150404
+Eth112/1/33   eth    10G     wdc-dr-vsan-prod1-01 Nic 1 Port 2_RITM0150404
+Eth112/1/34   eth    10G     wdc-dr-vsan-prod1-02 Nic 1 Port 2_RITM0150404
+Eth112/1/35   eth    10G     wdc-dr-vsan-prod1-03 Nic 1 Port 2_RITM0150404
+Eth112/1/36   eth    10G     wdc-dr-vsan-prod1-04 Nic 1 Port 2_RITM0150404
+Eth112/1/37   eth    10G     wdc-dr-vsan-prod1-01 Nic 2 Port 2_RITM0150404
+Eth112/1/38   eth    10G     wdc-dr-vsan-prod1-02 Nic 2 Port 2_RITM0150404
+Eth112/1/39   eth    10G     wdc-dr-vsan-prod1-03 Nic 2 Port 2_RITM0150404
+Eth112/1/40   eth    10G     wdc-dr-vsan-prod1-04 Nic 2 Port 2_RITM0150404
+Eth112/1/41   eth    10G     wdc-isi-gssftp-01 PORT 2_TKT2198866
+Eth112/1/42   eth    10G     wdc-isi-gssftp-02 PORT 2_TKT2198866
+Eth112/1/43   eth    10G     wdc-isi-gssftp-03 PORT 2_TKT2198866
+Eth112/1/44   eth    10G     wdc-isi-gssftp-04 PORT2_TKT2198866
+Eth112/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth112/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/1    eth    10G     WDC-DR-PROD61-ESX-01 - CARD1 - PORT2 - TKT3880960
+Eth113/1/2    eth    10G     WDC-DR-PROD61-ESX-02 - CARD1 - PORT2 - TKT3880960
+Eth113/1/3    eth    10G     WDC-DR-PROD61-ESX-03 - CARD1 - PORT2 - TKT3880960
+Eth113/1/4    eth    10G     WDC-DR-PROD61-ESX-04 - CARD1 - PORT2 - TKT3880960
+Eth113/1/5    eth    10G     WDC-DR-PROD61-ESX-05 - CARD1 - PORT2 - TKT3880960
+Eth113/1/6    eth    10G     WDC-DR-PROD61-ESX-06 - CARD1 - PORT2 - TKT3880960
+Eth113/1/7    eth    10G     WDC-DR-PROD61-ESX-07 - CARD1 - PORT2 - TKT3880960
+Eth113/1/8    eth    10G     wdc-aw-dr-ucsfia - Port 31
+Eth113/1/9    eth    10G     wdc-aw-dr-ucsfib - Port 31
+Eth113/1/10   eth    10G     wdc-aw-dr-ucsfia - Port 33
+Eth113/1/11   eth    10G     wdc-aw-dr-ucsfib - Port 33
+Eth113/1/12   eth    10G     --
+Eth113/1/13   eth    10G     wdc-aw-dr-isi - PCI Card Port 1
+Eth113/1/14   eth    10G     wdc-aw-dr-isi-02 - PCI Card Port 1
+Eth113/1/15   eth    10G     wdc-aw-dr-isi-03 - PCI Card Port 1
+Eth113/1/16   eth    10G     wdc-aw-dr-isi-04 - PCI Card Port 1
+Eth113/1/17   eth    10G     wdc-aw-dr-isi-05 PCI Card, Port 1
+Eth113/1/18   eth    10G     wdc-aw-dr-dd A3, Port 1
+Eth113/1/19   eth    10G     INFRA UPLINK - FG5-EAT1 - NPC1 - PORT 14
+Eth113/1/20   eth    10G     WDCPRDAVMR200-SLOT0-PORT0 - TKT2268880
+Eth113/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/25   eth    10G     wdc-dr-vsan-prod1-05 Nic 2 Port 1_RITM0150404
+Eth113/1/26   eth    10G     wdc-dr-vsan-prod1-06 Nic 2 Port 1_RITM0150404
+Eth113/1/27   eth    10G     wdc-dr-vsan-prod1-07 Nic 2 Port 1_RITM0150404
+Eth113/1/28   eth    10G     wdc-dr-vsan-prod1-08 Nic 2 Port 1_RITM0150404
+Eth113/1/29   eth    10G     wdc-dr-vsan-prod1-09 Nic 2 Port 1_RITM0150404
+Eth113/1/30   eth    10G     wdc-dr-vsan-prod1-10 Nic 2 Port 1_RITM0150404
+Eth113/1/31   eth    10G     wdc-dr-vsan-prod1-11  Nic 2 Port 1_RITM0150404
+Eth113/1/32   eth    10G     wdc-dr-vsan-prod1-12  Nic 2 Port 1_RITM0150404
+Eth113/1/33   eth    10G     wdc-dd9500-data1 Slot 1, Port 0 - RITM0161896
+Eth113/1/34   eth    10G     wdc-dd9500-data2 Slot 1, Port 3 - RITM0161896
+Eth113/1/35   eth    10G     WDC-DR-PROD4-ESX01 - CARD1-PORT1 - INC0558903
+Eth113/1/36   eth    10G     WDC-DR-PROD4-ESX02 - CARD1-PORT1 - INC0558903
+Eth113/1/37   eth    10G     WDC-DR-PROD4-ESX03 - CARD1-PORT1 - INC0558903
+Eth113/1/38   eth    10G     WDC-DR-PROD4-ESX04 - CARD1-PORT1 - INC0558903
+Eth113/1/39   eth    10G     WDC-DR-PROD4-ESX05 - CARD1-PORT1 - INC0558903
+Eth113/1/40   eth    10G     WDC-DR-PROD4-ESX06 - CARD1-PORT1 - INC0558903
+Eth113/1/41   eth    10G     WDC-DR-PROD4-ESX07 - CARD1-PORT1 - INC0558903
+Eth113/1/42   eth    10G     WDC-DR-PROD4-ESX08 - CARD1-PORT1 - INC0558903
+Eth113/1/43   eth    10G     WDCPRDAVMR201-SLOT0-PORT0 - TKT2268880
+Eth113/1/44   eth    10G     --
+Eth113/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth113/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/1    eth    10G     WDC-DR-PROD61-ESX-01 - CARD2 - PORT2 - TKT3880960
+Eth114/1/2    eth    10G     WDC-DR-PROD61-ESX-02 - CARD2 - PORT2 - TKT3880960
+Eth114/1/3    eth    10G     WDC-DR-PROD61-ESX-03 - CARD2 - PORT2 - TKT3880960
+Eth114/1/4    eth    10G     WDC-DR-PROD61-ESX-04 - CARD2 - PORT2 - TKT3880960
+Eth114/1/5    eth    10G     WDC-DR-PROD61-ESX-05 - CARD2 - PORT2 - TKT3880960
+Eth114/1/6    eth    10G     WDC-DR-PROD61-ESX-06 - CARD2 - PORT2 - TKT3880960
+Eth114/1/7    eth    10G     WDC-DR-PROD61-ESX-07 - CARD2 - PORT2 - TKT3880960
+Eth114/1/8    eth    10G     wdc-aw-dr-ucsfia - Port 32
+Eth114/1/9    eth    10G     wdc-aw-dr-ucsfib - Port 32
+Eth114/1/10   eth    10G     wdc-aw-dr-ucsfia - Port 34
+Eth114/1/11   eth    10G     wdc-aw-dr-ucsfib - Port 34
+Eth114/1/12   eth    10G     --
+Eth114/1/13   eth    10G     wdc-aw-dr-isi - PCI Card Port 2
+Eth114/1/14   eth    10G     wdc-aw-dr-isi-02 - PCI Card Port 2
+Eth114/1/15   eth    10G     wdc-aw-dr-isi-03 - PCI Card Port 2
+Eth114/1/16   eth    10G     wdc-aw-dr-isi-04 - PCI Card Port 2
+Eth114/1/17   eth    10G     wdc-aw-dr-isi-05 PCI Card, Port 2
+Eth114/1/18   eth    10G     wdc-aw-dr-dd A4, Port 1
+Eth114/1/19   eth    10G     --
+Eth114/1/20   eth    10G     WDCPRDAVMR200-SLOT0-PORT1 - TKT2268880
+Eth114/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/25   eth    10G     wdc-dr-vsan-prod1-05 Nic 2 Port 2_RITM0150404
+Eth114/1/26   eth    10G     wdc-dr-vsan-prod1-06 Nic 2 Port 2_RITM0150404
+Eth114/1/27   eth    10G     wdc-dr-vsan-prod1-07 Nic 2 Port 2_RITM0150404
+Eth114/1/28   eth    10G     wdc-dr-vsan-prod1-08 Nic 2 Port 2_RITM0150404
+Eth114/1/29   eth    10G     wdc-dr-vsan-prod1-09 Nic 2 Port 2_RITM0150404
+Eth114/1/30   eth    10G     wdc-dr-vsan-prod1-10 Nic 2 Port 2_RITM0150404
+Eth114/1/31   eth    10G     wdc-dr-vsan-prod1-11  Nic 2 Port 2_RITM0150404
+Eth114/1/32   eth    10G     wdc-dr-vsan-prod1-12  Nic 2 Port 2_RITM0150404
+Eth114/1/33   eth    10G     wdc-dd9500-data1 Slot 4, Port 0 - RITM0161896
+Eth114/1/34   eth    10G     wdc-dd9500-data2 Slot 4, Port 3 - RITM0161896
+Eth114/1/35   eth    10G     WDC-DR-PROD4-ESX01 - CARD2-PORT1 - INC0558903
+Eth114/1/36   eth    10G     WDC-DR-PROD4-ESX02 - CARD2-PORT1 - INC0558903
+Eth114/1/37   eth    10G     WDC-DR-PROD4-ESX03 - CARD2-PORT1 - INC0558903
+Eth114/1/38   eth    10G     WDC-DR-PROD4-ESX04 - CARD2-PORT1 - INC0558903
+Eth114/1/39   eth    10G     WDC-DR-PROD4-ESX05 - CARD2-PORT1 - INC0558903
+Eth114/1/40   eth    10G     WDC-DR-PROD4-ESX06 - CARD2-PORT1 - INC0558903
+Eth114/1/41   eth    10G     WDC-DR-PROD4-ESX07 - CARD2-PORT1 - INC0558903
+Eth114/1/42   eth    10G     WDC-DR-PROD4-ESX08 - CARD2-PORT1 - INC0558903
+Eth114/1/43   eth    10G     WDCPRDAVMR201-SLOT0-PORT1 - TKT2268880
+Eth114/1/44   eth    10G     --
+Eth114/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth114/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/1    eth    10G     WDC-LOADTEST1-ESXi-01-CARD1-PORT1 - TKT2352949
+Eth115/1/2    eth    10G     WDC-LOADTEST1-ESXi-01-CARD1-PORT3 - TKT2352949
+Eth115/1/3    eth    10G     WDC-LOADTEST1-ESXi-02-CARD1-PORT1 - TKT2352949
+Eth115/1/4    eth    10G     WDC-LOADTEST1-ESXi-02-CARD1-PORT3 - TKT2352949
+Eth115/1/5    eth    10G     WDC-LOADTEST1-ESXi-03-CARD1-PORT1 - TKT2352949
+Eth115/1/6    eth    10G     WDC-LOADTEST1-ESXi-03-CARD1-PORT3 - TKT2352949
+Eth115/1/7    eth    10G     WDC-LOADTEST1-ESXi-04-CARD1-PORT1 - TKT2352949
+Eth115/1/8    eth    10G     WDC-LOADTEST1-ESXi-04-CARD1-PORT3 - TKT2352949
+Eth115/1/9    eth    10G     WDC-LOADTEST1-ESXi-05-CARD1-PORT1 - TKT2352949
+Eth115/1/10   eth    10G     WDC-LOADTEST1-ESXi-05-CARD1-PORT3 - TKT2352949
+Eth115/1/11   eth    10G     wdc-isi-secsplk-19 port 1 TKT2414544
+Eth115/1/12   eth    10G     wdc-isi-secsplk-20 port 1 TKT2414544
+Eth115/1/13   eth    10G     --
+Eth115/1/14   eth    10G     --
+Eth115/1/15   eth    10G     --
+Eth115/1/16   eth    10G     --
+Eth115/1/17   eth    10G     --
+Eth115/1/18   eth    10G     --
+Eth115/1/19   eth    10G     --
+Eth115/1/20   eth    10G     --
+Eth115/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/25   eth    10G     --
+Eth115/1/26   eth    10G     --
+Eth115/1/27   eth    10G     wdc-isi-secsplk-01 PORT 1_TKT2156611
+Eth115/1/28   eth    10G     wdc-isi-secsplk-02 PORT 1_TKT2156611
+Eth115/1/29   eth    10G     wdc-isi-secsplk-03 PORT 1_TKT2156611
+Eth115/1/30   eth    10G     wdc-isi-secsplk-04 PORT 1_TKT2156611
+Eth115/1/31   eth    10G     wdc-isi-secsplk-05 PORT 1_TKT2156611
+Eth115/1/32   eth    10G     wdc-isi-secsplk-06 PORT 1_TKT2156611
+Eth115/1/33   eth    10G     wdc-isi-secsplk-07 PORT 1_TKT2156611
+Eth115/1/34   eth    10G     wdc-isi-secsplk-08 PORT 1_TKT2156611
+Eth115/1/35   eth    10G     wdc-isi-secsplk-09 PORT 1_TKT2156611
+Eth115/1/36   eth    10G     wdc-isi-secsplk-10 PORT 1_TKT2156611
+Eth115/1/37   eth    10G     wdc-isi-secsplk-11 PORT 1_TKT2156611
+Eth115/1/38   eth    10G     wdc-isi-secsplk-12 PORT 1_TKT2156611
+Eth115/1/39   eth    10G     wdc-isi-secsplk-13 PORT 1_TKT2156611
+Eth115/1/40   eth    10G     wdc-isi-secsplk-14 PORT 1_TKT2156611
+Eth115/1/41   eth    10G     wdc-isi-secsplk-15 PORT 1_TKT2156611
+Eth115/1/42   eth    10G     wdc-isi-secsplk-16 PORT 1_TKT2156611
+Eth115/1/43   eth    10G     wdc-isi-secsplk-17 port 1 TKT2414544
+Eth115/1/44   eth    10G     wdc-isi-secsplk-18 port 1 TKT2414544
+Eth115/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth115/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/1    eth    10G     WDC-LOADTEST1-ESXi-01-CARD1-PORT2 - TKT2352949
+Eth116/1/2    eth    10G     WDC-LOADTEST1-ESXi-01-CARD1-PORT4 - TKT2352949
+Eth116/1/3    eth    10G     WDC-LOADTEST1-ESXi-02-CARD1-PORT2 - TKT2352949
+Eth116/1/4    eth    10G     WDC-LOADTEST1-ESXi-02-CARD1-PORT4 - TKT2352949
+Eth116/1/5    eth    10G     WDC-LOADTEST1-ESXi-03-CARD1-PORT2 - TKT2352949
+Eth116/1/6    eth    10G     WDC-LOADTEST1-ESXi-03-CARD1-PORT4 - TKT2352949
+Eth116/1/7    eth    10G     WDC-LOADTEST1-ESXi-04-CARD1-PORT2 - TKT2352949
+Eth116/1/8    eth    10G     WDC-LOADTEST1-ESXi-04-CARD1-PORT4 - TKT2352949
+Eth116/1/9    eth    10G     WDC-LOADTEST1-ESXi-05-CARD1-PORT2 - TKT2352949
+Eth116/1/10   eth    10G     WDC-LOADTEST1-ESXi-05-CARD1-PORT4 - TKT2352949
+Eth116/1/11   eth    10G     wdc-isi-secsplk-19 port 2 TKT2414544
+Eth116/1/12   eth    10G     wdc-isi-secsplk-20 port 2 TKT2414544
+Eth116/1/13   eth    10G     --
+Eth116/1/14   eth    10G     --
+Eth116/1/15   eth    10G     --
+Eth116/1/16   eth    10G     --
+Eth116/1/17   eth    10G     --
+Eth116/1/18   eth    10G     --
+Eth116/1/19   eth    10G     --
+Eth116/1/20   eth    10G     --
+Eth116/1/21   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/22   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/23   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/24   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/25   eth    10G     --
+Eth116/1/26   eth    10G     --
+Eth116/1/27   eth    10G     wdc-isi-secsplk-01 PORT 2_TKT2156611
+Eth116/1/28   eth    10G     wdc-isi-secsplk-02 PORT 2_TKT2156611
+Eth116/1/29   eth    10G     wdc-isi-secsplk-03 PORT 2_TKT2156611
+Eth116/1/30   eth    10G     wdc-isi-secsplk-04 PORT 2_TKT2156611
+Eth116/1/31   eth    10G     wdc-isi-secsplk-05 PORT 2_TKT2156611
+Eth116/1/32   eth    10G     wdc-isi-secsplk-06 PORT 2_TKT2156611
+Eth116/1/33   eth    10G     wdc-isi-secsplk-07 PORT 2_TKT2156611
+Eth116/1/34   eth    10G     wdc-isi-secsplk-08 PORT 2_TKT2156611
+Eth116/1/35   eth    10G     wdc-isi-secsplk-09 PORT 2_TKT2156611
+Eth116/1/36   eth    10G     wdc-isi-secsplk-10 PORT 2_TKT2156611
+Eth116/1/37   eth    10G     wdc-isi-secsplk-11 PORT 2_TKT2156611
+Eth116/1/38   eth    10G     wdc-isi-secsplk-12 PORT 2_TKT2156611
+Eth116/1/39   eth    10G     wdc-isi-secsplk-13 PORT 2_TKT2156611
+Eth116/1/40   eth    10G     wdc-isi-secsplk-14 PORT 2_TKT2156611
+Eth116/1/41   eth    10G     wdc-isi-secsplk-15 PORT 2_TKT2156611
+Eth116/1/42   eth    10G     wdc-isi-secsplk-16 PORT 2_TKT2156611
+Eth116/1/43   eth    10G     wdc-isi-secsplk-17 port 2 TKT2414544
+Eth116/1/44   eth    10G     wdc-isi-secsplk-18 port 2 TKT2414544
+Eth116/1/45   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/46   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/47   eth    10G     DO NOT USE DUE TO CISCO BUG!!!
+Eth116/1/48   eth    10G     DO NOT USE DUE TO CISCO BUG!!!

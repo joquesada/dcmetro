@@ -1,0 +1,2 @@
+md5sum: /bootflash/nxos.9.3.9.bin: No such file or directory
+ck.out Empty / cksum or md5sum or sha256sum or sha512 calculation Error

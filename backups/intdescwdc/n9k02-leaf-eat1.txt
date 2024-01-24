@@ -1,0 +1,48 @@
+Eth1/1        eth    25G     wdc-dr-prod11-esxi-01 Port 2 TKT2421346
+Eth1/2        eth    25G     wdc-dr-prod11-esxi-02 Port 2 TKT2421346
+Eth1/3        eth    25G     wdc-dr-prod11-esxi-03 Port 2 TKT2421346
+Eth1/4        eth    25G     wdc-dr-prod11-esxi-04 Port 2 TKT2421346
+Eth1/5        eth    25G     wdc-dr-prod9-esxi-01 Port 2 TKT2421346
+Eth1/6        eth    25G     wdc-dr-prod9-esxi-02 Port 2 TKT2421346
+Eth1/7        eth    25G     wdc-dr-prod9-esxi-03 Port 2 TKT2421346
+Eth1/8        eth    25G     wdc-dr-prod10-esxi-01 Port 2 TKT2421346
+Eth1/9        eth    25G     wdc-dr-prod10-esxi-02 Port 2 TKT2421346
+Eth1/10       eth    25G     wdc-dr-prod10-esxi-03 Port 2 TKT2421346
+Eth1/11       eth    25G     wdc-lt-esxi-rac-01 port2 TKT2496686
+Eth1/12       eth    25G     wdc-lt-esxi-rac-02 port2 TKT2496686
+Eth1/13       eth    25G     wdc-lt-esxi-rac-03 port2 TKT2496686
+Eth1/14       eth    25G     wdc-lt-esxi-rac-04 port2 TKT2496686
+Eth1/15       eth    25G     wdc-vsan-prod2-esxi-01 port2 TKT2591352
+Eth1/16       eth    25G     wdc-vsan-prod2-esxi-02 port2 TKT2591352
+Eth1/17       eth    25G     wdc-vsan-prod2-esxi-03 port2 TKT2591352
+Eth1/18       eth    25G     wdc-vsan-prod2-esxi-04 port2 TKT2591352
+Eth1/19       eth    25G     wdc-vsan-prod2-esxi-05 port2 TKT2591352
+Eth1/20       eth    25G     wdc-vsan-prod2-esxi-06 port2 TKT2591352
+Eth1/21       eth    25G     wdc-vsan-prod2-esxi-07 port2 TKT2591352
+Eth1/22       eth    25G     wdc-vsan-prod2-esxi-08 port2 TKT2591352
+Eth1/25       eth    25G     wdc-lt-esxi-rac-05 Port 2 TKT2666213
+Eth1/26       eth    25G     wdc-dr-prod22-esxi-01 Port 2 TKT2666213
+Eth1/27       eth    25G     wdc-dr-prod22-esxi-02 Port 2 TKT2666213
+Eth1/28       eth    25G     wdc-dr-prod23-esxi-01 Model - PowerEdge R640 , Service Tag-DMRDJV2 TKT2909878
+Eth1/29       eth    25G     wdc-dr-prod23-esxi-02 Model - PowerEdge R640 , Service Tag-DMQFJV2 TKT2909878
+Eth1/30       eth    25G     wdc-dr-prod23-esxi-03 Model - PowerEdge R640 , Service Tag-DMRDJV2 TKT2909878
+Eth1/31       eth    10G     wdc-dd9800-2-data1.vmware.comSlot5 Port b - TKT2840627
+Eth1/32       eth    10G     wdc-dd9800-2-data3.vmware.comSlot7 Port b - TKT2840627
+Eth1/33       eth    10G     wdc-dd9800-2-data5.vmware.comSlot8 Port b - TKT2840627
+Eth1/34       eth    10G     wdc-dd9800-2-data7.vmware.comSlot10 Port b - TKT2840627
+Po11                     wdc-dr-prod14-esxi-01 RFC ITCM-1498 TKT2792757 
+Po12                     wdc-dr-prod14-esxi-02 RFC ITCM-1498 TKT2792757 
+Po13                     wdc-dr-prod14-esxi-03 RFC ITCM-1498 TKT2792757 
+Po105                    wdc-lt-esxi-rac-01 port1 and port2 TKT2496686
+Po106                    wdc-lt-esxi-rac-02 port1 and port2 TKT2496686
+Po107                    wdc-lt-esxi-rac-03 port1 and port2 TKT2496686
+Po108                    wdc-lt-esxi-rac-04 port1 and port2 TKT2496686
+Po109                    wdc-vsan-prod2-esxi-01 port1 and port2 TKT2591352
+Po110                    wdc-vsan-prod2-esxi-02 port1 and port2 TKT2591352
+Po111                    wdc-vsan-prod2-esxi-03 port1 and port2 TKT2591352
+Po112                    wdc-vsan-prod2-esxi-04 port1 and port2 TKT2591352
+Po113                    wdc-vsan-prod2-esxi-05 port1 and port2 TKT2591352
+Po114                    wdc-vsan-prod2-esxi-06 port1 and port2 TKT2591352
+Po115                    wdc-vsan-prod2-esxi-07 port1 and port2 TKT2591352
+Po116                    wdc-vsan-prod2-esxi-08 port1 and port2 TKT2591352
+Po117                    wdc-lt-esxi-rac-05 port1 and port2 TKT2666213

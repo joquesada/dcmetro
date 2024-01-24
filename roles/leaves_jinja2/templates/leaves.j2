@@ -1,0 +1,13 @@
+router bgp {{ asn }}
+!
+{% for neighbor in bgp_neighbors %}
+neighbor {{ neighbor['neighbor'] }}
+remote-as {{ neighbor['remote_as'] }}
+update-source {{ neighbor['update_source'] }}
+timers 3 10
+address-family l2vpn evpn
+send-community
+send-community extended
+!
+{% endfor %}
+

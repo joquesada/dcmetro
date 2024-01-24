@@ -1,0 +1,32 @@
+---
+- hosts: "n9k_upgrade_2"
+  gather_facts: false
+  tasks:
+
+  - name: Create checkpoint
+    nxos_command:
+      commands: checkpoint clean-config description Checkpoint to backup config
+  - name: Install OS on N9k
+    check_mode: false
+    nxos_install_os:
+      system_image_file: nxos.9.3.7.bin
+      issu: desired
+  - name: Wait for device to come back up with new image
+    wait_for:
+      port: 22
+      state: started
+      timeout: 500
+      delay: 60
+      host: '{{ n9k_upgrade_2 }}'
+  - name: Check installed OS for newly installed version
+    nxos_command:
+      commands: [show version | json]
+      provider: '{{ connection }}'
+    register: output
+    tags: verify
+  - name: verify that the current version is the desired one
+    assert:
+      that:
+        - output['stdout'][0]['kickstart_ver_str'] == '9.3(7)'
+    tags: verify
+...

@@ -1,0 +1,2 @@
+Installer will perform impact only check. Please wait. 
+Unable to send request to installer, give up. Return code -1.

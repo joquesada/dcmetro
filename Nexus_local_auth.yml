@@ -1,0 +1,17 @@
+---
+- hosts: "Nexus_local_auth"
+  gather_facts: false
+  tasks:
+
+  - name: Configure Local authentication
+    ignore_errors: yes
+    nxos_command:
+      commands:
+        - conf t
+        - aaa authentication login default local
+      tag: Local_auth
+  - name: Create checkpoint
+    ignore_errors: yes
+    nxos_command:
+      commands: checkpoint Jun11 description Checkpoint created with local auth
+...

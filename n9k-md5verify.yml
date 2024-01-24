@@ -1,0 +1,17 @@
+---
+- hosts: "ftp_copy"
+  gather_facts: false
+
+  tasks:
+  - name: n9k-md5 verify
+    nxos_command:
+      commands:
+        - "show file bootflash:nxos.9.3.9.bin md5sum"
+    register: config
+    tags: md5
+  - name: save config to /etc/ansible/backups/md5-sc2
+    copy:
+      content: "{{config.stdout[0]}}"
+      dest: "/etc/ansible/backups/md5-sc2/{{inventory_hostname}}.txt"
+    tags: md5
+...

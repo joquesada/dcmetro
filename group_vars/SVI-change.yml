@@ -1,0 +1,36 @@
+---
+ansible_connection: network_cli
+ansible_network_os: nxos
+#ansible_user: "svc.dcmetroscript"
+#ansible_password: "3cBA5b%Bda4E4@EC$#2"
+ansible_user: "admin"
+ansible_password: "Chrys@l1ssucksb1gtim3"
+
+missVLAN:
+  - {id: 3931, name: eat1-dcmetro-scripting, vni: 1003931}
+
+VLANDESC1:
+  - {id: 1524, name: sjc05_prod_lb_vips}
+  - {id: 1532, name: sjc05-t2-prod-srv-mgmt-2}
+  - {id: 1537, name: sjc05-prod-environment}
+  - {id: 1901, name: sjc05-stage-greemplum-server}
+  - {id: 1903, name: sjc05-t2-stage-srv-mgmt}
+  - {id: 1906, name: sjc05-tier2-staging-server-2}
+  - {id: 3890, name: eat1-gss-lab-interswitch}
+
+DELVNI1:
+  - {vni: 1003101, id: 3101 }
+  - {vni: 1003105, id: 3105 }
+  - {vni: 1003422, id: 3422 }
+  - {vni: 1003437, id: 3437 }
+  - {vni: 1003460, id: 3460 }
+  - {vni: 1003461, id: 3461 }
+  - {vni: 1003471, id: 3471 }
+  - {vni: 1003473, id: 3473 }
+  - {vni: 1003413, id: 3413 }
+  - {vni: 1003432, id: 3432 }
+  - {vni: 1003922, id: 3922 }
+  - {vni: 1003923, id: 3923 }
+  - {vni: 1003160, id: 3160 }
+  - {vni: 1003910, id: 3910 }
+...
